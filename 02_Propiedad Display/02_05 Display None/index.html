@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0205 | Los elementos con display:none</title>
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../icons.css" />
+</head>
+<body>
+    <div class="container">
+        <h1><strong>0205 |</strong> Los elementos con display:none</h1>
+        <hr />
+        <ul class="breadcrumbs">
+            <li>
+                <a href="../../index.html">Principal</a>    
+            </li>
+            <li>
+                ❯
+            </li>
+            <li class="active">
+                Los elementos con display:none
+            </li>
+        </ul>
+        <div class="content">
+            <h2>Características</h2>
+        
+            <article class="internal-navbar">
+                <section>
+                    <a href="page_01.html" class="link"><i class="wlw-attachment"></i> Características 1</a>
+                    <p>
+                        Un elemento con el valor <code>none</code> en esta propiedad desaparece de la vista del usuario 
+                        , pero no del documento. Si la aplicación está pensada para personas con discapacidad tener en
+                        cuenta que este valor elimina al elemento del <strong>Árbol de accesibilidad</strong> 
+                        (se llama árbol de accesibilidad al árbol que construyen las <strong>API de Accesibilidad</strong> sobre el <strong>
+                            Document Object Model
+                        </strong>), con lo que los lectores de pantalla no lo leerán.
+                    </p> 
+                    <p>
+                         Es común utilizar esto cuando queremos esconder un elemento HTML y una típica técnica donde se utiliza este valor es cuando quieres darle un estilo diferente a un checkbox o radio.
+                        CSS no tiene mucha versatilidad para estos controles, entonces la forma de cambiar su visualización es escondiéndolo y mostrando en su lugar una imagen, iconos o incluso texto.
+                    </p>
+                      <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="MWBXgEy">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/MWBXgEy">
+                                    <span class="wlw-global"></span>
+                                    Características 1
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>  
+                </section>
+                <section>
+                    <a href="page_02.html" class="link"><i class="wlw-attachment"></i> Ocultar elementos</a>
+                    <p>
+                        Ocultar y mostrar elementos es una necesidad habitual en cualquier aplicación, las técnicas para hacerlo
+                        son muy variadas y tienen sus particularidades. 
+                    </p>
+                    <p>
+                        Vamos a ver algunas técnicas para esto teniendo en cuenta 3 variables:
+                    </p>
+                    <aside class="comment">
+                       <strong>Nota:</strong> para testear la Accesibilidad utilizamos el lector de pantallas:
+                        <a href="https://www.nvaccess.org/" class="link">
+                            <i class="wlw-global"></i>
+                            NV Access
+                        </a>
+                    </aside>
+                    <ul>
+                        <li>
+                            Que el elemento HTML mantenga su función, sí es un botón que cambie el cursor a la típica mano, un enlace que redireccione.
+                        </li>
+                        <li>
+                            Que pueda ser accesible por medio de lectores de pantalla
+                        </li>
+                        <li>
+                            La navegación del elemento por teclado, por medio de la tecla <code>tab</code>.
+                        </li>
+                    </ul>
+    
+                    <h4>Opacity</h4>
+                    <p>
+                        La opacidad controla el grado de transparencia, sí intentamos ocultarlo asignando 0 a la propiedad el elemento 
+                        seguirá existiendo en el documento en el lugar que ocupa en el flujo. Analizando los 3 parámetros se concluye:
+                        <ul>
+                            <li>
+                                Mantienen las funciones
+                            </li>
+                            <li>
+                                Puede ser leído por un lector de pantallas
+                            </li>
+                            <li>
+                                Navegable por teclado.
+                            </li>
+                        </ul>
+                    </p>
+                    <h4>Visibility</h4>
+                    <p>
+                        En cuanto al resultado es similar a <code>opacity</code> en cuanto que sigue ocupando un lugar en el navegador.
+                    </p>
+                    <ul>
+                    <li>No Mantiene su función</li>
+                    <li>
+                    No puede ser leído por lectores de pantalla.
+                    </li>
+                    <li>
+                    Tampoco es navegable por teclado.
+                    </li>
+                    </ul>
+                    <h4>Posicionarlo fuera del viewport</h4>
+                    <p>
+                        El <strong>viewport</strong> es la pantalla, sí sacamos un elemento de la pantalla por medio de asignar a la posición el valor <code>absolute</code> y moviéndolo por fuera la interacción con el 
+                        usuario,se perderá, en el ejemplo se interactúa con él por medio la etiqueta <code>label</code>.
+                    </p>
+                    <ul>
+                        <li>Mantiene su función</li>
+                        <li>Los lectores de pantalla podrán leerlo</li>
+                        <li>pero al tratar de navegar por teclado tendrá un comportamiento extraño, ya que el elemento sigue siendo navegable.</li>
+                    </ul>
+                    <h4>Asignar cero a todas la propiedades de caja</h4>
+                    <p>
+                        Es una técnica demasiado compleja para una acción simple, consta de asignarle <code>0</code> o <code>none</code>, dependiendo la propiedad, a todas las propiedades que son propias del <strong>Modelo de Caja</strong>. 
+                        Es posible aplicarlo sobre un elemento con la propiedad diferente a <code>display:inline</code> y es recomendable asignarle: 
+                        <code>overflow:hidden</code>, <code>line-height:0</code>.
+                        <ul>
+                            <li>Esto lo ocultará dejando de tener interacción  con el usuario</li>
+                            <li>Es posible navegarlo con el teclado</li>
+                            <li>Los lectores de pantalla pueden reconocerlo</li>
+                        </ul>
+                    </p>
+                    <h4>clip-path</h4>
+                    <p>
+                        Está propiedades permite recortar o enmascarar una elemento HTML, según algunos autores es la forma más efectiva. El elemento oculto con está técnica sigue ocupando un lugar en la vista, para ello 
+                        se puede posicionar absolutamente (<code>position:absolute</code>).
+                    </p>
+                    <ul>
+                        <li>Mantiene su función</li>
+                        <li>Los usuarios no podrán interactuar con él</li>
+                        <li>Es posible el acceso de los lectores de pantalla</li>
+                    </ul>
+
+                      <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="abjKoYy">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/abjKoYy">
+                                    <span class="wlw-global"></span>
+                                    Ocultar elementos
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>  
+                </section>
+                
+            </article>
+        </div>
+    </div>
+    <footer class="footer footer-image">
+        <div class="d-flex justify-content-between footer-image__content">
+            <div>
+                <img src="../../images/web-layout-workshop-logo.svg" />
+            </div>
+            <div class="text-right">
+                <h6>Desarrollado por Nicolás Kolumbic</h6>
+                <ul class="social-media-list">
+                    <li>
+                        <a href="https://www.linkedin.com/in/nicolaskolumbic/">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 34 34">
+                                <title>
+                                  LinkedIn
+                                </title>                     
+                                <g>
+                                  <path d="M34,2.5v29A2.5,2.5,0,0,1,31.5,34H2.5A2.5,2.5,0,0,1,0,31.5V2.5A2.5,2.5,0,0,1,2.5,0h29A2.5,2.5,0,0,1,34,2.5ZM10,13H5V29h5Zm.45-5.5A2.88,2.88,0,0,0,7.59,4.6H7.5a2.9,2.9,0,0,0,0,5.8h0a2.88,2.88,0,0,0,2.95-2.81ZM29,19.28c0-4.81-3.06-6.68-6.1-6.68a5.7,5.7,0,0,0-5.06,2.58H17.7V13H13V29h5V20.49a3.32,3.32,0,0,1,3-3.58h.19c1.59,0,2.77,1,2.77,3.52V29h5Z" fill="#fff"></path>
+                                </g>
+                              </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/NicolasKolumbic">
+                            <svg height="24" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                                <path fill="#fff" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+    </footer>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</body>
+</html>
