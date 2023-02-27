@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0102 | Modelo de Cajas </title>
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@300;500;600&display=swap" />
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../icons.css" />
+    <style>
+        .properties {
+            display: inline-flex;
+            flex-wrap: wrap;
+            width: 50%;
+        }
+
+        .properties ul {
+            padding-left: 1rem;
+        }
+
+        .properties ul li {
+            margin-right: 1rem;
+        }
+
+        .box-model-example {
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+        }
+
+        .row-span {
+            grid-row: span 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container clear-float">
+        <h1><strong>0102 |</strong> Box Model</h1>
+        <hr />
+        <ul class="breadcrumbs">
+            <li>
+                <a href="../../index.html">Principal</a>
+            </li>
+            <li>
+                ❯
+            </li>
+            <li class="active">
+                Box Model
+            </li>
+        </ul>
+
+        <div class="content">
+            <h2>Introducción</h2>
+            <p>
+                En los documentos HTML a medida que se van incluyendo contenido, etiquetas o estructuras HTML, estás se
+                van acomodando
+                de izquierda a derecha, de arriba hacia abajo, parece algo obvio para aquello que trabajamos con HTML y
+                CSS hace un tiempo,
+                pero es importante conocer que este es el <strong>flujo normal</strong> de cómo la información se
+                estructura en HTML,
+                es posible cambiar este flujo en algunos idiomas occidentales como japones, hebreo o arabe donde la
+                lectura es derecha a izquierda.
+            </p>
+            <p>
+                Cada etiqueta tiene lo que se conoce como <strong>Modelo de Caja</strong> o <strong>Box Model</strong>.
+                Está brinda un orden interno
+                de capas con objetivos precisos cada uno. CSS tiene propiedades para manipularlas:
+            </p>
+            <figure>
+                <figcaption>
+                    <p>
+                        Estructura de Cajas.
+                    </p>
+                </figcaption>
+                <img src="../../images/structure_1_grid.jpg" class="captures max-width" />
+            </figure>
+            <p>
+                A su vez, cada caja
+                puede contener su propia estructura
+                de cajas más pequeñas
+            </p>
+            <figure>
+                <figcaption>
+                    <p>
+                        Cajas dentro de cajas.
+                    </p>
+                </figcaption>
+                <img src="../../images/structure_2_grid.jpg" class=" captures max-width" />
+            </figure>
+            <figure class="box-img float-left">
+                <figcaption class="caption-img">
+                    <span>Esquema del modelo de cajas</span>
+                </figcaption>
+                <img src="../../images/box model.jpg" class="captures" />
+            </figure>
+            <div>
+                <h4>Propiedades para manipular el Modelo de Caja</h4>
+                <hr class="double-border-top" />
+                <div class="properties">
+
+                    <div>
+                        <h3>Márgenes</h3>
+                        <ul class="simple-list">
+                            <li>
+                                margin-top
+                            </li>
+                            <li>
+                                margin-right
+                            </li>
+                            <li>
+                                margin-bottom
+                            </li>
+                            <li>
+                                margin-left
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Bordes</h3>
+                        <ul class="simple-list">
+                            <li>
+                                border-top-color, border-top-width, border-top-style
+                            </li>
+                            <li>
+                                border-right-color, border-right-width, border-right-style
+                            </li>
+                            <li>
+                                border-bottom-color, border-bottom-width, border-bottom-style
+                            </li>
+                            <li>
+                                border-left-color, border-left-width, border-left-style
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Relleno</h3>
+                        <ul class="simple-list">
+                            <li>
+                                padding-top
+                            </li>
+                            <li>
+                                padding-right
+                            </li>
+                            <li>
+                                padding-bottom
+                            </li>
+                            <li>
+                                padding-left
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Contenido</h3>
+                        <ul class="simple-list">
+                            <li>
+                                width
+                            </li>
+                            <li>
+                                max-width
+                            </li>
+                            <li>
+                                min-width
+                            </li>
+                            <li>
+                                height
+                            </li>
+                            <li>
+                                max-height
+                            </li>
+                            <li>
+                                min-height
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p>
+                Cada caja tiene un modelo como este donde <strong>ninguna propiedad es obligatoria, ni siquiera el
+                    contenido</strong>.
+                Podemos crear un <strong>elemento HTML</strong> como un <code>div</code> vacío y asignarle solo
+                <strong>bordes</strong>.
+            </p>
+             <p>
+                    Puede suceder que por algún requisito necesitemos salirnos de ese flujo, CSS tiene propiedades
+                    que lo permiten, por nombrar
+                    las más utilizadas:
+                    <strong>position</strong>, <strong>left</strong>, <strong>right</strong>,
+                    <strong>bottom</strong>,
+                    <strong>top</strong>, <strong>float</strong>, <strong>z-index</strong>, <strong>clear</strong>.
+                </p>
+            <section>
+                <a href="page_01.html" class="link"><i class="wlw-attachment"></i>La altura del documento HTML</a>
+                <p>
+                    Es típico, en algunos diseños, que una imagen cubra todo lo alto de la pantalla, e
+                    intuitivamente pensamos que con incluir un <code>height:100%</code> al contenedor y definir en
+                    la propiedad <code>background-image</code> una imagen bastaría, pero no es así.
+                </p>
+                <p>
+                    Un paréntesis para que quede claro el porqué de esto:
+                </p>
+                <div>
+                    <img src="../../images/html document.png" />
+                </div>
+                <p>
+                    En la <strong>Imagen 1</strong> nos encontramos con un documento HTML en blanco, a medida que a
+                    este se le incluye contenido, crece hacia abajo (<strong>Imagen 2</strong>), incrementando la
+                    altura del <code>body</code>.
+                    Cuando la cantidad de contenido sobrepase el alto de nuestro monitor aparecerá la barra de
+                    scroll para poder desplazarnos sobre el documento (<strong>Imagen 3</strong>).¿Entonces alcanza
+                    con agregar <code>height: 100%</code> al <code>body</code>?
+                </p>
+                <p>La respuesta es no, y tiene lógica. En nuestro monitores tenemos claro la resolución, su ancho y
+                    alto en píxeles, en el navegador está determinando por ese mismo menos la barra de scroll y el
+                    marco del navegador.
+                    En el caso, pensamoslo así. El <strong>100%</strong> es el todo, un total, cuando aplicamos
+                    <code>height:100%</code>¿A qué <strong>total</strong> nos estamos refiriendo?. No es alto del
+                    monitor, es el <strong>contenido</strong>.
+                    Si tuviéramos una medida que represente el 100%, tendremos un <strong>alto total</strong>
+                    determinado, un límite hasta donde incluir el contenido.</p>
+               
+            </section>
+
+        </div>
+    </div>
+    <footer class="footer footer-image">
+    <div class="d-flex justify-content-between footer-image__content">
+    <div>
+        <img src="../../images/web-layout-workshop-logo.svg" />
+    </div>
+    <div class="text-right">
+        <h6>Desarrollado por Nicolás Kolumbic</h6>
+        <ul class="social-media-list">
+            <li>
+                <a href="https://www.linkedin.com/in/nicolaskolumbic/">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 34 34">
+                        <title>
+                            LinkedIn
+                        </title>
+                        <g>
+                            <path
+                                d="M34,2.5v29A2.5,2.5,0,0,1,31.5,34H2.5A2.5,2.5,0,0,1,0,31.5V2.5A2.5,2.5,0,0,1,2.5,0h29A2.5,2.5,0,0,1,34,2.5ZM10,13H5V29h5Zm.45-5.5A2.88,2.88,0,0,0,7.59,4.6H7.5a2.9,2.9,0,0,0,0,5.8h0a2.88,2.88,0,0,0,2.95-2.81ZM29,19.28c0-4.81-3.06-6.68-6.1-6.68a5.7,5.7,0,0,0-5.06,2.58H17.7V13H13V29h5V20.49a3.32,3.32,0,0,1,3-3.58h.19c1.59,0,2.77,1,2.77,3.52V29h5Z"
+                                fill="#fff"></path>
+                        </g>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/NicolasKolumbic">
+                    <svg height="24" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="24"
+                        data-view-component="true">
+                        <path fill="#fff"
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                        </path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+    </div>
+    </footer>
+</body>
+</html>

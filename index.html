@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Layout Workshop</title>
+    <link rel="shortcut icon" href="images/favicon.gif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="icons.css" />
+
+</head>
+<body>
+    <div id="web-layout-workshop">
+        <div class="portrait">
+            <div class="portrait__content">
+                <img src="images/web-layout-workshop-logo-black.svg" class="portrait__brand" />
+                <img src="images/portada-taller-xs.jpg" class="d-block-xs w-xs-100" />
+                <p class="portrait__text">
+                    El objetivo de este Taller es un repaso por aquellas <strong>propiedades</strong> y <strong>técnicas</strong>
+                    CSS vinculadas estrictamente a la estructuración de proyectos, a lo que en español denominamos <strong>Maquetación Web</strong>. 
+                    Para ello se ahondará en <strong>Flexbox</strong>, <strong>Grid Layout</strong>, <strong>Web Responsive Design</strong>, los diferentes posicionamientos y
+                    técnicas comunes para el armado de documentos HTML modernos. 
+                </p>
+
+            </div>   
+        </div>
+        <div class="presentation">
+            <div class="content">
+                                <h1 class="p-0">Sobre este material</h1>
+                                
+                                <p>
+                                    <img src="images/folder schema.png" class="float-lg-left mb-xs-1 w-xs-100 mr-lg-1" />
+                                    El taller esta pensado para todo aquel que tiene un conocimiento de HTML y 
+                                    medio-avanzado CSS, no voy hacer referencia a propiedades relacionadas con las bases de CSS, el color o texto.
+                                    <strong>Mi objetivo es que al momento de estar frente a la tarea de armar una maqueta cuente con un conocimiento profundo de CSS moderno y un abanico de técnicas para hacer frente con técnicas sencillas, modernas y buenas prácticas.</strong>
+                                </p>
+                                <p>
+                                    Este repositorio es complementario al Taller y para fines didácticos contiene solo CSS, HTML
+                                    y un mínimo de Javascript, para conectar con <strong>Codepen</strong> por ejemplo.
+                                </p>
+                                <p>
+                                    El taller está organizado en <strong>módulos</strong> para dividir el contenido por temas, desde los temas que crei que son elementales, luego técnicas modernas como <strong>Flex Layout</strong>, <strong>Grid Layout</strong>, los complementos de <strong>Position</strong>, <strong>Float</strong>, y <strong>Selectores</strong>, y por ultimo <strong>Response web Design</strong>. 
+                                    La <strong>Introducción</strong> son unos concepto algo básicos sobre CSS que sirven como base para el resto. Tambien de manera no tan profunda, nos tomaremos tiempo para algunas técnicas anticuada, ya que algunos proyectos antiguos la utilizan, y mi intención es arrojar luz sobre 
+                                    las viejas técnicas tambien.
+                                </p>
+                                <p>
+                                    Dentro de cada módulo, cada artículo tiene una serie secciones enumeradas relacionadas a la propiedad. 
+                                    En la parte superior de cada artículo está lo escencial, y a manera que navegamos hacia abajo se encuentran los detalles u
+                                    obsevaciones.
+                                </p>
+                                <div class="d-flex justify-content-end">
+                                    <figure class="text-right m-xs-0">
+                                        <figcaption>
+                                            <span>Cada artículo tiene un serie de secciones con un link a un ejemplo HTML offline</span>
+                                        </figcaption>
+                                        <img src="images/anchor.png" class="w-xs-100" />
+                                    </figure>
+                                </div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="container">
+                <h1>Módulos</h1>
+                <hr>
+                <article class="index">
+                    <section class="section w-lg-75">
+                        <h3 class="module-title">Introducción</h3>
+                        <ol class="main-index">
+                            <li>
+                                <a href="01_Introduction/01_01 Developer Tools/index.html">
+                                    Herramientas de Desarrollo (Developer Tools)
+                                </a>
+                                <ol class="contents-description">
+                                    <li>
+                                        Repaso por las <strong>Herramientas de Desarrollo (Dev Tools)</strong>  que brindan los navegadores. Focalizando aquellas que tienen que ver con CSS y HTML.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="01_Introduction/01_02 Box Model/index.html">
+                                    Modelo de Cajas (Box Model)
+                                </a>
+                                <ol class="contents-description">
+                                    <li>
+                                        Definición del <strong>Modelo de Cajas (Box Model)</strong>, concepto importante para la Maquetación Web.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="01_Introduction/01_03 Shorthand Properties/index.html">
+                                    Propiedades Abreviadas (Shorthand Properties)
+                                </a>
+                                <ol class="contents-description">
+                                    <li> 
+                                        Repaso por las <strong>Propiedades Abreviadas (Shorthand properties)</strong> básicas más utilizadas.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="01_Introduction/01_04 Measurement Units/index.html">
+                                    Unidades de medidas
+                                </a>
+                                <ol class="contents-description">
+                                    <li>
+                                        Repaso por las unidades de medida más utilizadas en CSS.
+                                    </li>
+                                    <li>
+                                        Diferencia entre <strong>em</strong> y <strong>rem</strong>.
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </section> 
+                    <hr class="dotted-separator" />
+                    <section class="section w-lg-75">
+                        <h3 class="module-title">Propiedad Display</h3>
+                        <ol class="main-index">
+                            <li>
+                                <a href="02_Propiedad Display/02_01 Display Browser/index.html">
+                                    Introducción a la propiedad <strong><i>display</i></strong>
+                                </a>
+                                <ol class="contents-description">
+                                    <li>
+                                       El valor de <strong>display</strong> del navegador.
+                                    </li>
+                                    <li>
+                                        Los elementos reemplazados y no reemplazados.
+                                     </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="02_Propiedad Display/02_02 Display Block/index.html">
+                                    Los elementos en bloque, <strong><i>display:block</i></strong>
+                                </a>
+                                <ol class="contents-description">
+                                    <li>
+                                       Como se comporta los elementos en bloque en el navegador y con los elementos adyacentes.
+                                    </li>
+                                    <li>
+                                        Alineación vertical y horizontal de elementos en bloque.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="02_Propiedad Display/02_03 Display Inline/index.html">
+                                    Los elementos en línea, <strong><i>display:inline</i></strong>
+                                </a>
+                                <ol class="contents-description">
+                                    <li>
+                                       Como se comporta los elementos en línea en el navegador y con los elementos adyacentes.
+                                    </li>
+                                    <li>
+                                        El comportamiento cuando flotamos elementos en línea.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="02_Propiedad Display/02_04 Display Inline Block/index.html">
+                                    Los elementos de bloque en línea, <strong><i>display:inline-block</i></strong>
+                                </a>
+                                <ol class="contents-description">
+                                    <li>
+                                        Como se comporta los elementos de bloque en línea en el navegador y con los elementos adyacentes.
+                                    </li>
+                                    <li>
+                                        La alineación vertical
+                                    </li> 
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="02_Propiedad Display/02_05 Display None/index.html">
+                                    Los elementos con <strong><i>display:none</i></strong> 
+                                </a>
+                                <ol class="contents-description">
+                                    <li>
+                                        Como se comporta los elementos configurados en <strong>none</strong> en el navegador.
+                                    </li>
+                                    <li>
+                                        Ocultar elementos
+                                    </li> 
+                                </ol>
+                            </li>
+                        </ol>
+                    </section>   
+                    <hr class="dotted-separator" />
+                    <section class="section w-lg-75">
+                        <h3 class="module-title">Flexbox</h3>
+                        <h4>Propiedades de Contenedor</h4>
+                        <ol class="main-index">
+                            <li>
+                                <a href="03_Flebox/Container Properties/03_01 Flex Display/index.html">
+                                   Introducción a <strong><i>display:flex</i></strong>  y <strong><i>display:inline-flex</i></strong>
+                                </a>
+                                <ol class="contents-description">
+                                    <li>
+                                        Definición del Módulo de Diseño Flexible.
+                                    </li>
+                                    <li>
+                                        Diferencia entre <strong>flex</strong> y <strong>inline-flex</strong>
+                                    </li>
+                                    <li>
+                                        Primeros conceptos principales
+                                    </li> 
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="03_Flebox/Container Properties/03_02 Align Items/index.html">
+                                    Alineando el <strong><i>eje transversal</i></strong> con <strong><i>align-items</i></strong>
+                                </a>
+                                <ol class="contents-description">
+                                    <li>
+                                        Una nueva y sencilla técnica de alinear elementos.
+                                    </li>
+                                    <li>
+                                        Opciones de alineación.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="03_Flebox/Container Properties/03_03 Justify Content/index.html">
+                                    Alineando el <strong><i>eje principal</i></strong> con <strong><i>justify-content</i></strong>
+                                </a>
+                                <ol class="contents-description">
+                                    <li>
+                                        Una nueva y sencilla técnica de alinear elementos.
+                                    </li>
+                                    <li>
+                                        Opciones de alineación.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="03_Flebox/Container Properties/03_04 Flex Direction/index.html">
+                                    Moficando la orientación del <strong><i>eje principal</i></strong> con <strong><i>flex-direction</i></strong>
+                                </a>
+                                <ol class="contents-description">
+                                    <li>
+                                        Opciones para determinar la dirección de los elementos flexibles.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="03_Flebox/Container Properties/03_05 Flex Wrap/index.html">
+                                    Gestionando el desbordamiento con <strong><i>flex-wrap</i></strong>
+                                </a>
+                                <ol class="contents-description">
+                                    <li>
+                                        Como manipular el comportamiento de los elementos cuando el contenedor no es lo
+                                        suficiente ancho .
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="03_Flebox/Container Properties/03_06 Align Content/index.html">
+                                    Alineando los <strong><i>elementos flexibles</i></strong> como grupo con <strong><i>align-content</i></strong>
+                                </a>
+                                <ol class="contents-description">
+                                    <li>
+                                        Mover grupos de elementos dentro de un contenedor flexible.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="03_Flebox/Container Properties/03_07 Gaps/index.html">
+                                   Gestionando los espacios entre <strong><i>elementos flexibles</i></strong> con <strong><i>gap</i></strong>
+                                </a>
+                            </li>
+                        </ol>
+                        <h4>Propiedades de Elementos Flexibles</h4>
+    
+                        <ol class="main-index flex-section-index">
+                            <li>
+                                <a href="03_Flebox/Items Properties/03_08 Introduction/index.html">
+                                    Introducción a los Elementos Flexibles
+                                </a>
+                            </li>
+                            <li>
+                                <a href="03_Flebox/Items Properties/03_09 Flex Grow/index.html">
+                                    Administrar el espacio disponible con <strong>flex-grow</strong>.
+                                </a>
+                                <ol class="contents-description">
+                                    <li>
+                                        Maquetar controles de formularios
+                                    </li>
+                                    <li>
+                                        Estructurar columna de ancho fijo y otra flexible.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="above-ten">
+                                <a href="03_Flebox/Items Properties/03_10 Flex Shrink/index.html">
+                                    Administrar el espacio disponible negativo con <strong>flex-shrink</strong>.
+                                </a>
+                                <ol class="contents-description">
+                                    <li>
+                                        Maquetar controles de formularios
+                                    </li>
+                                    <li>
+                                        Estructurar columna de ancho fijo y otra flexible.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="above-ten">
+                                <a href="03_Flebox/Items Properties/03_11 Flex Basis/index.html">
+                                    Flex Basis
+                                </a>
+                            </li>
+                            <li class="above-ten">
+                                <a href="03_Flebox/Items Properties/03_12 Align Self/index.html">
+                                    Alinear <strong>elementos flexibles</strong> por unidad con <strong>align-self</strong>.
+                                </a>
+                            </li>
+                            <li class="above-ten">
+                                <a href="03_Flebox/Items Properties/03_13 Order/index.html">
+                                    Reordenar <strong>elementos flexibles</strong> con la propiedad <strong>order</strong>
+                                </a>
+                            </li>
+                        </ol>
+                        <h4>Otras formas de aplicar Flexbox</h4>
+                        <ol class="main-index">
+                            <li>
+                                <a href="03_Flebox/Flexbox Shorthand Properties/index.html">
+                                    Propiedades abreviadas para Flexbox
+                                </a>
+                            </li>
+                            <li>
+                                <a href="03_Flebox/Flexbox in Bootstrap/index.html">
+                                    Flexbox en Bootstrap
+                                </a>
+                            </li>
+                        </ol>
+                    </section>
+                    <hr class="dotted-separator" />
+                    <section class="section w-lg-75">
+                        <h3 class="module-title">Grid Layout</h3>
+                        <ol class="main-index">
+                            <li>
+                                <a href="04_Grid Layout/04_01_Display Grid/index.html">Introducción a <strong><i>display:grid</i></strong></a>
+                                <ol class="contents-description">
+                                    <li>Conceptos principales</li>
+                                    <li>Diferencias entre <strong>Grid Layout</strong> y <strong>Flebox Layout</strong></li>
+                                    <li>Diferencias entre <strong>grid</strong> y <strong>inline-grid</strong></li>
+                                </ol>
+                            </li>
+                            <li><a href="04_Grid Layout/04_02 Justify Items/index.html">Alineación horizontal con <strong><i>justify-items</i></strong> </a></li>
+                            <li>
+                                <a href="04_Grid Layout/04_03 Grid_Explicita_Grid_Templates/index.html">Definir una grilla explicitamente</a>
+                                <ol class="contents-description">
+                                    <li>Estructuración explicita</li>
+                                    <li>Unidades de medida para estructurar</li>
+                                    <li>La unidad de medida <strong>fr(Fraction)</strong></li>  
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="04_Grid Layout/04_04 Grid Gaps/index.html">Espacio entre celdas con <strong><i>gap</i></strong> </a>
+                                <ol class="contents-description">
+                                    <li>Gestión del espacio entre filas y columnas</li>
+                                     
+                                </ol>
+                            </li>
+                            <li><a href="04_Grid Layout/04_05_Grid_Auto/index.html">Definir medidas para resto de celdas</a></li>
+                            <li><a href="04_Grid Layout/04_06 Grid_Implicitamente_Grid_Templates/index.html">Definir una grilla implicitamente</a></li>
+                            <li><a href="04_Grid Layout/04_07_Grid_Start_End/index.html">Reubicar y expandir celdas</a></li>
+                            <li><a href="04_Grid Layout/04_08 Alias Grid Lines/index.html">Alias para <strong><i>Grid Lines</i></strong></a></li>
+                            <li><a href="04_Grid Layout/04_09 Grid Areas/index.html">Areas</a></li>
+                            <li class="above-ten"><a href="04_Grid Layout/04_10 Alineations/index.html">Alineación en celdas</a></li>
+                            <li class="above-ten"><a href="04_Grid Layout/04_11 Auto Placement/index.html">auto-placement</a></li>
+                        </ol>
+                        <h4>Otras formas de aplicar Grid Layout</h4>
+                        <ol class="main-index">
+                            <li>
+                                <a href="04_Grid Layout/04_12 Grid Layout Shorthand/index.html">
+                                    Propiedades abreviadas para Grid Layout
+                                </a>
+                            </li>
+                            <li>
+                                <a href="04_Grid Layout/04_13 Grid Layout Bootstrap/index.html">
+                                    Grid Layout en Bootstrap
+                                </a>
+                            </li>
+                        </ol>
+                    </section>
+                    <hr class="dotted-separator" />
+                    <section class="section w-lg-75">
+                        <h3 class="module-title">Position</h3>
+                        <ol class="main-index">
+                            <li><a href="05_Propiedad Position/05_01 Static Position/index.html">Posición Estática (<strong>position:static</strong>)</a></li>
+                            <li>
+                                <a href="05_Propiedad Position/05_02 Relative Position/index.html">Posición Relativa (<strong>position:relative</strong>)</a>
+                                <ol class="contents-description">
+                                    <li>
+                                        Caracteristicas de los elementos en posición <strong>relativa</strong>.
+                                     </li>
+                                     <li>
+                                         Crear un <strong>Tooltip</strong> básico personalizado.
+                                     </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="05_Propiedad Position/05_03 Absolute Position/index.html">Posición Absoluta (<strong>position:absolute</strong>)</a>
+                                <ol class="contents-description">
+                                    <li>
+                                        Caracteristicas de los elementos en posición <strong>absoluta</strong>.
+                                     </li>
+                                     <li>
+                                         Crear un <strong>Lightbox</strong> o <strong>Modal</strong> básico personalizado.
+                                     </li>
+                                </ol>
+                                
+                            </li>
+                            <li>
+                                <a href="05_Propiedad Position/05_04 Fixed Position/index.html">Posición Fija (<strong>position:fixed</strong>)</a>
+                                <ol class="contents-description">
+                                    <li>
+                                        Caracteristicas de los elementos en posición <strong>fija</strong>.
+                                     </li>
+                                     <li>
+                                         Crear una <strong>Barra de navegación</strong> fija en la parte superior del documento HTML.
+                                     </li>
+                                </ol>
+                            </li> 
+                            <li>
+                                <a href="06_Propiedad Position/05_05 Sticky Position/index.html">Posición Adhesiva (<strong>position:sticky</strong>)</a>
+                                <ol class="contents-description">
+                                    <li>
+                                        Caracteristicas de los elementos en posición <strong>adhesiva</strong>.
+                                     </li>
+                                     <li>
+                                         Crear una <strong>tabla</strong> con la cabecera fija.
+                                     </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </section>
+                    <hr class="dotted-separator" />
+                    <section class="section w-lg-75">
+                        <h3 class="module-title"> Float</h3>
+                        <ol class="main-index">
+                            <li><a href="06_Propiedad Float/06_01 Introduction to Float Elements/index.html">Introducción a los elementos flotantes</a></li>
+                            <li><a href="06_Propiedad Float/06_02 Fundamentals of floating elements/index.html">Fundamentos de los elementos flotantes</a></li>
+                            <li><a href="06_Propiedad Float/06_03 Web Layout with Float/index.html">Estructurar con la propiedad <strong>float</strong></a></li>
+                            <li><a href="06_Propiedad Float/06_04 The clear property/index.html">La propiedad <strong>clear</strong></a></li>
+                            <li><a href="06_Propiedad Float/06_05 The float and shape-outside properties/index.html">La propiedad <strong>float</strong> y <strong>shape-outside</strong></a></li>
+                        </ol>
+                    </section>
+                    <hr class="dotted-separator" />
+                    <section class="section w-lg-75">
+                        <h3 class="module-title"> Selectores</h3>
+                        <ol class="main-index">
+                            <li><a href="07_Selectors/07_01_Basic_Selectors/index.html">Selectores Básicos</a></li>
+                            <li><a href="07_Selectors/07_02_Advanced_Selectors/index.html">Selectores Avanzados</a></li>
+                            <li><a href="07_Selectors/07_03_Especification/index.html">Especificidad, herencia y precedencia</a></li>
+                        </ol>
+                    </section>  
+                    <hr class="dotted-separator" />
+                    <section class="section w-lg-75">
+                        <h3 class="module-title"> Diseño Web Adaptable (Resposive Web Design)</h3>
+                        <ol class="main-index">
+                            <li>
+                                <a href="08_Responsive Design/08_01 Introduction/index.html">Introducción</a>
+                                <ol class="contents-description">
+                                    <li>
+                                        Fundamentos de las <strong>at-rules</strong>.
+                                     </li>
+                                     <li>
+                                        Breve descripción de algunas de ellas
+                                     </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="08_Responsive Design/08_02 Media Queries/index.html">Medios de consulta (<strong>@media</strong>)</a>
+                                <ol class="contents-description">
+                                    <li>
+                                        Fundamentos de los <strong>Medios de consulta</strong>.
+                                    </li>
+                                    <li>
+                                        Operadores y parámetros de los <strong>Medios de consulta</strong>.
+                                    </li>
+                                    <li>
+                                        Media Queries Level 4.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="08_Responsive Design/08_03 Containers/index.html">Contenedores (<strong>@container</strong>)</a>
+                                <ol class="contents-description">
+                                    <li>
+                                        Fundamentos de los <strong>Contenedores</strong>.
+                                    </li> 
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="08_Responsive Design/08_03 Text/index.html">Tratamiento del texto en un diseño adaptable</a>
+                                <ol class="contents-description">
+                                    <li>
+                                        Cómo utilizar la unidad <strong>rem</strong> correctamente en un diseño.
+                                    </li> 
+                                    <li>
+                                        Tamaños de textos.
+                                    </li> 
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="08_Responsive Design/08_04 Multimedia Resources/index.html">Tratamiento de los recursos multimedia</a>
+                                <ol class="contents-description">
+                                    <li>
+                                        Cómo colocar imágenes y videos a pantalla completa.
+                                    </li> 
+                                    <li>
+                                        Medidas de las imágenes.
+                                    </li> 
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="08_Responsive Design/08_05 SVG/index.html">Tratamiento de imágenes SVG</a>
+                                <ol class="contents-description">
+                                    <li>
+                                        Fundamento de SVG.
+                                    </li> 
+                                    <li>
+                                        Etiquetas incluidas en SVG.
+                                    </li> 
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="08_Responsive Design/08_06 Structure/index.html">¿Cómo estructurar el documento?</a>
+                            </li>
+                            
+                        </ol>
+                    </section>              
+                </article> 
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                
+                <article class="d-flex justify-content-between"> 
+                    <section class="d-flex flex-gap-2">
+                        <div>
+                            <h5 class="footer-title">Sitios Web</h5>
+                            <ul class="footer-list">
+                                <li>
+                                    <a href="https://css-tricks.com/"> CSS Tricks</a>
+                                </li>
+                                <li>
+                                    <a href="https://developer.mozilla.org/es/docs/Web/CSS">
+                                        MDN Web Docs
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://caniuse.com/">
+                                        Can I use
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://web.dev/">
+                                        Web Dev
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://whatwg.org/">
+                                        WHATWG community
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.w3schools.com/howto/default.asp">
+                                        w3Schools How to
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.alibrate.com/actividad">
+                                        Alibrate
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                       <div>
+                            <h5 class="footer-title">Fonts</h5>
+                            <ul class="footer-list">
+                                <li><a href="https://fonts.google.com/specimen/Roboto?category=Sans+Serif&preview.text=Grid%20Layout&preview.text_type=custom&query=Roboto">Roboto</a></li>
+                                <li><a href="https://fonts.google.com/noto/specimen/Noto+Serif+Display?category=Serif&preview.text=Grid%20Layout&preview.text_type=custom">Noto Serif Display</a></li>
+                            </ul>
+                            <h5 class="footer-title"> Recursos Gráficos</h5>
+                            <ul class="footer-list">
+                                <li><a href="https://www.freepik.es/vectores/acuarela">Vector de Acuarela creado por vextok - www.freepik.es </a></li>
+                                <li><a href="https://www.freepik.es/vector-gratis/dispositivo-maqueta-dispositivo-digital_4122518.htm#query=mockup%20monitor%20computadora&position=35&from_view=search">Imagen de rawpixel.com en Freepik</a> </li>
+                            </ul>
+    
+                       </div>         
+                    </section>
+                    <section>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="footer-brand" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 200 80" xml:space="preserve">
+                            <path class="white" d="M30.9,38.7c-1.9,0.7-3.4,1.8-4.4,3.3c-1,1.5-1.6,3.4-1.6,5.5c0,1,0.1,1.7,0.3,2.1c0.2,0.4,0.3,0.6,0.3,0.7
+                            c-1.4,0-2.5-0.3-3.2-0.9s-1.1-1.6-1.1-3c0-1.7,0.7-3.4,2.1-5c1.4-1.6,3.2-2.9,5.4-3.9s4.4-1.5,6.6-1.5c0.4,0,0.9,0,1.6,0.1
+                            l0.4,24.6l8.4-24.5h5.1L51,60.7l8.4-24.5h2.8L51.1,66h-5.8l-0.5-20.4L37.3,66h-5.8L30.9,38.7z"/>
+                            <path class="white" d="M60.6,64.6c-1.1-1-1.7-2.6-1.7-4.8c0-1.8,0.4-3.8,1.1-6c0.7-2.2,1.9-4.1,3.6-5.7c1.7-1.6,3.7-2.4,6.2-2.4
+                            c3.4,0,5.1,2.1,5.1,6.4v0c0.1,0,0.2,0,0.4,0c0.9,0,1.9-0.2,3-0.7c1.1-0.5,2.2-1,3.1-1.7l0.4,1.1c-0.8,0.8-1.8,1.5-3,2.1
+                            c-1.2,0.6-2.6,1-4.1,1.2c-0.2,2.4-0.8,4.5-1.6,6.4c-0.9,1.8-2,3.2-3.4,4.2c-1.4,1-2.9,1.5-4.5,1.5C63.3,66.2,61.7,65.6,60.6,64.6z
+                            M68.8,61.5c0.6-0.7,1.2-1.7,1.7-3c0.5-1.3,0.8-2.7,1-4.2c-0.7-0.2-1.1-0.7-1.1-1.7c0-1.1,0.4-1.8,1.2-2.2
+                            c-0.1-0.9-0.2-1.5-0.4-1.8c-0.2-0.3-0.6-0.5-1.1-0.5c-0.9,0-1.7,0.6-2.6,1.9c-0.8,1.3-1.5,2.8-2,4.6c-0.5,1.8-0.8,3.4-0.8,4.7
+                            c0,1.3,0.1,2.1,0.4,2.6c0.3,0.4,0.8,0.7,1.6,0.7C67.5,62.6,68.2,62.2,68.8,61.5z"/>
+                            <path class="white" d="M79.7,46h5.8L85,48.5c0.9-0.8,1.7-1.4,2.5-1.8c0.7-0.4,1.5-0.6,2.4-0.6s1.5,0.3,2,0.9
+                            c0.5,0.6,0.7,1.3,0.7,2.1c0,0.8-0.3,1.5-0.8,2c-0.5,0.6-1.2,0.9-2.1,0.9c-0.6,0-1-0.1-1.2-0.4s-0.4-0.7-0.5-1.2
+                            c-0.1-0.3-0.2-0.6-0.2-0.8s-0.2-0.2-0.4-0.2c-0.6,0-1,0.1-1.4,0.3s-0.9,0.6-1.5,1.2L81.2,66h-5.8L79.7,46z"/>
+                            <path class="white" d="M103.3,65.1c-0.9-0.8-1.3-1.9-1.3-3.4c0-0.6,0.1-1.3,0.2-2.1l0.3-1.6c0.1-0.5,0.2-0.9,0.2-1.5
+                            c0-1.3-0.5-1.9-1.4-1.9c-0.4,0-0.9,0.1-1.3,0.4c-0.5,0.2-1,0.6-1.6,1.1L96.3,66h-5.8l5.8-27.2l5.9-0.8l-3,14.1L107,46h4l-8,5.6
+                            c0.4-0.1,0.8-0.2,1.3-0.2c1.4,0,2.5,0.4,3.3,1.3c0.7,0.9,1.1,2,1.1,3.4c0,0.6-0.1,1.1-0.2,1.5l-0.4,2c-0.1,0.5-0.2,0.9-0.2,1.3
+                            c0,1,0.5,1.5,1.6,1.5c0.8,0,1.4-0.3,1.9-0.9c0.5-0.6,1-1.5,1.4-2.7h1.7c-1.7,4.9-4.1,7.4-7.4,7.4
+                            C105.4,66.2,104.2,65.8,103.3,65.1z"/>
+                            <path class="white" d="M114.1,65.5c-0.9-0.5-1.5-1.1-2-1.9c-0.4-0.8-0.6-1.6-0.6-2.5c0-0.9,0.2-1.6,0.6-2.3c0.4-0.7,0.9-1.1,1.5-1.4
+                            c1-1.9,1.9-3.8,2.7-5.7c0.8-1.9,1.5-4,2.2-6.2l5.9-0.8c0.1,3.4,0.4,7.1,0.7,11.1c0.1,1.6,0.2,2.8,0.2,3.5c0,0.6-0.1,1.1-0.2,1.5
+                            c1.3-0.7,2.2-1.4,2.9-2h1.7c-1.7,2-3.7,3.6-6.1,5c-0.8,0.8-1.7,1.4-2.9,1.8c-1.1,0.4-2.3,0.6-3.4,0.6C116,66.2,115,66,114.1,65.5z
+                            M118.5,62.2c0.7-0.6,1-1.5,1-2.8c0-0.8-0.1-1.9-0.2-3.4c-0.3-3-0.4-5.1-0.5-6.1c-0.6,2.1-1.7,4.6-3.2,7.6
+                            c0.6,0.3,0.9,0.8,0.9,1.4c0,0.5-0.2,1-0.5,1.4c-0.3,0.4-0.8,0.6-1.3,0.6c-0.6,0-0.9-0.2-1.1-0.5c0,1,0.2,1.7,0.6,2.1
+                            c0.4,0.5,1,0.7,1.9,0.7C117,63.1,117.9,62.8,118.5,62.2z"/>
+                            <path class="white" d="M138.9,64.9c-0.8-0.9-1.1-1.9-1.1-3.2c0-0.6,0.1-1.2,0.2-1.9c0.1-0.7,0.3-1.4,0.4-2.1
+                            c0.1-0.7,0.2-1.1,0.3-1.3c0.2-0.9,0.4-1.9,0.6-2.8c0.2-0.9,0.3-1.6,0.3-2.2c0-1.4-0.5-2-1.4-2c-0.7,0-1.3,0.3-1.8,1
+                            c-0.5,0.7-1,1.6-1.3,2.7L132.3,66h-5.8l5.8-27.2l5.9-0.8l-2.2,10.1c1.3-1.5,2.9-2.2,4.7-2.2c1.4,0,2.4,0.4,3.2,1.1
+                            c0.8,0.7,1.2,1.9,1.2,3.4c0,0.8-0.1,1.6-0.3,2.6c-0.2,0.9-0.5,2.1-0.8,3.5c-0.2,0.8-0.4,1.6-0.6,2.4c-0.2,0.8-0.3,1.4-0.3,1.9
+                            c0,0.5,0.1,0.9,0.4,1.2c0.2,0.3,0.7,0.4,1.2,0.4c0.8,0,1.4-0.3,1.9-0.9c0.5-0.6,1-1.5,1.4-2.7h1.7c-1,2.9-2.1,4.9-3.4,5.9
+                            c-1.3,1-2.6,1.5-4,1.5C140.9,66.2,139.7,65.8,138.9,64.9z"/>
+                            <path class="white" d="M149.4,64.6c-1.1-1-1.7-2.6-1.7-4.8c0-1.8,0.4-3.8,1.1-6c0.7-2.2,1.9-4.1,3.6-5.7c1.7-1.6,3.7-2.4,6.2-2.4
+                            c3.4,0,5.1,2.1,5.1,6.4v0c0.1,0,0.2,0,0.4,0c0.9,0,1.9-0.2,3-0.7c1.1-0.5,2.2-1,3.1-1.7l0.4,1.1c-0.8,0.8-1.8,1.5-3,2.1
+                            c-1.2,0.6-2.6,1-4.1,1.2c-0.2,2.4-0.8,4.5-1.6,6.4c-0.9,1.8-2,3.2-3.4,4.2c-1.4,1-2.9,1.5-4.5,1.5
+                            C152.1,66.2,150.5,65.6,149.4,64.6z M157.6,61.5c0.6-0.7,1.2-1.7,1.7-3c0.5-1.3,0.8-2.7,1-4.2c-0.7-0.2-1.1-0.7-1.1-1.7
+                            c0-1.1,0.4-1.8,1.2-2.2c-0.1-0.9-0.2-1.5-0.4-1.8c-0.2-0.3-0.6-0.5-1.1-0.5c-0.9,0-1.7,0.6-2.6,1.9c-0.8,1.3-1.5,2.8-2,4.6
+                            c-0.5,1.8-0.8,3.4-0.8,4.7c0,1.3,0.1,2.1,0.4,2.6c0.3,0.4,0.8,0.7,1.6,0.7C156.3,62.6,157,62.2,157.6,61.5z"/>
+                            <path class="white" d="M168.8,44.5h5.8l-0.6,3c1.3-1.1,2.9-1.7,4.7-1.7c1.5,0,2.7,0.5,3.6,1.5c0.9,1,1.3,2.6,1.3,4.8
+                            c0,2.1-0.3,4.2-0.9,6.4c-0.6,2.1-1.7,4-3.1,5.5c-1.5,1.5-3.4,2.3-5.8,2.3c-1.7,0-2.8-0.5-3.4-1.4l-2.1,9.8l-6,1.4L168.8,44.5z
+                            M175.6,61c0.8-1.2,1.5-2.6,1.8-4.3c0.4-1.7,0.6-3.2,0.6-4.7c0-2.2-0.7-3.3-2-3.3c-0.5,0-1,0.2-1.5,0.5s-0.9,0.8-1.3,1.4
+                            l-2.4,11.2c0.2,0.6,0.7,0.9,1.5,0.9C173.7,62.8,174.8,62.2,175.6,61z"/>
+                            <path class="white" d="M100.9,15.9c0,0,2.6,0.7,3.8-1.3c1.2-2,3.1-4.3,5.4-4.8c0,0-2.1-3-4.3-1.1
+                            C103.5,10.7,104.1,14.3,100.9,15.9z"/>
+                            <path class="white" d="M101,15.9c0,0-2.6,0.7-3.8-1.3c-1.2-2-3.1-4.3-5.4-4.8c0,0,2.1-3,4.3-1.1C98.4,10.7,97.7,14.3,101,15.9z"/>
+                            <path class="white" d="M100.9,4.5c0,1.6,2.5,4.1,2,7.8c-0.4,3-2,3.6-2,3.6s-1.6-0.7-2-3.6C98.4,8.7,100.9,6.1,100.9,4.5z"/>
+                            <path class="white" d="M91.5,14.2c-0.1-0.2-0.1-0.5,0.2-0.6c0.2-0.1,0.5-0.1,0.7,0c0.4,0.3,0.4,0.9,0.2,1.2
+                            c-0.3,0.4-0.8,0.5-1.2,0.4c-0.2-0.1-0.4-0.2-0.6-0.3c-0.2-0.2-0.3-0.4-0.3-0.6c-0.1-0.4-0.1-0.9,0.1-1.3c0.2-0.4,0.5-0.7,0.9-0.9
+                            c0.4-0.2,0.8-0.3,1.2-0.4c0.2,0,0.4,0,0.6,0c0.2,0,0.4,0,0.6,0.1c0.8,0.2,1.5,0.7,2,1.3c0.1,0.1,0.1,0.2,0.2,0.2l0.2,0.2l0.3,0.5
+                            l0.3,0.5l0.3,0.4c0.4,0.6,1,1.1,1.6,1.4c0.3,0.1,0.7,0.2,1,0.2c0.4,0,0.7-0.1,1-0.3l0,0c0,0,0.1,0,0.1,0c0,0,0,0.1,0,0.1
+                            c-0.3,0.3-0.7,0.4-1.1,0.5c-0.4,0.1-0.8,0-1.2-0.2c-0.7-0.3-1.3-0.9-1.8-1.5l-0.4-0.5l-0.3-0.5c-0.1-0.2-0.2-0.3-0.3-0.5
+                            l-0.2-0.2c-0.1-0.1-0.1-0.1-0.2-0.2c-0.5-0.5-1-1-1.7-1.2c-0.2-0.1-0.3-0.1-0.5-0.1c-0.2,0-0.3,0-0.5,0c-0.3,0-0.7,0.1-1,0.3
+                            c-0.3,0.2-0.5,0.4-0.7,0.7c-0.1,0.3-0.2,0.6-0.1,0.9c0.1,0.2,0.1,0.3,0.2,0.4c0.1,0.1,0.2,0.2,0.4,0.2c0.1,0,0.3,0.1,0.5,0
+                            c0.1,0,0.2,0,0.2-0.1c0.1,0,0.1-0.1,0.2-0.1c0.1-0.1,0.1-0.3,0.1-0.4c0-0.2-0.1-0.3-0.2-0.4c-0.1-0.1-0.3-0.1-0.4,0
+                            c-0.1,0.1-0.2,0.2-0.1,0.3c0,0,0,0.1,0,0.1C91.6,14.2,91.5,14.2,91.5,14.2L91.5,14.2z"/>
+                            <path class="white" d="M101.4,16.2c0.3,0.2,0.6,0.3,1,0.3c0.4,0,0.7-0.1,1-0.2c0.6-0.3,1.2-0.8,1.6-1.4c0.2-0.3,0.4-0.6,0.6-0.9
+                            l0.3-0.5c0.1-0.2,0.2-0.3,0.4-0.5c0.5-0.6,1.2-1.1,2-1.3c0.8-0.2,1.7-0.1,2.4,0.3c0.4,0.2,0.7,0.5,0.9,0.9c0.2,0.4,0.2,0.9,0,1.3
+                            c0,0.1-0.1,0.2-0.1,0.3c-0.1,0.1-0.1,0.2-0.2,0.3c-0.2,0.2-0.4,0.3-0.6,0.3c-0.2,0.1-0.5,0-0.7,0c-0.2-0.1-0.4-0.2-0.5-0.4
+                            c-0.3-0.4-0.2-1,0.2-1.2c0.2-0.1,0.5-0.1,0.6,0.1c0.1,0.1,0.2,0.2,0.2,0.3c0,0.1,0,0.1,0,0.2c0,0.1-0.1,0.1-0.1,0.1
+                            c0,0-0.1,0-0.1,0c0,0,0-0.1,0-0.1c0.1-0.1,0-0.3-0.1-0.3c-0.1-0.1-0.3-0.1-0.4,0c-0.1,0-0.1,0.1-0.1,0.2c0,0.1-0.1,0.1-0.1,0.2
+                            c0,0.2,0,0.3,0.1,0.4c0.1,0.1,0.2,0.2,0.4,0.2c0.2,0,0.3,0,0.5,0c0.1,0,0.3-0.1,0.4-0.2c0.1-0.1,0.1-0.1,0.1-0.2
+                            c0-0.1,0.1-0.1,0.1-0.2c0.1-0.3,0.1-0.6-0.1-0.9c-0.1-0.3-0.4-0.5-0.7-0.7c-0.6-0.3-1.3-0.4-2-0.3c-0.7,0.2-1.3,0.6-1.7,1.2
+                            c-0.2,0.3-0.4,0.6-0.6,0.9c-0.2,0.3-0.4,0.6-0.7,0.9c-0.5,0.6-1.1,1.2-1.8,1.5c-0.4,0.2-0.8,0.2-1.2,0.2c-0.4,0-0.8-0.2-1.1-0.5
+                            c0,0,0-0.1,0-0.1C101.3,16.2,101.4,16.2,101.4,16.2L101.4,16.2z"/>
+                            <path class="white" d="M91.9,14.1c0,0.1-0.1,0.2-0.2,0.2c-0.1,0-0.2-0.1-0.2-0.2c0-0.1,0.1-0.2,0.2-0.2C91.8,13.9,91.9,14,91.9,14.1
+                            z"/>
+                            <path class="white" d="M110.6,14c0,0.1-0.1,0.2-0.2,0.2c-0.1,0-0.2-0.1-0.2-0.2c0-0.1,0.1-0.2,0.2-0.2
+                            C110.5,13.8,110.6,13.9,110.6,14z"/>
+                            <path class="white" d="M41.1,23.3c-0.3,0.5-0.8,1-1.2,1.5c-0.5,0.5-1,0.9-1.5,1.3c0.4,0.4,0.7,0.8,1,1.3c0.3,0.5,0.5,1,0.7,1.5
+                            l-0.9,0.7c-0.3-0.7-0.6-1.3-1.1-1.9c-0.5-0.6-1-1.2-1.6-1.6c0.8-0.5,1.5-1,2.2-1.6c0.7-0.6,1.3-1.3,1.8-1.9L41.1,23.3z M45.1,23.3
+                            c-0.3,0.5-0.8,1-1.2,1.5c-0.5,0.5-1,0.9-1.5,1.3c0.4,0.4,0.7,0.8,1,1.3c0.3,0.5,0.5,1,0.7,1.5l-0.9,0.7c-0.3-0.7-0.6-1.3-1.1-1.9
+                            c-0.5-0.6-1-1.2-1.6-1.6c0.8-0.5,1.5-1,2.2-1.6c0.7-0.6,1.3-1.3,1.8-1.9L45.1,23.3z"/>
+                            <path class="white" d="M63.9,32h-0.7l-2.5-7.2c-0.2-0.5-0.4-1.1-0.6-1.6c-0.2-0.6-0.4-1.2-0.6-2h0c-0.2,0.7-0.4,1.4-0.6,2
+                            c-0.2,0.6-0.4,1.1-0.6,1.6L55.9,32h-0.7l-4.7-13.6h2l2.2,6.2c0.2,0.4,0.3,0.9,0.5,1.5c0.2,0.5,0.3,1.1,0.5,1.6h0
+                            c0.2-0.5,0.3-1.1,0.5-1.6c0.2-0.5,0.3-1,0.5-1.5l2.1-6.2h1.7l2.2,6.2c0.2,0.4,0.3,0.9,0.5,1.4s0.3,1.1,0.5,1.6h0
+                            c0.1-0.5,0.3-1.1,0.5-1.6c0.2-0.5,0.3-1,0.5-1.4l2.2-6.2h1.9L63.9,32z"/>
+                            <path class="white" d="M77.7,25.7c0,0.3,0,0.6-0.1,0.8l-1.1,1.1h-5.7c0,0.3,0.1,0.6,0.2,0.9c0.1,0.3,0.4,0.6,0.6,0.9s0.6,0.5,1,0.7
+                            s0.9,0.3,1.5,0.3c0.6,0,1.2-0.1,1.6-0.2s0.9-0.4,1.4-0.7l-0.5,2c-0.3,0.2-0.7,0.3-1.2,0.4S74.6,32,74,32c-0.7,0-1.3-0.1-1.9-0.4
+                            s-1.2-0.6-1.6-1c-0.5-0.4-0.8-1-1.1-1.6c-0.3-0.6-0.4-1.3-0.4-2c0-0.8,0.1-1.5,0.4-2.2s0.7-1.1,1.1-1.6s1-0.7,1.5-1
+                            c0.6-0.2,1.1-0.3,1.7-0.3c0.7,0,1.2,0.1,1.8,0.3c0.5,0.2,0.9,0.5,1.3,0.8c0.3,0.3,0.6,0.7,0.8,1.2S77.7,25.2,77.7,25.7z
+                            M75.8,25.7c0-0.2,0-0.5-0.1-0.7c-0.1-0.2-0.2-0.5-0.4-0.7c-0.2-0.2-0.4-0.4-0.7-0.5c-0.3-0.1-0.5-0.2-0.9-0.2
+                            c-0.3,0-0.6,0.1-0.9,0.2c-0.3,0.1-0.6,0.3-0.8,0.5c-0.3,0.2-0.5,0.4-0.6,0.7S71.1,25.7,71,26h4.8C75.8,25.9,75.8,25.9,75.8,25.7z"
+                            />
+                            <path class="white" d="M88.5,27c0,0.8-0.1,1.5-0.4,2.1c-0.3,0.6-0.6,1.2-1.1,1.6s-1,0.8-1.7,1C84.6,31.9,83.8,32,83,32
+                            c-0.7,0-1.4-0.1-1.9-0.3c-0.6-0.2-1-0.4-1.4-0.6V16.9h1.9v5.5c0.2-0.1,0.4-0.1,0.6-0.2s0.6-0.1,1-0.1c0.7,0,1.3,0.1,2,0.3
+                            s1.2,0.6,1.7,1c0.5,0.4,0.9,0.9,1.1,1.6C88.3,25.6,88.5,26.2,88.5,27z M86.6,27c0-0.5-0.1-1-0.3-1.4s-0.4-0.7-0.7-1
+                            c-0.3-0.3-0.7-0.5-1-0.6c-0.4-0.1-0.8-0.2-1.2-0.2c-0.4,0-0.7,0-1,0.1s-0.5,0.2-0.7,0.3v6c0.2,0.1,0.4,0.1,0.6,0.2
+                            s0.5,0.1,0.9,0.1c1.1,0,2-0.3,2.6-0.9C86.3,28.8,86.6,28,86.6,27z"/>
+                            <path class="white" d="M95.4,31.8V18.4h2.1v11.7h5.9v1.7H95.4z"/>
+                            <path class="white" d="M111.3,32c-0.3-0.1-0.6-0.2-0.8-0.4c-0.2-0.2-0.4-0.5-0.5-0.8c-0.3,0.4-0.7,0.8-1.2,0.9
+                            c-0.5,0.2-1,0.3-1.5,0.3c-0.5,0-0.9-0.1-1.3-0.2c-0.4-0.2-0.7-0.4-1-0.6c-0.3-0.3-0.5-0.6-0.6-0.9c-0.1-0.4-0.2-0.7-0.2-1.1
+                            c0-0.5,0.1-0.9,0.3-1.2c0.2-0.4,0.4-0.7,0.7-0.9c0.3-0.3,0.6-0.5,1-0.6c0.4-0.1,0.8-0.2,1.2-0.3l2.2-0.2v-0.6
+                            c0-0.4-0.1-0.8-0.4-1.1c-0.3-0.3-0.8-0.5-1.4-0.5c-0.5,0-0.9,0.1-1.4,0.2s-0.9,0.3-1.2,0.5l-0.4-1.6c0.4-0.3,0.9-0.5,1.4-0.6
+                            c0.5-0.1,1.1-0.2,1.7-0.2c0.5,0,1,0.1,1.5,0.2c0.4,0.1,0.8,0.4,1.2,0.7s0.6,0.7,0.8,1.1c0.2,0.4,0.3,0.9,0.3,1.5v3.8
+                            c0,0.4,0.1,0.8,0.3,1c0.2,0.2,0.5,0.4,0.8,0.5L111.3,32z M109.5,27.5l-1.9,0.2c-0.6,0.1-1,0.2-1.3,0.5s-0.4,0.6-0.4,1
+                            c0,0.3,0.1,0.6,0.4,0.9c0.3,0.3,0.6,0.4,0.9,0.4c0.3,0,0.5-0.1,0.8-0.2c0.3-0.1,0.5-0.3,0.7-0.5s0.4-0.4,0.5-0.7
+                            c0.1-0.3,0.2-0.5,0.2-0.8V27.5z"/>
+                            <path class="white" d="M118.3,30.9c-0.4,0.9-0.7,1.6-1.1,2.3c-0.4,0.6-0.8,1.2-1.2,1.7s-0.8,0.8-1.3,1.2c-0.4,0.3-0.9,0.6-1.3,0.8
+                            l-1.2-1.2c0.4-0.2,0.8-0.4,1.2-0.6c0.4-0.2,0.7-0.5,1-0.9c0.3-0.4,0.6-0.8,0.9-1.3c0.3-0.5,0.6-1.1,0.9-1.8l-3.5-8.7h2l1.8,4.3
+                            c0.1,0.3,0.3,0.6,0.4,1c0.1,0.4,0.3,0.7,0.4,1.1h0c0.1-0.4,0.3-0.7,0.4-1.1c0.1-0.3,0.3-0.7,0.4-1l1.8-4.4h1.8L118.3,30.9z"/>
+                            <path class="white" d="M132.8,27.1c0,0.7-0.1,1.4-0.4,2c-0.3,0.6-0.6,1.1-1.1,1.6c-0.5,0.4-1,0.8-1.6,1c-0.6,0.2-1.3,0.4-2,0.4
+                            s-1.4-0.1-2-0.4c-0.6-0.2-1.2-0.6-1.6-1s-0.8-1-1.1-1.6c-0.3-0.6-0.4-1.3-0.4-2c0-0.7,0.1-1.4,0.4-2c0.3-0.6,0.6-1.1,1.1-1.6
+                            s1-0.8,1.6-1c0.6-0.2,1.3-0.4,2-0.4s1.4,0.1,2,0.4c0.6,0.2,1.1,0.6,1.6,1c0.5,0.4,0.8,1,1.1,1.6S132.8,26.3,132.8,27.1z
+                            M130.9,27.1c0-0.5-0.1-1-0.3-1.4c-0.2-0.4-0.4-0.8-0.7-1s-0.6-0.5-1-0.7c-0.4-0.2-0.8-0.2-1.2-0.2s-0.8,0.1-1.2,0.2
+                            s-0.7,0.4-1,0.7c-0.3,0.3-0.5,0.6-0.7,1c-0.2,0.4-0.3,0.9-0.3,1.4c0,0.5,0.1,0.9,0.3,1.4c0.2,0.4,0.4,0.8,0.7,1
+                            c0.3,0.3,0.6,0.5,1,0.7s0.8,0.2,1.2,0.2s0.8-0.1,1.2-0.2c0.4-0.2,0.7-0.4,1-0.7c0.3-0.3,0.5-0.6,0.7-1
+                            C130.8,28,130.9,27.6,130.9,27.1z"/>
+                            <path class="white" d="M141.3,31.8l-0.1-0.9c-0.4,0.4-0.8,0.7-1.2,0.9c-0.4,0.2-1,0.3-1.8,0.3c-0.5,0-1-0.1-1.4-0.2
+                            c-0.4-0.2-0.8-0.4-1.1-0.7s-0.6-0.7-0.8-1.1c-0.2-0.4-0.3-0.9-0.3-1.4v-6.3h1.9v6.1c0,0.3,0,0.5,0.1,0.7c0.1,0.2,0.2,0.5,0.4,0.6
+                            c0.2,0.2,0.4,0.3,0.7,0.5c0.3,0.1,0.6,0.2,1,0.2c0.4,0,0.7-0.1,1-0.2c0.3-0.1,0.5-0.3,0.7-0.5c0.2-0.2,0.3-0.4,0.4-0.6
+                            c0.1-0.2,0.1-0.5,0.1-0.7v-6.1h1.9v9.5H141.3z"/>
+                            <path class="white" d="M151.1,23.8h-3v5.3c0,0.4,0.1,0.7,0.4,0.9c0.3,0.2,0.6,0.3,1,0.3c0.4,0,0.8,0,1-0.1l-0.4,1.7
+                            c-0.2,0.1-0.5,0.1-0.9,0.1c-0.4,0-0.8-0.1-1.2-0.2s-0.7-0.3-1-0.6c-0.3-0.2-0.5-0.5-0.7-0.9c-0.2-0.4-0.2-0.8-0.2-1.2v-5.2h-1.9
+                            v-1.5h1.9v-1.9l1.9-1v2.9h3.4L151.1,23.8z"/>
+                            <path class="white" d="M161.2,26c-0.8,0.4-1.5,1-2.2,1.6c-0.7,0.6-1.3,1.3-1.8,1.9l-0.6-0.8c0.3-0.5,0.7-1.1,1.2-1.5s1-0.9,1.5-1.3
+                            c-0.4-0.4-0.7-0.8-1.1-1.3c-0.3-0.5-0.5-1-0.7-1.5l0.9-0.7c0.2,0.7,0.6,1.3,1.1,1.9C160,25,160.6,25.5,161.2,26z M165.2,26
+                            c-0.8,0.4-1.5,1-2.2,1.6c-0.7,0.6-1.3,1.3-1.8,1.9l-0.6-0.8c0.3-0.5,0.8-1.1,1.2-1.5c0.5-0.5,1-0.9,1.5-1.3
+                            c-0.4-0.4-0.7-0.8-1-1.3s-0.5-1-0.7-1.5l0.9-0.7c0.3,0.7,0.6,1.3,1.1,1.9S164.6,25.5,165.2,26z"/>
+                            <path class="white" d="M192.8,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L192.8,72.2z"/>
+                            <path class="white" d="M190,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L190,72.2z"/>
+                            <path class="white" d="M187.2,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L187.2,72.2z"/>
+                            <path class="white" d="M184.3,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L184.3,72.2z"/>
+                            <path class="white" d="M181.5,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L181.5,72.2z"/>
+                            <path class="white" d="M178.7,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L178.7,72.2z"/>
+                            <path class="white" d="M175.8,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L175.8,72.2z"/>
+                            <path class="white" d="M173,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L173,72.2z"/>
+                            <path class="white" d="M170.1,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L170.1,72.2z"/>
+                            <path class="white" d="M167.3,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L167.3,72.2z"/>
+                            <path class="white" d="M164.5,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L164.5,72.2z"/>
+                            <path class="white" d="M161.6,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L161.6,72.2z"/>
+                            <path class="white" d="M158.8,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L158.8,72.2z"/>
+                            <path class="white" d="M156,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L156,72.2z"/>
+                            <path class="white" d="M153.1,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L153.1,72.2z"/>
+                            <path class="white" d="M150.3,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L150.3,72.2z"/>
+                            <path class="white" d="M147.5,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L147.5,72.2z"/>
+                            <path class="white" d="M144.6,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L144.6,72.2z"/>
+                            <path class="white" d="M141.8,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L141.8,72.2z"/>
+                            <path class="white" d="M139,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L139,72.2z"/>
+                            <path class="white" d="M136.1,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L136.1,72.2z"/>
+                            <path class="white" d="M133.3,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L133.3,72.2z"/>
+                            <path class="white" d="M130.5,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L130.5,72.2z"/>
+                            <path class="white" d="M127.6,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L127.6,72.2z"/>
+                            <path class="white" d="M124.8,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L124.8,72.2z"/>
+                            <path class="white" d="M122,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L122,72.2z"/>
+                            <path class="white" d="M119.1,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L119.1,72.2z"/>
+                            <path class="white" d="M116.3,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L116.3,72.2z"/>
+                            <path class="white" d="M113.5,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L113.5,72.2z"/>
+                            <path class="white" d="M110.6,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L110.6,72.2z"/>
+                            <path class="white" d="M107.8,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L107.8,72.2z"/>
+                            <path class="white" d="M105,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L105,72.2z"/>
+                            <path class="white" d="M102.1,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L102.1,72.2z"/>
+                            <path class="white" d="M99.3,72.2L99,71.9l0.5-0.5L99,70.8l0.3-0.3l0.8,0.8L99.3,72.2z"/>
+                            <path class="white" d="M96.4,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L96.4,72.2z"/>
+                            <path class="white" d="M93.6,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L93.6,72.2z"/>
+                            <path class="white" d="M90.8,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L90.8,72.2z"/>
+                            <path class="white" d="M87.9,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L87.9,72.2z"/>
+                            <path class="white" d="M85.1,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L85.1,72.2z"/>
+                            <path class="white" d="M82.3,72.2L82,71.9l0.5-0.5L82,70.8l0.3-0.3l0.8,0.8L82.3,72.2z"/>
+                            <path class="white" d="M79.4,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L79.4,72.2z"/>
+                            <path class="white" d="M76.6,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L76.6,72.2z"/>
+                            <path class="white" d="M73.8,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L73.8,72.2z"/>
+                            <path class="white" d="M70.9,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L70.9,72.2z"/>
+                            <path class="white" d="M68.1,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L68.1,72.2z"/>
+                            <path class="white" d="M65.3,72.2L65,71.9l0.5-0.5L65,70.8l0.3-0.3l0.8,0.8L65.3,72.2z"/>
+                            <path class="white" d="M62.4,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L62.4,72.2z"/>
+                            <path class="white" d="M59.6,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L59.6,72.2z"/>
+                            <path class="white" d="M56.8,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L56.8,72.2z"/>
+                            <path class="white" d="M53.9,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L53.9,72.2z"/>
+                            <path class="white" d="M51.1,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L51.1,72.2z"/>
+                            <path class="white" d="M48.3,72.2L48,71.9l0.5-0.5L48,70.8l0.3-0.3l0.8,0.8L48.3,72.2z"/>
+                            <path class="white" d="M45.4,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L45.4,72.2z"/>
+                            <path class="white" d="M42.6,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L42.6,72.2z"/>
+                            <path class="white" d="M39.8,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L39.8,72.2z"/>
+                            <path class="white" d="M36.9,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L36.9,72.2z"/>
+                            <path class="white" d="M34.1,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L34.1,72.2z"/>
+                            <path class="white" d="M31.3,72.2L31,71.9l0.5-0.5L31,70.8l0.3-0.3l0.8,0.8L31.3,72.2z"/>
+                            <path class="white" d="M28.4,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L28.4,72.2z"/>
+                            <path class="white" d="M25.6,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L25.6,72.2z"/>
+                            <path class="white" d="M22.7,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L22.7,72.2z"/>
+                            <path class="white" d="M19.9,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L19.9,72.2z"/>
+                            <path class="white" d="M17.1,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L17.1,72.2z"/>
+                            <path class="white" d="M14.2,72.2L14,71.9l0.5-0.5L14,70.8l0.3-0.3l0.8,0.8L14.2,72.2z"/>
+                            <path class="white" d="M11.4,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L11.4,72.2z"/>
+                            <path class="white" d="M8.6,72.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L8.6,72.2z"/>
+                            <path class="white" d="M113.3,12.6l0.3,0.3l-0.5,0.5l0.5,0.5l-0.3,0.3l-0.8-0.8L113.3,12.6z"/>
+                            <path class="white" d="M116.1,12.6l0.3,0.3l-0.5,0.5l0.5,0.5l-0.3,0.3l-0.8-0.8L116.1,12.6z"/>
+                            <path class="white" d="M119,12.6l0.3,0.3l-0.5,0.5l0.5,0.5l-0.3,0.3l-0.8-0.8L119,12.6z"/>
+                            <path class="white" d="M121.8,12.6l0.3,0.3l-0.5,0.5l0.5,0.5l-0.3,0.3l-0.8-0.8L121.8,12.6z"/>
+                            <path class="white" d="M124.7,12.6l0.3,0.3l-0.5,0.5l0.5,0.5l-0.3,0.3l-0.8-0.8L124.7,12.6z"/>
+                            <path class="white" d="M127.5,12.6l0.3,0.3l-0.5,0.5l0.5,0.5l-0.3,0.3l-0.8-0.8L127.5,12.6z"/>
+                            <path class="white" d="M130.3,12.6l0.3,0.3l-0.5,0.5l0.5,0.5l-0.3,0.3l-0.8-0.8L130.3,12.6z"/>
+                            <path class="white" d="M133.2,12.6l0.3,0.3l-0.5,0.5l0.5,0.5l-0.3,0.3l-0.8-0.8L133.2,12.6z"/>
+                            <path class="white" d="M136,12.6l0.3,0.3l-0.5,0.5l0.5,0.5l-0.3,0.3l-0.8-0.8L136,12.6z"/>
+                            <path class="white" d="M138.8,12.6l0.3,0.3l-0.5,0.5l0.5,0.5l-0.3,0.3l-0.8-0.8L138.8,12.6z"/>
+                            <path class="white" d="M141.7,12.6l0.3,0.3l-0.5,0.5l0.5,0.5l-0.3,0.3l-0.8-0.8L141.7,12.6z"/>
+                            <path class="white" d="M144.5,12.6l0.3,0.3l-0.5,0.5l0.5,0.5l-0.3,0.3l-0.8-0.8L144.5,12.6z"/>
+                            <path class="white" d="M147.3,12.6l0.3,0.3l-0.5,0.5l0.5,0.5l-0.3,0.3l-0.8-0.8L147.3,12.6z"/>
+                            <path class="white" d="M150.2,12.6l0.3,0.3l-0.5,0.5l0.5,0.5l-0.3,0.3l-0.8-0.8L150.2,12.6z"/>
+                            <path class="white" d="M153,12.6l0.3,0.3l-0.5,0.5l0.5,0.5l-0.3,0.3l-0.8-0.8L153,12.6z"/>
+                            <path class="white" d="M88.3,14.2L88,13.9l0.5-0.5L88,12.8l0.3-0.3l0.8,0.8L88.3,14.2z"/>
+                            <path class="white" d="M85.4,14.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L85.4,14.2z"/>
+                            <path class="white" d="M82.6,14.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L82.6,14.2z"/>
+                            <path class="white" d="M79.8,14.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L79.8,14.2z"/>
+                            <path class="white" d="M76.9,14.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L76.9,14.2z"/>
+                            <path class="white" d="M74.1,14.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L74.1,14.2z"/>
+                            <path class="white" d="M71.3,14.2L71,13.9l0.5-0.5L71,12.8l0.3-0.3l0.8,0.8L71.3,14.2z"/>
+                            <path class="white" d="M68.4,14.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L68.4,14.2z"/>
+                            <path class="white" d="M65.6,14.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L65.6,14.2z"/>
+                            <path class="white" d="M62.7,14.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L62.7,14.2z"/>
+                            <path class="white" d="M59.9,14.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L59.9,14.2z"/>
+                            <path class="white" d="M57.1,14.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L57.1,14.2z"/>
+                            <path class="white" d="M54.2,14.2L54,13.9l0.5-0.5L54,12.8l0.3-0.3l0.8,0.8L54.2,14.2z"/>
+                            <path class="white" d="M51.4,14.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L51.4,14.2z"/>
+                            <path class="white" d="M48.6,14.2l-0.3-0.3l0.5-0.5l-0.5-0.5l0.3-0.3l0.8,0.8L48.6,14.2z"/>
+                            </svg>
+                        <h6>Desarrollado por Nicolás Kolumbic</h6>
+                        <ul class="reset-list d-flex justify-content-end mt-1">
+                            <li class="mr-1">
+                                <a href="https://www.linkedin.com/in/nicolaskolumbic/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 34 34">
+                                        <title>
+                                          LinkedIn
+                                        </title>                     
+                                        <g>
+                                          <path d="M34,2.5v29A2.5,2.5,0,0,1,31.5,34H2.5A2.5,2.5,0,0,1,0,31.5V2.5A2.5,2.5,0,0,1,2.5,0h29A2.5,2.5,0,0,1,34,2.5ZM10,13H5V29h5Zm.45-5.5A2.88,2.88,0,0,0,7.59,4.6H7.5a2.9,2.9,0,0,0,0,5.8h0a2.88,2.88,0,0,0,2.95-2.81ZM29,19.28c0-4.81-3.06-6.68-6.1-6.68a5.7,5.7,0,0,0-5.06,2.58H17.7V13H13V29h5V20.49a3.32,3.32,0,0,1,3-3.58h.19c1.59,0,2.77,1,2.77,3.52V29h5Z" fill="#fff"></path>
+                                        </g>
+                                      </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/NicolasKolumbic">
+                                    <svg height="24" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                                        <path fill="#fff" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </article>
+                <article>
+                    <h5 class="footer-title">Artículos</h5>
+                    <ul class="footer-list footer-grid">
+                        <li>
+                            <a href="https://css-tricks.com/job-titles-in-the-web-industry/">Nombre de puestos en la industria web </a>
+                        </li>
+                        <li>
+                            <a href="https://developer.chrome.com/docs/devtools/">Documentación DevTools</a>
+                        </li>
+                        <li>
+                            <a href="https://css-tricks.com/almanac/selectors/f/focus-visible/">
+                                :foco-visible
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a>
+                        </li>
+                        <li>
+                            <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">A Complete Guide to Grid</a>
+                        </li>
+                        <li>
+                            <a href="https://css-tricks.com/fighting-the-space-between-inline-block-elements/"> Fighting the Space Between Inline Block Elements</a>
+                        </li>
+                        <li>
+                            <a href="https://ed.team/comunidad/explicacion-device-pixel-ratio">Expicación Device Pixel Ratio</a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#gutters">Conceptos básicos de diseño de cuadrícula</a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">El contexto de apilamiento</a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/es/docs/Learn/Accessibility/HTML">HTML: Una buena base para la accesibilidad</a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/es/docs/Web/CSS/Replaced_element">Elemento de reemplazo </a>
+                        </li>
+                        <li>
+                            <a href="https://www.zentica-global.com/es/zentica-blog/ver/elementos-reemplazados-en-html-mitos-y-realidades-6073b4e213422">Elementos Reemplazados en HTML: Mitos y Verdades </a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">
+                                Aligning Items in a Flex Container
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://runebook.dev/es/docs/css/at-rule">
+                                At-rules
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://cybmeta.com/em-y-rem">
+                                Como utilizar em y rem en CSS
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://parachutedesign.ca/blog/px-to-rem/">Why Designers Should Switch From PX to REM</a>
+                        </li>
+                        <li>
+                            <a href="https://uxdesign.cc/why-designers-should-move-from-px-to-rem-and-how-to-do-that-in-figma-c0ea23e07a15">Why designers should move from px to rem (and how to do that in Figma)</a>
+                        </li>
+                        <li>
+                            <a href="https://medium.com/@sascha.wolff/dont-use-rem-em-for-paddings-margins-and-more-94e19026b000">Don’t use rem/em for paddings, margins and more</a>
+                        </li>
+                        <li>
+                            <a href="https://medium.com/weekly-webtips/to-increase-a11y-use-rem-instead-of-px-96ee9d9dc9ad">
+                                To increase A11Y, use rem instead of px
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.aluracursos.com/blog/guia-de-unidades-en-css">
+                                Guía de unidades en css
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://keepcoding.io/blog/propiedad-flex-basis-de-flexbox/">
+                                Propiedad flex-basis de Flexbox
+                            </a>
+                        </li>
+                       
+                        <li>
+                            <a href="https://webdesign.tutsplus.com/es/tutorials/understanding-css-inheritance-inherit-initial-unset-and-revert-keywords--cms-34233">
+                                Comprendiendo la herencia en CSS (Inherit, Initial, Unset y Revert)
+                            </a>
+                        </li>
+                        <li>
+                            <a hhref="https://www.freecodecamp.org/news/css-positioning-position-absolute-and-relative/">
+                                CSS Positioning – Position Absolute and Relative Example
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.hexagonalalien.es/2016/08/7-formas-de-ocultar-elementos-con-css.html">7 formas de ocultar elementos con CSS</a>
+                        </li>
+                        <li>
+                            <a href="https://www.paradigmadigital.com/dev/diferencia-flex-basis-width/">
+                                Diferencia entre flex basis y width
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://hardzone.es/reportajes/que-es/dci-p3-gama-color-caracteristicas/">
+                                ¿Qué es DCI-P3 en monitores? ¿merece la pena para jugar?
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="https://www.imaginanet.com/blog/minmaxing-aprendiendo-vmin-y-vmax-en-css.html">
+                                MinMaxing: aprendiendo vMin y vMax en CSS
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.yunbitsoftware.com/blog/2017/06/22/viewport-units-css-que-es/">
+                                Viewport units CSS. Qué es y cómo utilizar las unidades vh, vw, vmin y vmax
+                            </a>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+          
+        </footer>
+    </div>
+   
+    
+</body>
+</html>

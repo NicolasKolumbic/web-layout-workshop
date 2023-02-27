@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'web-layout-workshop';
+    src:
+      url('fonts/web-layout-workshop.ttf?hzd2ms') format('truetype'),
+      url('fonts/web-layout-workshop.woff?hzd2ms') format('woff'),
+      url('fonts/web-layout-workshop.svg?hzd2ms#web-layout-workshop') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="wlw-"], [class*=" wlw-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'web-layout-workshop' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1.2rem;
+  }
+  
+  .wlw-mobile:before {
+    content: "\e000";
+  }
+  .wlw-laptop:before {
+    content: "\e001";
+  }
+  .wlw-desktop:before {
+    content: "\e002";
+  }
+  .wlw-tablet:before {
+    content: "\e003";
+  }
+  .wlw-phone:before {
+    content: "\e004";
+  }
+  .wlw-document:before {
+    content: "\e005";
+  }
+  .wlw-documents:before {
+    content: "\e006";
+  }
+  .wlw-search:before {
+    content: "\e007";
+  }
+  .wlw-clipboard:before {
+    content: "\e008";
+  }
+  .wlw-newspaper:before {
+    content: "\e009";
+  }
+  .wlw-browser:before {
+    content: "\e00c";
+  }
+  .wlw-picture:before {
+    content: "\e00f";
+  }
+  .wlw-video:before {
+    content: "\e011";
+  }
+  .wlw-camera:before {
+    content: "\e012";
+  }
+  .wlw-briefcase:before {
+    content: "\e015";
+  }
+  .wlw-hourglass:before {
+    content: "\e01f";
+  }
+  .wlw-puzzle:before {
+    content: "\e026";
+  }
+  .wlw-envelope:before {
+    content: "\e028";
+  }
+  .wlw-gears:before {
+    content: "\e02b";
+  }
+  .wlw-key:before {
+    content: "\e02c";
+  }
+  .wlw-paperclip:before {
+    content: "\e02d";
+  }
+  .wlw-attachment:before {
+    content: "\e02e";
+  }
+  .wlw-pencil:before {
+    content: "\e032";
+  }
+  .wlw-tools-2:before {
+    content: "\e034";
+  }
+  .wlw-caution:before {
+    content: "\e03d";
+  }
+  .wlw-profile-male:before {
+    content: "\e040";
+  }
+  .wlw-chat:before {
+    content: "\e049";
+  }
+  .wlw-heart:before {
+    content: "\e04a";
+  }
+  .wlw-cloud:before {
+    content: "\e04b";
+  }
+  .wlw-upload:before {
+    content: "\e04c";
+  }
+  .wlw-download:before {
+    content: "\e04d";
+  }
+  .wlw-global:before {
+    content: "\e052";
+  }
+  .wlw-clock:before {
+    content: "\e055";
+  }
+  .wlw-alarmclock:before {
+    content: "\e059";
+  }
+  .wlw-refresh:before {
+    content: "\e05a";
+  }
+  .wlw-happy:before {
+    content: "\e05b";
+  }
+  .wlw-sad:before {
+    content: "\e05c";
+  }
+  .wlw-linkedin:before {
+    content: "\e062";
+  }

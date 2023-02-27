@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diferencia entre em y rem</title>
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../icons.css" />
+</head>
+<style>
+
+</style>
+<body>
+    <div>
+        <p>
+            En este documento HTML cómo en la mayoría los navegadores tiene un tamaño de fuente definido por defecto, suele ser <strong>16 px</strong>. 
+            Con el objetivo de evitar ruido por otras reglas css, este ejemplo no incluye una hoja de estilos.
+        </p>
+        <div>
+            <p>
+                Este es un texto que debería tener un <code>font-size:16px</code>
+            </p>
+        </div>
+    </div>  
+    <div>
+        <p>
+            Pasado con exito el test ahora en dos ejemplos asignaremos <strong>1 em</strong> y <strong>1 rem</strong> respectivamente.
+        </p>
+        <div>
+            <p style="font-size: 1em;">
+                Este es un texto con un <strong>font-size:1em</strong> debería ser calculado a <strong>16px</strong>
+            </p>
+            <p style="font-size: 1rem;">
+                Este es un texto con un <strong>font-size:1rem</strong> debería ser calculado a <strong>16px</strong>
+            </p>
+        </div>
+    </div>
+    <div>
+        <p>
+            Por último para entender la diferencia entre <strong>em</strong> y <strong>rem</strong> inspecciones el siguiente HTML.
+        </p>
+        <div>
+            <p style="font-size: 2em;">
+                Este es un texto con un <strong>font-size:2em</strong> debería ser calculado a <strong>32px</strong>.
+                <span style="font-size: 0.75em;">Soy un pequeño <strong>span</strong> dentro del texto con un <strong>font-size:0.75em</strong></span>
+            </p>
+            <p style="font-size: 2rem;">
+                Este es un texto con un <strong>font-size:2rem</strong> debería ser calculado a <strong>32px</strong>. 
+                <span style="font-size: 0.75rem;">Soy un pequeño <strong>span</strong> dentro del texto con un <strong>font-size:0.75rem</strong></span>
+            </p>
+        </div>
+    </div>   
+</body>
+</html>

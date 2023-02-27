@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0104 | Unidades de medida</title>
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../icons.css" />
+</head>
+<body>
+    <div class="container">
+        <h1><strong>0104 |</strong> Unidades de medida</h1>
+        <hr />
+        <ul class="breadcrumbs">
+            <li>
+                <a href="../../index.html">Principal</a>    
+            </li>
+            <li>
+                ❯
+            </li>
+            <li class="active">
+                Unidades de medida
+            </li>
+        </ul>
+        <div class="content">
+            <article class="internal-navbar mt-2">
+                <section>
+                    <a href="#" class="link"><i class="wlw-attachment"></i> Unidades absolutas</a>
+                    <figure>
+                        <img src="../../images/measurement-units-absolute.png" >
+                    </figure>
+                    
+                    <p>
+                       La mayoría de las unidades absolutas están destinadas a medios impresos, objetivo que se escapa del taller, así brevemente se mencionan.
+                    </p>
+                    <ul>
+                        <li>
+                            El <strong>píxel</strong> (<code>px</code>) es la unidad de información mínima de pantalla.
+                        </li>
+                        <li>
+                            <strong>points</strong>(<code>pt</code>) está unidad se relaciona con la tipografía. 16px equivalen a 12pt.
+                        </li>
+                        <li>
+                            <strong>inches/pulgadas</strong>(<code>in</code>) Normalmente nos fijamos en estás unidades cuando queremos comprar un nuevo televisor o monitor,
+                            No suelen utilizarse en proyectos, no tienen ningún uso práctico porque podemos conseguir los mismos efectos utilizando otras unidades.
+                        </li>
+                        <li>
+                            <strong>centímetros y milímetros</strong>(<code>cm</code> y <code>mm</code>) Son medidas bastantes comunes en la vida diaria, relacionadas a la impresión. 16px es aproximadamente 0.4233cm y 4.2333 mm.
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <a href="#" class="link"><i class="wlw-attachment"></i> Unidades relativas</a>
+                    <figure>
+                        <img src="../../images/measurement-units-relative.png" >
+                    </figure>
+                    <p>
+                        Estas medidas se calculan en base a un todo, este puede ser el <strong>viewport</strong>, la unidad de píxeles de la fuente tipográfica del navegador o
+                        un porcentaje del ancho de un contenedor. Las medidas relativas están en el manual de buenas prácticas para el diseño de sitios web, <strong>Resposive Web Design</strong>
+                        hace un uso intenso de estás pero solo se describirán aquellas de las que se hace uso.
+                    </p>
+    
+                    <ul>
+                        <li>
+                            <code>em</code> viene de la tipografía, por mucho tiempo se utilizó para construir diseños adaptables. En CSS, 1em se correponde con la medida que el navegador asigna a 
+                            la fuente tipográfica, que hoy es de 16px (1em = 16px). Está relación puede cambiar, ver punto 3.
+                        </li>
+                       <li>
+                           <code>rem</code> o <strong>root em</strong> es una unidad que se presentó como alternativa a <code>em</code>, la diferencia es que 1rem equivale al valor de la propiedad <code>font-size</code> 
+                           en la raíz del documento, etiqueta <code>html</code>, <code>em</code> puede cambiar esta referencia. En el punto 3 se desarrolla con mas detalle.
+                       </li>
+                       <li>
+                           <strong>porcentaje (%)</strong> este representa la proporción de una parte con respecto a un total que se considera de dividir el total en cien.
+                        </li>
+                        <li>
+                            <strong>viewport width</strong> (<code>vw</code>), el <strong>viewport</strong> es la pantalla, entendiendo que en ese caso que con <code>width</code> nos referimos
+                            al ancho de la pantalla, restando el scroll sí es que lo hay. 1vw representa el ancho de la pantalla dividido por 100.
+                        </li>
+                        <li>
+                            <strong>viewport height</strong> (<code>vh</code>), igual al caso anterior, pero con <code>height</code> nos referimos
+                            al alto de la pantalla, restando el alto de la barra del url, los marcadores sí es que lo hay. 1vh representa el alto de la pantalla dividido por 100.
+                        </li>
+                        <li>
+                            <strong>viewport min</strong> (<code>vmin</code>), dado una resolución por ejemplo de 1024 x 768, sí definimos que es un elemento tendrá un ancho de <code>1vmin</code>, se le asignará 
+                            el resultado de la extensión menor (1024 (ancho) x 768 (alto)) dividido en 100 (7,68).
+                        </li>
+                        <li>
+                            <strong>viewport min</strong> (<code>vmax</code>), similar a la unidad anterior pero en este caso toma el máximo como total, estas unidades no son soportadas por IE y Microsoft Edge previos a la versión 16 lanzada en 2017.
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <a href="page_01.html" class="link"><i class="wlw-attachment"></i> Diferencia entre <i>rem</i> y <i>em</i></a>
+                    <p>
+                        La diferencia entre <strong>em</strong> y <strong>rem</strong> está en el origen del valor de referencia. La base que toma cada uno 
+                        para hacer los cálculos para definir un valor. En el caso de los <code>em</code> la referencia base es la etiqueta que esté por encima o 
+                        aquella que la contiene. A diferencia de <code>rem</code> el valor de referencia es posible redefinirlo dentro del árbol DOM. <code>rem</code> utiliza el 
+                        valor de referencia de la propiedad <code>font-size</code> en la etiqueta <code>html</code>.
+                    </p>
+                    <div class="d-flex">
+                        <figure class="box-img">
+                            <figcaption class="caption-img">
+                                <span>Estructura HTML con em</span> 
+                            </figcaption>
+                            <img src="../../images/unidades em.png" />
+                        </figure>
+                        <figure class="box-img">
+                            <figcaption class="caption-img">
+                                <span>Estructura HTML con rem</span> 
+                            </figcaption>
+                            <img src="../../images/unidades rem.png" />
+                        </figure>
+                    </div> 
+                </section>
+                <section>
+                    <a href="#" class="link"><i class="wlw-attachment"></i> viewport height y viewport width</a>
+                    <p>
+                        Estás medidas toman de referencia el <strong>viewport</strong>, que es básicamente la altura del área donde el monitor renderiza un documento HTML.
+                        Veamos la imagen para que quede más claro.
+                    </p>
+                    <figure class="box-img">
+                        <figcaption class="caption-img">
+                            <span>
+                                Viewport Height y Viewport Width
+                            </span>
+                        </figcaption>
+                        <img src="../../images/viewport-width-height.png">
+                    </figure>  
+                </section>
+                <section>
+                    <a href="#" class="link"><i class="wlw-attachment"></i> viewport minimum y viewport maximum</a>
+                    <p>
+                        <strong>minimum viewport</strong> toma como referencia la medida menor del <strong>viewport</strong> del dispositivo, sí la medida menor es horizontal, por ejemplo una tablet, el 100% será el ancho de la pantalla de la tablet; 
+                        sí es un monitor la medida menor se encuentra en el lado vertical.
+                    </p>
+                    <figure class="box-img">
+                        <figcaption class="caption-img">
+                            <span>
+                                Minimum Viewport <strong>(vmin)</strong> 
+                            </span>
+                        </figcaption>
+                        <img src="../../images/minimum-viewport.png">
+                    </figure> 
+                    <p>
+                        <strong>maximum viewport</strong> toma como referencia la medida mayor del <strong>viewport</strong> del dispositivo, sí la medida mayor es horizontal, por ejemplo un monitor de pc, el 100% será el ancho de la pantalla del monitor; 
+                        sí es una tablet la medida mayor se encuentra en el lado vertical.
+                    </p>
+                    <figure class="box-img">
+                        <figcaption class="caption-img">
+                            <span>
+                                Maximum Viewport <strong>(vmmax)</strong> 
+                            </span>
+                        </figcaption>
+                        <img src="../../images/maximum-viewport.png">
+                    </figure> 
+                </section>
+                
+               
+            </article>
+        </div>
+    </div>
+    <footer class="footer footer-image">
+        <div class="d-flex justify-content-between footer-image__content">
+            <div>
+                <img src="../../images/web-layout-workshop-logo.svg" />
+            </div>
+            <div class="text-right">
+                <h6>Desarrollado por Nicolás Kolumbic</h6>
+                <ul class="social-media-list">
+                    <li>
+                        <a href="https://www.linkedin.com/in/nicolaskolumbic/">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 34 34">
+                                <title>
+                                  LinkedIn
+                                </title>                     
+                                <g>
+                                  <path d="M34,2.5v29A2.5,2.5,0,0,1,31.5,34H2.5A2.5,2.5,0,0,1,0,31.5V2.5A2.5,2.5,0,0,1,2.5,0h29A2.5,2.5,0,0,1,34,2.5ZM10,13H5V29h5Zm.45-5.5A2.88,2.88,0,0,0,7.59,4.6H7.5a2.9,2.9,0,0,0,0,5.8h0a2.88,2.88,0,0,0,2.95-2.81ZM29,19.28c0-4.81-3.06-6.68-6.1-6.68a5.7,5.7,0,0,0-5.06,2.58H17.7V13H13V29h5V20.49a3.32,3.32,0,0,1,3-3.58h.19c1.59,0,2.77,1,2.77,3.52V29h5Z" fill="#fff"></path>
+                                </g>
+                              </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/NicolasKolumbic">
+                            <svg height="24" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                                <path fill="#fff" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0101 | Herramientas de Desarrollo</title>
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../icons.css" />
+    <style>
+        .reset-list{
+            counter-reset: item-number 3;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1rem;
+            width: 100%;
+        }
+
+        .btn-inspector,
+        .btn-device,
+        .btn-hover,
+        .btn-cls {
+            position: relative;
+            padding: 0 25px;
+        }
+
+        .in-text-btn:before {
+            display: block;
+            position: absolute;
+            left: 7px;
+            top: -14px;
+        }
+
+        .btn-inspector:before {
+            content: url(../../images/inspection-button.jpg);  
+        }
+
+        .btn-device:before {
+            content: url(../../images/device-button.jpg);  
+        }
+
+        .btn-hover:before {
+            content: url(../../images/hov-button.jpg);  
+        }
+
+        .btn-cls:before {
+            content: url(../../images/cls-button.jpg);  
+        }
+
+        .source-items{
+            margin-top: 3rem;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><strong>0101 |</strong> Developer Tools</h1>
+        <hr />
+        <ul class="breadcrumbs">
+            <li>
+                <a href="../../index.html">Principal</a>    
+            </li>
+            <li>
+                ❯
+            </li>
+            <li class="active">
+                Developer Tools
+            </li>
+        </ul>
+        <div class="content">
+            <h2>
+                Intoducción
+            </h2>
+            <p>
+                Todos los navegadores modernos incluyen las conocidas como <strong>Herramientas de Desarrollo</strong> o <strong>Developer Tools</strong>, 
+                este conjunto de herramientas tienen como objetivo, entre otros, ayudarnos a depurar (debugging), analizar, inspeccionar todo lo relacionado al
+                 <strong>Front-end</strong>: código <strong>HTML</strong>, <strong>CSS</strong>, <strong>Javascript</strong>,
+                 <strong>Typescript</strong>, <strong>SASS</strong> entre otros. Teniendo en cuenta el objetivo del Taller, se va a hacer
+                mención a lo relacionado a <strong>CSS</strong> y <strong>HTML</strong>.  
+            </p>
+            <aside class="comment">
+                <strong>Nota:</strong>Para los ejemplos de está sección utilizamos el sitio de <strong>Unicef</strong>. Un organismo de la Organización de las Naciones Unidas que
+                tiene como objetivo promover la defensa de los derechos de los niños, suplir sus necesidades básicas y contribuir a su desarrollo.
+                El sitio suele actualizarse  con regularidad, por lo que las capturas del sitio entre los ejemplos son diferentes.
+            </aside>
+            <h2>
+                Abrir o mostrar herramientas de desarrollo
+            </h2>
+            <p>
+                Para <strong>ocultar/mostrar</strong> las herramientas tenemos 3 opciones: Podemos presionar la tecla <strong>F12</strong>, el juego de teclas <code>ctrl</code> + <code>mayus</code> + <code>I</code> o 
+                acceder desde el navegador al menú de opciones del navegador, generalmente situado en la parte superior derecha 
+                de la interfaz del navegador, entre las opciones se encuentra el submenú <strong>More Tools</strong> o en español
+                 <strong>Más Herramientas</strong>, dentro de él, la opción <strong>Herramientas de Desarrollo</strong>. Por último es posible ingresar inspeccionando algunos elementos del sitio, para ello, click derecho sobre alguna parte del sitio; 
+                se abrirá un menú contextual y en él una lista de opciones debemos seleccionar la opción <strong>Inspeccionar</strong>.
+            </p>
+            <figure class="box-img">
+                <figcaption class="caption-img">
+                    <span>
+                        Ingresar desde el menú del navegador
+                        Sitio: <a class="link" href="https://www.unicef.org/es">
+                            <i class="wlw-global"></i>
+                            unicef
+                        </a>
+                    </span>
+                </figcaption>
+                <img src="../../images/show developers tools.jpg" class="captures" />
+            </figure>
+            <figure class="box-img">
+                <figcaption class="caption-img">
+                    <span>
+                        Ingresar inspeccionando elementos
+                    </span>
+                </figcaption>
+                <img src="../../images/show developers tools 2.jpg" class="captures" />
+            </figure>
+            <h2>
+                Anatomía de las herramientas de desarrollo
+            </h2>
+            <p>
+                La ventana <strong>Herramientas de Desarrollo</strong> en todos los navegadores tiene una apariencia similar 
+                a la siguiente imagen:
+            </p>
+            <div>
+                <figure class="m-0 mb-2">
+                    <img src="../../images/developer tool schema.png" />
+                </figure>
+                
+                <ol class="enumeratoin-list column-count-2 column-gap-2">
+                    <li>
+                        <strong>Inspector</strong><span class="in-text-btn btn-inspector"></span>: es el botón que permite inspeccionar los
+                         elementos HTML del documento; una vez presionado, este cambia
+                        a modo de inspección, notarán que el icono cambia a celeste, en ese momento se puede hacer click en algún
+                        elemento desde el <strong>HTML</strong> renderizado en el navegador, en el panel izquierdo notará el elemento HTML seleccionado y las propiedades CSS en el derecho. Puede ver una animación de la acción en la <a href="#inspection-animation" class="paragraph-link">#Herramienta de Desarrollo</a>.
+                    </li>
+                    <li><strong>Devices</strong><span class="in-text-btn btn-device"></span>: Este botón permite hacer una simulación de una aplicación en dispositivos pequeños como tabletas y teléfonos.
+                        Además es posible <strong>visualizar</strong> el documento en distintos dispositivos y emular un contexto de rendimiento de conexión.
+                        Algunas aclaraciones:
+                        e n mi experiencia, simulando una app para el dispositivo <strong>Android</strong> el simulador hace una aproximación aceptable de cómo se visualizará la aplicación
+                        en el dispositivo (en el caso de Google Chrome). En cambio, tiene falencias cuando se intenta simular desde Windows para dispositivos <strong>Apple</strong>,
+                        IPhone por ejemplo. Al final de la sección pueden ver una animación de la simulación en la <a href="#device-visualization-animation" class="paragraph-link">#Animación de visualización de dispositivos</a>.
+                    </li>
+    
+                    <li>
+                        <strong>Elements</strong>: es la pestaña donde se puede ver el <strong>diseño</strong> de la vista, el <strong>CSS</strong> y el documento <strong>HTML</strong> que el navegador está renderizando
+                        actualmente. Cuando las Herramientas de Desarrollo se abren por primera vez, está pestaña se visualiza por defecto.<a href="#elements-tab" class="paragraph-link">#Pestaña Elementos (Element Tab)</a>.
+                    </li>
+    
+                    <li>
+                        <strong>Fuentes(Source)</strong>: En esta pestaña se encuentran los archivos fuente de la página que estamos viendo 
+                        actualmente. Archivos de estilos CSS, Javascript, JSON, imágenes y otros recursos externos de estos tipos obtenidos de otros dominios.
+                        Casi al final del documento se puede ver una descripción de la pestaña<a href="#source-tab" class="paragraph-link">#Fuentes</a>.
+                    </li>
+                </ol>
+            </div>
+            <div>
+                <div id="inspection-animation" class="p-1">
+                    <div class="marked-box">
+                        <strong>Animación de Inspección (Imagen 1)</strong> 
+                    </div>
+                    <img src="../../images/inspection.gif" class="captures w-100" />
+                </div>
+                <div class="p-1">
+                    <div class="marked-box" id="device-visualization-animation">
+                        <strong>Animación de visualización de dispositivos (Imagen 2)</strong> 
+                    </div>
+                    <img src="../../images/device-inspect.gif" class="captures w-100" />
+                </div> 
+            </div>
+            <h2 id="elements-tab">
+                Pestaña Elementos
+            </h2>
+            <p>
+                La pestaña de <strong>Elementos</strong> está dividida en 2 secciones, una muestra el <strong>HTML</strong> y la otra las propiedades <strong>CSS</strong> aplicadas al elemento seleccionado del primero. También dentro del 
+                panel derecho tenemos algunas otras pestañas relacionadas a Javascript.
+            </p>
+           
+            <div>
+                <div>
+                    <figure class="box-img">
+                        <figcaption class="caption-img">
+                            <span>
+                                Areas de la pestaña
+                            </span>
+                        </figcaption>
+                        <img src="../../images/developer tool elements areas.jpg" class="captures" />
+                    </figure>  
+                    <p>
+                        En el panel izquierdo, área del HTML, podemos visualizar el documento HTML cómo un árbol de nodos donde podemos colapsarlos o expandirlos para mostrar o esconder sus nodos hijos, ir navegando entre ellos, seleccionar alguno para ver las propiedades CSS vinculadas. 
+                        También teniendo el foco en este panel, presionando <code>ctrl</code> + <code>F</code> podemos buscar una cadena de texto, etiqueta HTML o XPath (sucesión de nodos en árbol para ver el camino de un nodo padre a un hijo, ej: <strong>"/html/body/footer"</strong>).
+                    </p>
+
+                    <p>
+                        Sí hacemos click derecho sobre alguno de los nodos HTML aparece una lista desplegable con una serie de acciones para hacer sobre el nodo, en la siguiente imagen se detallan:
+                    </p>
+                    <figure class="box-img">
+                        <figcaption class="caption-img">
+                            <span>
+                                Detalles del área del HTML
+                            </span>
+                        </figcaption>
+                        <img src="../../images/developer tool html elements tab.png"  />  
+                    </figure>
+                    <div class="p-1">
+                        <ol class="enumeratoin-list column-count-3 column-gap-2">
+                            <li>
+                                <strong>Add attribute</strong> agrega un nuevo atributo HTML.
+                            </li>
+                            <li>
+                                <strong>Edit attribute</strong> edita un atributo HTML.
+                            </li>
+                            <li>
+                                <strong>Edit as HTML</strong> permite editar en tiempo real el HTML del lado del cliente.
+                            </li>
+                            <li>
+                                <strong>Duplicate element</strong> duplica el elemento seleccionado.
+                            </li>
+                            <li>
+                                <strong>Delete element</strong> elimina el elemento HTML del DOM.
+                            </li>
+                            <li>
+                                <strong>Hide element</strong> esconde el elemento HTML agregando una clase CSS.
+                            </li>
+                            <li>
+                                <strong>Force State</strong> fuerza a que un botón, por ejemplo, tenga los típicos estados de los botones (:hover, focus, etc).
+                            </li>
+                            
+                            <li>
+                                <strong>Expand Recursively</strong> Expande el nodo seleccionado y todos sus hijos.
+                            </li>
+                            <li>
+                                <strong>Collapse Children</strong> Colapsa el nodo seleccionado y todos sus hijos
+                            </li>
+                            <li class="above-ten">
+                                <strong>Capture node screenshot</strong> descarga una screenshot de una parte del diseño.
+                            </li>
+                            <li class="above-ten">
+                                <strong>Scroll into view</strong> sí el elemento está oculto del scroll navega a él.
+                            </li>
+                            <li class="above-ten">
+                                <strong>Badge settings</strong> muestra o esconde unas etiquetas que aparecen en el panel izquierdo relacionadas a ciertas cosas como Flex, Grid.
+                            </li>
+                            <li class="above-ten">
+                                <strong>Store as global variable</strong> crea una variable global temporal del elemento HTML seleccionado.
+                            </li>
+                        </ol>
+                    </div>
+                <p>
+                        En el panel derecho, donde están los estilos vinculados a ese elemento HTML seleccionado, 
+                        tenemos ordenados por <strong>precedencia</strong>, <strong>herencia</strong> y <strong>especificación</strong>, 
+                        algo que vamos a ver más adelante en otro módulo, las reglas CSS divididas 
+                        en bloque por un borde inferior.
+                </p>
+                    <figure class="box-img">
+                        <figcaption class="caption-img">
+                            <span>
+                                Detalles del área del CSS
+                            </span>
+                        </figcaption>
+                        <img src="../../images/elements CSS.png"  />  
+                    </figure>
+                </div>
+                <div class="p-1">
+                    <ol class="enumeratoin-list column-count-3 column-gap-2">
+                        <li>
+                            Las <strong>reglas CSS</strong> aplicadas al elemento HTML seleccionado desde la estructura HTML se muestran 
+                            una bajo otra. En la parte superior derecha del bloque se puede ver un link con el archivo <strong>.css</strong> que contiene la regla. Haciendo click podemos navegar hacia el archivo
+                            dentro de la pestaña <strong>Source</strong> y ver la regla concreta.
+                        </li>
+                        <li>
+                            El bloque de la parte superior es un área donde podemos definir propiedades CSS en línea, escribir en está sección implica que el navegador agregue el atributo <code>styles</code> y dentro de él agregue las propiedades CSS que definimos.
+                        </li>
+                        <li>
+                            <span class="in-text-btn btn-hover"></span><strong>:hov</strong> Al momento de inspeccionar un elemento con los estados relacionados con las <strong>seudo-clases CSS</strong> 
+                             (<code>:hover</code>, <code>:focus</code>, <code>:active</code> y <code>:visited</code>) este es muy útil.
+                            Cuando es presionado despliega una lista de checkbox con las seudo-clases y podemos chequear alguno para mantener el estado sin
+                            necesidad del mouse, y así inspeccionar el elemento con algún estado.
+                        </li>
+                        <li>
+                            El botón con el icono del signo <strong>+</strong> permite crear una nueva regla a partir del elemento HTML seleccionado, sí hacemos click en la esquina inferior derecha del botón, algo similar a una flecha, vemos un desplegable que nos da opciones para seleccionar en cual archivo podemos agregar la regla o directamente en el.
+                        </li>
+            
+                        <li>
+                            El botón <span class="in-text-btn btn-cls"></span> permite listar y agregar clases a un elemento HTML dinámicamente en el navegador, no es agregado a algún 
+                            archivo CSS. Equivale a editar el HTML y agregar el atributo <code>class</code> con una clase CSS.
+                        </li>
+                        <li>
+                            <strong>Layout, Diseño</strong> Dependiendo del navegador y el idioma lo pueden encontrar 
+                            con algunos de estos nombres. En esta pestaña se puede ver la estructura de un diseño basado
+                            <strong>Flexbox</strong> o <strong>Grid Layout</strong>, En Firefox se agrega el <strong>Box Model</strong>,
+                            <strong>(imagen 2 y 3)</strong>.
+                        </li>
+                        <li>
+                            <strong>Computed, Calculado</strong> Dependiendo del navegador y el idioma lo pueden encontrar 
+                            con algunos de estos nombres. En esta pestaña se puede ver todas las propiedades CSS aplicadas al elemento
+                            inspeccionado. La diferencia con la pestaña anterior es que en esta se verán los valores definitivos de las
+                            propiedades que están afectando al elemento HTML <strong>(imagen 1)</strong>.
+                        </li>
+                        <li>
+                            <strong>Styles, Rules o Estilos</strong>: Dependiendo del navegador y el idioma lo pueden encontrar 
+                            con algunos de estos nombres. En esta se visualizan todos los estilos aplicados al elemento inspeccionado
+                            por el navegador, alguna librería de terceros, Bootstrap por ejemplo, y las del equipo de desarrollo de la 
+                            aplicación.
+                        </li>
+                    </ol>
+                </div>                 
+            </div>
+            <h2 id="device-tab">
+                Detalles la Pestaña Calculada (Computed)
+            </h2>
+            <p>
+                La pestaña Calculado, hace referencia a los <strong>valores calculados</strong> de algunas propiedades CSS del elemento HTML seleccionado. 
+            </p>
+            <p>El porqué de esta pestaña tiene 2 respuestas : </p>
+            <ul>
+                <li>
+                    La primera es porque algunas propiedades CSS tienen como valor <strong>unidades relativas</strong> que representan una referencia, los <code>em</code>, <code>rem</code>, <code>porcentajes</code> por ejemplo. El navegador cada vez que le asignamos una medida relativa hace unos cálculos para resolver qué <strong>medida absoluta</strong> debe tener el elemento. Para nosotros esa medida es relativa pero el navegador al final del cálculo la pasa a una medida absolutas y lo renderiza en pantalla.
+                </li>
+                <li>
+                    La segunda, a una propiedad CSS de un elemento HTML se le puede aplicar varias reglas con la misma propiedad. Esto puede llevar que en la pestaña de Elementos seleccionemos uno y nos encontremos con una cantidad de reglas infernal, difícil de leer y comprender qué valor tiene una propiedad CSS. En la pestaña <strong>Calculado</strong> siempre nos va a mostrar el valor final.
+                </li>
+            </ul>
+            <div>
+                    <figure class="box-img">
+                        <figcaption class="caption-img">
+                            <span>
+                                Detalles de la pestaña Calculado (Computed)
+                            </span>
+                        </figcaption>
+                        <img src="../../images/computedTab.png" class="w-75" />
+                    </figure>
+  
+                <div class="p-1">
+                    <ol class="enumeratoin-list column-count-2 column-gap-2">
+                        <li>
+                            Las propiedades CSS siempre se muestran en relación a un elemento HTML seleccionado en el área del HTML, la sección izquierda.
+                            En la imagen se ve un elemento HTML con un fondo gris, este es el elemento seleccionado.
+                        </li>
+                        <li>
+                            En la parte superior se puede ver un gráfico con el esquema del modelo de cajas del elemento seleccionado. El elemento seleccionado 
+                            en este caso no tiene definido propiedades del modelo de caja.
+                        </li>
+                            <li>
+                                    En un <strong>color rojizo</strong> se pueden ver una lista de las propiedades CSS que están afectando al <strong>elemento HTML</strong>.
+                            </li>
+                            <li>
+                                    A la izquierda de una <strong>propiedad en ese color rojizo</strong>,
+                                    siempre que el valor de esta provenga de una hoja de estilos,
+                                    vamos a ver la lista de todas las <strong>reglas</strong> y
+                                    <strong>archivos CSS</strong> que están
+                                    afectando a la propiedad.
+                            </li>
+                            <li>
+                                    En un color rojizo semitransparente, aunque no tengamos ninguna regla o archivo CSS relacionado, vamos a ver las propiedades heredadas de un <strong>nodo HTML</strong> padre.
+                            </li>
+                             <li>
+                            Es posible filtrar las propiedades de un elemento HTML desde este campo de búsqueda.
+                        </li>
+                        <li><strong>Show all</strong>. El control por defecto está inactivo. Por defecto en está pestaña se muestran aquellas propiedades 
+                            que fueron modificadas en algún archivo de hoja de estilos incluido en el documento HTML. Sí activamos el casillero se verán todas
+                            las propiedades CSS del elemento HTML seleccionado con los valores por defecto que implementa el navegador. Ver imagen <strong>Show all, ver todas la propiedades de un elemento HTML</strong>.
+                        </li>
+                        <li>
+                            <strong>Group</strong>. Este casillero cuando está activado agrupa las propiedades relacionadas por secciones. Ver imagen a la derecha <strong>Propiedades Agrupadas</strong>
+                        </li>
+                    </ol>
+                </div>
+                
+                <div class="codepen-container">
+                    <div class="codepen"
+                      data-height="500"
+                      data-theme-id="dark"
+                      data-default-tab="result"
+                      data-user="NicolasKolumbic"
+                      data-slug-hash="abaNRML">
+                        <p class="codepen-alert">
+                            <span class="no-signal"></span>
+                            Ha ocurrido algún problema con la señal de internet. 
+                            <a href="https://codepen.io/NicolasKolumbic/pen/abaNRML">
+                                <span class="wlw-global"></span>
+                                Ejemplo de propiedades CSS calculadas
+                            </a> 
+                            desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                            en 
+                            <a href="https://codepen.io">
+                                <span class="wlw-global"></span>
+                                CodePen
+                            </a>.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="d-flex">
+                <figure class="box-img w-30">
+                    <figcaption class="caption-img">
+                        <span>
+                            Propiedades Agrupadas
+                        </span>
+                        <img src="../../images/computed tab - group.jpg" class="w-100" />
+                    </figcaption>
+                </figure>
+                <figure class="box-img w-30">
+                    <figcaption class="caption-img">
+                        <span>
+                            Show all, ver todas la propiedades de un elemento HTML
+                        </span>
+                        <img src="../../images/computed tab - show all.jpg" class="w-100" />
+                    </figcaption>
+                </figure>
+                <figure class="box-img w-30">
+                    <figcaption class="caption-img">
+                        <span>
+                           Agrupar propiedades y mostrar todas la propiedades de un elemento HTML
+                        </span>
+                        <img src="../../images/computed tab - group - show all.jpg" class="w-100" />
+                    </figcaption>
+                </figure>
+            </div>
+        
+           
+            <h2 id="device-tab">
+                Detalles del modo "Device"
+            </h2>
+            <figure class="box-img">
+                <figcaption class="caption-img">
+                    <span>Modo "Device"</span> 
+                </figcaption>
+                <img src="../../images/user agent device details.png" class="w-100" />
+            </figure>    
+            <ol class="enumeratoin-list column-count-3 column-gap-2">
+            <li>
+                    Esta es una lista desplegable de algunos dispositivos pre-configurados,
+                    podemos incluso agregar dispositivos personalizados a esta lista a nuestro local. 
+                    Sí seleccionamos <strong>responsive</strong>, <strong>Chrome</strong> nos da el
+                    control de las dimensiones de la ventana de visualización para que lo redimensionemos
+                    a nuestro parecer. En la imagen 3 se puede ver una lista 
+                    de algunas de los dispositivos preconfigurados
+            </li>
+                <li>
+                        Sí el dispositivo seleccionado es uno de la lista de <strong>pre-configurados</strong> o
+                        <strong>personalizados</strong> estos campos van a mostrar las dimensiones de él,
+                        en cambio, sí tenemos seleccionado <strong>responsive</strong> va a mostrar las dimensiones
+                        y va permitirnos editar estos campos numéricos para modificar
+                        las dimensiones píxel a píxel.
+                </li>
+                <li>
+                    Muestra en porcentaje el valor del <strong>zoom</strong>
+                </li>
+                <li>
+                    <strong>DPR(Device Pixel Ratio)</strong> es la relación entre los píxeles físicos, propios del hardware, y los píxeles CSS que no necesariamente
+                    son la misma cosa. 
+                </li>
+                <li>
+                    <strong>Device Type:</strong> El tipo de dispositivo puede ser: <strong>Mobile</strong>, <strong>Mobile no táctil</strong>, <strong>Desktop</strong> o <strong>Desktop táctil</strong>.
+                </li>
+                <li>
+                    <strong>No throttling</strong>. Son una serie de opciones que permiten emular 
+                        diferentes tipos de calidad de conexión, para activar esta emulación
+                        tenemos que seleccionar alguna y refrescar el navegador.
+                </li>
+                <li>
+                    <strong>Orientación</strong>. Este botón permite alternar entre la emulación de la orientación vertical y horizontal de un dispositivo móvil/tableta.
+                </li>
+                <li>
+                        Estas barras de colores son diferentes bloques de los <strong>Medios de Consulta (Media Queries)</strong> definidos en alguna hoja de estilos CSS, más adelante cuando veamos el módulo de <strong>Responsive Web Design</strong> vamos a retomar este tema.
+                </li>
+                     <li>
+                             Son unas reglas en píxeles para mostrar el tamaño del dispositivo.
+                     </li>
+                    <li class="above-ten">
+                            Estas barras aparecen cuando tenemos seleccionado <strong>responsive</strong>
+                            para poder alterar las dimensiones de la ventana.
+                    </li>
+                    <li class="above-ten">
+                            En el menú de opciones podemos <strong>esconder/mostrar</strong> algunas opciones anteriores,
+                            hacer un <strong>screenshot o captura de pantalla de la versión móvil
+                            de la aplicación y descargarla</strong>. <strong>Capture screenshot</strong> va hacer una captura de 
+                            lo que estamos viendo en este momento en la ventana, 
+                            <strong>Capture full size screenshot</strong> de todo el documento HTML.
+                    </li>
+            </ol>
+            <div class="d-flex">
+                <figure class="box-img">
+                    <figcaption class="caption-img">
+                        <span>
+                            Imagen 3, opciones del menú <strong>Dimensions</strong>
+                        </span>
+                    </figcaption>
+                    <img src="../../images/devices menu.jpg" class="w-100" />
+                </figure>
+                <figure class="box-img">
+                    <figcaption class="caption-img">
+                        <span>
+                            No throttling
+                        </span>
+                    </figcaption>
+                    <img src="../../images/no-throttling.jpg" class="w-100" />
+                </figure>
+            </div>
+           
+            <h2 id="source-tab">
+                Pestaña Fuentes
+            </h2>
+                                    <p>
+                    En panel izquierdo contiene una lista de todos los archivos fuente que conforman el documento HTML actual, el que estamos viendo en la pantalla.
+                    Estos archivos puede ser de tipo imagen (jpg, gif , png o svg), código Javascript, CSS, HTML o archivo de fuente tipográfica.
+                </p>
+            <figure class="box-img">
+                <figcaption class="caption-img">
+                    <span>
+                        Pestaña Fuentes
+                    </span>
+                </figcaption>
+                <img src="../../images/user agent source.png" class="w-100" />
+            </figure>
+            <ol class="enumeratoin-list source-items column-count-3 column-gap-2">
+
+                        <li>
+                                    <strong>top</strong> representa el marco del documento HTML principal.
+                        </li>
+                                                <li>
+                             El <strong>primer nivel</strong>, en este caso <strong>https://www.unicef.org/</strong>, es el <strong>origen</strong>,
+                        el dominio desde donde estamos viendo el documento HTML.       
+                        </li>
+                        <li>
+                                    El resto de <strong>niveles</strong> son recursos que carga el <strong>primer nivel</strong>, el <strong>origen</strong>. 
+                        </li>
+                        <li>
+                                    Podemos expandir los distintos directorios, recursos y navegar por ellos para investigarlos, si hacemos doble click lo abrimos en el panel derecho y quedará anclado mientras no sea cerrado.
+                        </li>
+                           <li>
+                                        El panel derecho o panel central es el área donde podemos visualizar los recursos cargados cuando los abrimos desde el panel izquierdo, estos se acumularán y cuando no quepan aparecerá un menú con los archivos abiertos ocultos.
+                           </li>
+                        <li>
+                                   Los archivos abiertos quedan en memoria y va a aparecer cada vez que entremos a la pestaña <strong>Fuentes</strong>. 
+                        </li>
+                        <li>
+                                    <strong>Botón de formateo de CSS y Javascript</strong>. Este botón permite formatear en la ventana un archivo minificado, no lo hace sobre el archivo original, es con fines visuales circunstancialmente.
+                        </li>
+              
+            </ol>
+           
+        </div>  
+    </div>
+    <footer class="footer footer-image">
+        <div class="d-flex justify-content-between footer-image__content">
+            <div>
+                <img src="../../images/web-layout-workshop-logo.svg" />
+            </div>
+            <div class="text-right">
+                <h6>Desarrollado por Nicolás Kolumbic</h6>
+                <ul class="social-media-list">
+                    <li>
+                        <a href="https://www.linkedin.com/in/nicolaskolumbic/">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 34 34">
+                                <title>
+                                  LinkedIn
+                                </title>                     
+                                <g>
+                                  <path d="M34,2.5v29A2.5,2.5,0,0,1,31.5,34H2.5A2.5,2.5,0,0,1,0,31.5V2.5A2.5,2.5,0,0,1,2.5,0h29A2.5,2.5,0,0,1,34,2.5ZM10,13H5V29h5Zm.45-5.5A2.88,2.88,0,0,0,7.59,4.6H7.5a2.9,2.9,0,0,0,0,5.8h0a2.88,2.88,0,0,0,2.95-2.81ZM29,19.28c0-4.81-3.06-6.68-6.1-6.68a5.7,5.7,0,0,0-5.06,2.58H17.7V13H13V29h5V20.49a3.32,3.32,0,0,1,3-3.58h.19c1.59,0,2.77,1,2.77,3.52V29h5Z" fill="#fff"></path>
+                                </g>
+                              </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/NicolasKolumbic">
+                            <svg height="24" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                                <path fill="#fff" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+    </footer>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</body>
+</html>
