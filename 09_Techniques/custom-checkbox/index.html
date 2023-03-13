@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalizar Checkbox</title>
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../icons.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <style>
+        .custom-checkbox {
+            display: inline-flex;
+        }
+
+        .custom-checkbox__control {
+            position: absolute;
+            clip-path: polygon(1px 1px);
+        }
+
+        .custom-checkbox__control + .custon-checkbox__icon + .custon-checkbox__icon {
+            position: absolute;
+            clip-path: polygon(1px 1px);
+        }
+
+        .custom-checkbox__control:checked + .custon-checkbox__icon {
+            position: absolute;
+            clip-path: polygon(1px 1px);
+        }
+
+        .custom-checkbox__control:checked + .custon-checkbox__icon + .custon-checkbox__icon {
+            position: static;
+            clip-path: none;
+            color: var(--aero);
+        }
+
+        .custon-checkbox__label{
+            padding-left: 0.5rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="content">
+        <label class="custom-checkbox" for="custon-checkbox-id"> 
+            <input type="checkbox" id="custon-checkbox-id" class="custom-checkbox__control">
+            <span class="material-symbols-outlined custon-checkbox__icon">
+                check_box_outline_blank
+            </span>
+            <span class="material-symbols-outlined custon-checkbox__icon">
+                check_box
+            </span>
+            <span class="custon-checkbox__label">Estás de acuerdo</span>
+        </label>
+    </div>
+   </div>
+</body>
+</html>
