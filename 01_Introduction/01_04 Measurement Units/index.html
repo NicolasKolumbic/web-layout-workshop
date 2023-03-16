@@ -32,18 +32,18 @@
                 <section>
                     <a href="#" class="link"><i class="wlw-attachment"></i> Unidades absolutas</a>
                     <figure>
-                        <img src="../../images/measurement-units-absolute.png" >
+                        <img src="../../images/measurement-units-absolute.png" class="w-100" >
                     </figure>
                     
                     <p>
-                       La mayoría de las unidades absolutas están destinadas a medios impresos, objetivo que se escapa del taller, así brevemente se mencionan.
+                       La mayoría de las unidades absolutas están destinadas a medios impresos.
                     </p>
                     <ul>
                         <li>
                             El <strong>píxel</strong> (<code>px</code>) es la unidad de información mínima de pantalla.
                         </li>
                         <li>
-                            <strong>points</strong>(<code>pt</code>) está unidad se relaciona con la tipografía. 16px equivalen a 12pt.
+                            <strong>points</strong>(<code>pt</code>) está unidad se relaciona con la tipografía, la utilizan los software editores de textos, 16px equivalen a 12pt.
                         </li>
                         <li>
                             <strong>inches/pulgadas</strong>(<code>in</code>) Normalmente nos fijamos en estás unidades cuando queremos comprar un nuevo televisor o monitor,
@@ -57,22 +57,28 @@
                 <section>
                     <a href="#" class="link"><i class="wlw-attachment"></i> Unidades relativas</a>
                     <figure>
-                        <img src="../../images/measurement-units-relative.png" >
+                        <img src="../../images/measurement-units-relative.png" class="w-100" >
                     </figure>
                     <p>
-                        Estas medidas se calculan en base a un todo, este puede ser el <strong>viewport</strong>, la unidad de píxeles de la fuente tipográfica del navegador o
-                        un porcentaje del ancho de un contenedor. Las medidas relativas están en el manual de buenas prácticas para el diseño de sitios web, <strong>Resposive Web Design</strong>
-                        hace un uso intenso de estás pero solo se describirán aquellas de las que se hace uso.
+                        Estas medidas se calculan relativas a algo, un todo, 
+                        una medida total que se utiliza como referencia para hacer los cálculos y dar como resultado un valor en
+                        píxeles.
+                    </p>
+                    <p>
+                        Puede ser el <strong>viewport</strong>, el valor de la <strong>fuente tipográfica del navegador</strong> 
+                        o un porcentaje del las <strong>dimensiones de un contenedor</strong>. 
+                        <strong>Resposive Web Design</strong> hace un uso intenso de las medidas relativas.
+
                     </p>
     
                     <ul>
                         <li>
-                            <code>em</code> viene de la tipografía, por mucho tiempo se utilizó para construir diseños adaptables. En CSS, 1em se correponde con la medida que el navegador asigna a 
+                            <code>em</code> viene de la tipografía, por mucho tiempo se utilizó para construir diseños adaptables. En CSS, 1em se corresponde con la medida que el navegador asigna a 
                             la fuente tipográfica, que hoy es de 16px (1em = 16px). Está relación puede cambiar, ver punto 3.
                         </li>
                        <li>
                            <code>rem</code> o <strong>root em</strong> es una unidad que se presentó como alternativa a <code>em</code>, la diferencia es que 1rem equivale al valor de la propiedad <code>font-size</code> 
-                           en la raíz del documento, etiqueta <code>html</code>, <code>em</code> puede cambiar esta referencia. En el punto 3 se desarrolla con mas detalle.
+                           en la raíz del documento, etiqueta <code>html</code>, <code>em</code> puede cambiar esta referencia. En el punto 3 se desarrolla con más detalle.
                        </li>
                        <li>
                            <strong>porcentaje (%)</strong> este representa la proporción de una parte con respecto a un total que se considera de dividir el total en cien.
@@ -86,11 +92,14 @@
                             al alto de la pantalla, restando el alto de la barra del url, los marcadores sí es que lo hay. 1vh representa el alto de la pantalla dividido por 100.
                         </li>
                         <li>
-                            <strong>viewport min</strong> (<code>vmin</code>), dado una resolución por ejemplo de 1024 x 768, sí definimos que es un elemento tendrá un ancho de <code>1vmin</code>, se le asignará 
-                            el resultado de la extensión menor (1024 (ancho) x 768 (alto)) dividido en 100 (7,68).
+                            <strong>viewport min</strong> (<code>vmin</code>), dado una <strong>resolución X</strong>,
+                            de 1024 x 768 por ejemplo, 
+                            sí definimos que es un elemento tendrá un ancho de <strong>1vmin</strong>,
+                            su valor va ser la medida menor, en este caso el alto de 768px, dividido en 100 (7,68px).
+
                         </li>
                         <li>
-                            <strong>viewport min</strong> (<code>vmax</code>), similar a la unidad anterior pero en este caso toma el máximo como total, estas unidades no son soportadas por IE y Microsoft Edge previos a la versión 16 lanzada en 2017.
+                            <strong>viewport min</strong> (<code>vmax</code>), similar a la unidad anterior pero en este caso toma la <strong>medida máxima como total</strong>.
                         </li>
                     </ul>
                 </section>
@@ -135,8 +144,10 @@
                 <section>
                     <a href="page_03.html" class="link"><i class="wlw-attachment"></i> viewport minimum y viewport maximum</a>
                     <p>
-                        <strong>minimum viewport</strong> toma como referencia la medida menor del <strong>viewport</strong> del dispositivo, sí la medida menor es horizontal, por ejemplo una tablet, el 100% será el ancho de la pantalla de la tablet; 
-                        sí es un monitor la medida menor se encuentra en el lado vertical.
+                        <strong>minimum viewport</strong> toma como referencia la medida menor del <strong>viewport</strong> 
+                        del dispositivo, sí la medida menor es horizontal, por ejemplo una tablet, el <strong>100vmin (equivale al 100%)</strong>
+                        será el ancho de la pantalla de la tablet; 
+                        es un monitor de pc de escritorio panorámico, la medida menor se encuentra en el lado vertical.
                     </p>
                     <figure class="box-img">
                         <figcaption class="caption-img">
@@ -147,8 +158,10 @@
                         <img src="../../images/minimum-viewport.png">
                     </figure> 
                     <p>
-                        <strong>maximum viewport</strong> toma como referencia la medida mayor del <strong>viewport</strong> del dispositivo, sí la medida mayor es horizontal, por ejemplo un monitor de pc, el 100% será el ancho de la pantalla del monitor; 
-                        sí es una tablet la medida mayor se encuentra en el lado vertical.
+                        <strong>maximum viewport</strong> toma como referencia la medida mayor del <strong>viewport</strong> del dispositivo,
+                        sí la medida mayor es horizontal, por ejemplo un monitor de pc, el <strong>100vmax (equivale al 100%)</strong> 
+                        será el ancho de la pantalla del monitor; 
+                        sí la medida mayor es horizontal, por ejemplo un monitor de pc, el 100% será el ancho de la pantalla del monitor.
                     </p>
                     <figure class="box-img">
                         <figcaption class="caption-img">
