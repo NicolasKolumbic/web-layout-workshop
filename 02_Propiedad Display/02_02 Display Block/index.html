@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0202 | Los elementos en bloque, display:block</title>
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../icons.css" />
+   
+</head>
+<body>
+    <div class="container">
+        <h1><strong>0202 |</strong> Los elementos en bloque, <strong><i>display:block</i></strong></h1>
+        <hr />
+        <ul class="breadcrumbs">
+          <li>
+              <a href="../../index.html">Principal</a>    
+          </li>
+          <li>
+              ❯
+          </li>
+          <li class="active">
+              Los elementos en bloque, <i>display:block</i>
+          </li>
+        </ul>
+        <div class="content">
+          <h2>Características</h2>
+      
+          <article class="internal-navbar">
+              <section>
+                  <a href="page_01.html" class="link"><i class="wlw-attachment"></i> Características 1</a>
+                  
+                  <p>
+                            Los <strong>elementos en bloque</strong> ocupan todo el ancho disponible del 
+                            contenedor y el alto de un elemento en bloque se ajustará a su contenido,
+                                el <code>div</code> es un <strong>elemento en bloque</strong> por ejemplo.
+              En el árbol de un documento HTML, el contenedor principal de todo
+                    su contenido es el <code>body</code>. 
+                  </p>
+  
+                  <div class="codepen-container">
+                    <div class="codepen"
+                      data-height="500"
+                      data-theme-id="dark"
+                      data-default-tab="result"
+                      data-user="NicolasKolumbic"
+                      data-slug-hash="JjyRpPm">
+                        <p class="codepen-alert">
+                            <span class="no-signal"></span>
+                            Ha ocurrido algún problema con la señal de internet. 
+                            <a href="https://codepen.io/NicolasKolumbic/pen/JjyRpPm">
+                                <span class="wlw-global"></span>
+                                Características 1
+                            </a> 
+                            desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                            en 
+                            <a href="https://codepen.io">
+                                <span class="wlw-global"></span>
+                                CodePen
+                            </a>.
+                        </p>
+                    </div>
+                </div>
+              </section>
+              <section>
+                <a href="page_02.html" class="link"><i class="wlw-attachment"></i> Características 2</a>
+                <p>
+                  A un <strong>elemento en bloque</strong> se les puede definir un ancho, cuando lo 
+              hacemos, el modelo de caja se ajustará a ese ancho, pero aun así no permitirá
+                  que los elementos previos o siguientes se acomoden a sus lados. Este comportamiento determina tengan o no definido el ancho, no permitirá que se puedan ubicar más de un elemento en la misma línea.
+                </p>
+
+                <div class="codepen-container">
+                  <div class="codepen"
+                    data-height="500"
+                    data-theme-id="dark"
+                    data-default-tab="result"
+                    data-user="NicolasKolumbic"
+                    data-slug-hash="OJjRQMM">
+                      <p class="codepen-alert">
+                          <span class="no-signal"></span>
+                          Ha ocurrido algún problema con la señal de internet. 
+                          <a href="https://codepen.io/NicolasKolumbic/pen/OJjRQMM">
+                              <span class="wlw-global"></span>
+                              Características 2
+                          </a> 
+                          desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                          en 
+                          <a href="https://codepen.io">
+                              <span class="wlw-global"></span>
+                              CodePen
+                          </a>.
+                      </p>
+                  </div>
+              </div>
+              </section>
+ 
+              <section>
+                <a href="page_03.html" class="link"><i class="wlw-attachment"></i> La propiedad box-sizing y los elementos en bloque</a>
+                <p>
+                  La propiedad <code>box-sizing</code> controla cómo se comporta el <strong>Modelo de Caja</strong> en relación a las propiedades que lo conforman
+                              (<code>padding</code>,<code>margin</code>,<code>border</code>,<code>width</code>,<code>height</code>).
+                  El valor por defecto de esta propiedad es <code>content-box</code>, de está forma si a un
+                  elemento de bloque en un escenario donde este tiene definido un ancho y alto le agregamos <strong>relleno</strong> <code>padding</code> y/o <strong>bordes</strong> (<code>border</code>), estos valores 
+                  se sumarán al ancho y alto desde el borde exterior. Sin embargo, sí cambiamos el valor de esta propiedad a <code>border-box</code> los bordes y relleno serán parte del ancho/alto total del elemento definido por <code>width</code> y <code>height</code>. 
+                </p>
+  
+                <div class="codepen-container">
+                  <div class="codepen"
+                    data-height="500"
+                    data-theme-id="dark"
+                    data-default-tab="result"
+                    data-user="NicolasKolumbic"
+                    data-slug-hash="GRxqWoY">
+                      <p class="codepen-alert">
+                          <span class="no-signal"></span>
+                          Ha ocurrido algún problema con la señal de internet. 
+                          <a href="https://codepen.io/NicolasKolumbic/pen/GRxqWoY">
+                              <span class="wlw-global"></span>
+                              Características 3
+                          </a> 
+                          desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                          en 
+                          <a href="https://codepen.io">
+                              <span class="wlw-global"></span>
+                              CodePen
+                          </a>.
+                      </p>
+                  </div>
+              </div>
+              </section>
+              <section>
+                <a href="page_04.html" class="link"><i class="wlw-attachment"></i>El valor auto y los elementos en bloque</a>
+                <p>
+                            De las propiedades del <strong>modelo de caja</strong> solo <code>height</code>, <code>width</code> y <code>margin</code> puede recibir el valor <code>auto</code>.
+                            Una técnica común es la de centrar un elemento en bloque horizontalmente asignando 
+                            la clave <code>auto</code> a los márgenes laterales y un ancho menor al contenedor al elemento.
+                            En el caso de los márgenes, asignarle el valor <code>auto</code> tendrá como resultado que el navegador tome medida de su contenedor menos el ancho del elemento 
+                            dividido a cada margen en la misma orientación (<code>margin-left</code>,<code>margin-right</code> y <code>margin-top</code>,<code>margin-bottom</code>)
+                            con el valor <code>auto</code>. En el caso de <code>width</code> el elemento se expanderá al ancho de contenedor, <code>height</code> por su parte se ajustará a su contenido.
+                </p>
+
+                <div class="codepen-container">
+                  <div class="codepen"
+                    data-height="500"
+                    data-theme-id="dark"
+                    data-default-tab="result"
+                    data-user="NicolasKolumbic"
+                    data-slug-hash="MWVepjy">
+                      <p class="codepen-alert">
+                          <span class="no-signal"></span>
+                          Ha ocurrido algún problema con la señal de internet. 
+                          <a href="https://codepen.io/NicolasKolumbic/pen/MWVepjy">
+                              <span class="wlw-global"></span>
+                              El valor auto y los elementos en bloque
+                          </a> 
+                          desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                          en 
+                          <a href="https://codepen.io">
+                              <span class="wlw-global"></span>
+                              CodePen
+                          </a>.
+                      </p>
+                  </div>
+              </div>
+                
+              </section>
+              <section>
+                <a href="page_05.html" class="link"><i class="wlw-attachment"></i>Los márgenes negativos y los elementos en bloque</a>
+                <p>
+                   Cuando se les asigna valores negativos a los márgenes suceden cosas curiosas. 
+                   Horizontalmente cuando incluimos márgenes negativos el elemento no se mueve en sentido contrario al cual se le define, 
+                   sí no que se expande tanto como el valor negativo lo indique.
+                </p>  
+
+                <div class="codepen-container">
+                  <div class="codepen"
+                    data-height="500"
+                    data-theme-id="dark"
+                    data-default-tab="result"
+                    data-user="NicolasKolumbic"
+                    data-slug-hash="oNqLZZq">
+                      <p class="codepen-alert">
+                          <span class="no-signal"></span>
+                          Ha ocurrido algún problema con la señal de internet. 
+                          <a href="https://codepen.io/NicolasKolumbic/pen/oNqLZZq">
+                              <span class="wlw-global"></span>
+                              Los márgenes negativos y los elementos en bloque
+                          </a> 
+                          desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                          en 
+                          <a href="https://codepen.io">
+                              <span class="wlw-global"></span>
+                              CodePen
+                          </a>.
+                      </p>
+                  </div>
+              </div>
+              </section>
+              <section>
+                <a href="page_06.html" class="link"><i class="wlw-attachment"></i>Los elementos reemplazados </a>
+                <p>
+                  No he encontrado un elemento reemplazado en bloque por defecto, pero es posible cambiar la visualización de una imagen,
+                  que por defecto es un elemento en línea, a bloque. Las imágenes o videos tienen un ancho intrínseco, dado por su medida original
+                  en píxeles. Una vez modificada la propiedad <code>display</code> la imagen se comportará como un elemento <strong>en bloque</strong>
+                </p>
+                <div class="codepen-container">
+                  <div class="codepen"
+                    data-height="500"
+                    data-theme-id="dark"
+                    data-default-tab="result"
+                    data-user="NicolasKolumbic"
+                    data-slug-hash="gOeMmXE">
+                      <p class="codepen-alert">
+                          <span class="no-signal"></span>
+                          Ha ocurrido algún problema con la señal de internet. 
+                          <a href="https://codepen.io/NicolasKolumbic/pen/gOeMmXE">
+                              <span class="wlw-global"></span>
+                              Los elementos reemplazados
+                          </a> 
+                          desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                          en 
+                          <a href="https://codepen.io">
+                              <span class="wlw-global"></span>
+                              CodePen
+                          </a>.
+                      </p>
+                  </div>
+              </div>  
+              </section>
+          </article>
+        </div>
+    </div>
+    <footer class="footer footer-image">
+      <div class="d-flex justify-content-between footer-image__content">
+          <div>
+            <img src="../../images/web-layout-workshop-logo.svg" />
+          </div>
+          <div class="text-right">
+              <h6>Desarrollado por Nicolás Kolumbic</h6>
+              <ul class="social-media-list">
+                  <li>
+                      <a href="https://www.linkedin.com/in/nicolaskolumbic/">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 34 34">
+                              <title>
+                                LinkedIn
+                              </title>                     
+                              <g>
+                                <path d="M34,2.5v29A2.5,2.5,0,0,1,31.5,34H2.5A2.5,2.5,0,0,1,0,31.5V2.5A2.5,2.5,0,0,1,2.5,0h29A2.5,2.5,0,0,1,34,2.5ZM10,13H5V29h5Zm.45-5.5A2.88,2.88,0,0,0,7.59,4.6H7.5a2.9,2.9,0,0,0,0,5.8h0a2.88,2.88,0,0,0,2.95-2.81ZM29,19.28c0-4.81-3.06-6.68-6.1-6.68a5.7,5.7,0,0,0-5.06,2.58H17.7V13H13V29h5V20.49a3.32,3.32,0,0,1,3-3.58h.19c1.59,0,2.77,1,2.77,3.52V29h5Z" fill="#fff"></path>
+                              </g>
+                            </svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://github.com/NicolasKolumbic">
+                          <svg height="24" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                              <path fill="#fff" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                          </svg>
+                      </a>
+                  </li>
+                  <li>
+                    <a href="https://runebook.dev/es/docs/css/replaced_element">
+                      Replaced elements 
+                    </a>
+                  </li>
+              </ul>
+          </div> 
+      </div>
+  </footer>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</body>
+</html>

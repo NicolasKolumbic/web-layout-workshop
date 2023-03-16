@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Característica 1</title>
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../icons.css" />
+    <style>
+        .control {
+            display: none;
+        }
+
+        .checked {
+            display: none;
+            color: var(--aero);
+            font-weight: 600;
+        }
+
+        .unchecked {
+            font-weight: 600;
+        }
+
+        input.control:checked ~ span.checked {
+            display: inline-block;
+        }
+
+        input.control:checked ~ span.unchecked {
+            display: none;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="p-1">
+        <label class="input-checkbox" for="veggie">
+            veggie :
+            <input type="checkbox" id="veggie" class="control" />
+            <span class="checked">checked!</span>
+            <span class="unchecked">unchecked</span>
+        </label>
+        </div>
+    </div>
+   
+</body>
+</html>

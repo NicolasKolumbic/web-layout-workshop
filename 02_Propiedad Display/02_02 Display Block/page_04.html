@@ -1,0 +1,82 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regla 2</title>
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../icons.css" />
+    <style>
+        .sp-1 {
+            background-color: rgba(3, 169, 244,0.5);
+            border: 1px solid #333;
+            padding: 10px;
+            width: 240px;
+        }
+
+        .width-auto {
+            width: auto;
+        }
+
+        .width-300 {
+            width: 300px;
+        }
+
+        .margin-left-auto {
+            margin-left: auto;
+        }
+
+        .margin-right-auto {
+            margin-right: auto;
+        }
+
+        .margin-left-100 {
+            margin-left: 100px;
+        }
+
+        .margin-right-100 {
+            margin-right: 100px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="p-1">
+        <div class="sample">
+            <div class="sp-1 width-300 margin-right-auto margin-left-auto">
+                Soy un elemento en bloque centrado horizontalmente con los laterales establecidos en auto.
+                <strong>{width:300px; margin-left:auto; margin-right:auto}</strong>
+            </div>
+        </div>
+        <p>
+            En la <strong>dirección de lectura latina</strong>, sí configuramos un ancho de 300px, margen izquierdo con 100px y 
+            el margen derecho en <strong>auto</strong>, el navegador calculará este con el ancho disponible menos
+            los 300px del elemento, menos los 100px del lado izquierdo. Se puede comprobar en la pestaña <strong>Calculado</strong> de las
+            <strong>Herramientas de Desarrollo</strong>.
+        </p>
+        <div class="sample">
+            <div class="sp-1 width-300 margin-right-auto margin-left-100">
+                Soy un elemento en bloque.
+                <strong>{width:300px; margin-left:100px; margin-right:auto}</strong>
+            </div>
+        </div>
+        <p>
+            Sí definimos ambos margenes con 100px, el navegador calculará el margen derecho como si estuviera en <strong>auto</strong>
+        </p>
+        <div class="sample">
+            <div class="sp-1 width-300 margin-right-100 margin-left-100">
+                Soy un elemento en bloque.
+                <strong>{width:300px; margin-left:100px; margin-right:100px}</strong>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
