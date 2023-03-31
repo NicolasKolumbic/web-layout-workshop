@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tu lugar en el mundo</title>
+    <link href="../styles.css" rel="stylesheet" />
+</head>
+<style>
+    html {
+        height: 100%;
+    }
+
+    body {
+        height: 100%;
+        margin:0;
+    }
+
+    .flex-wrapper {
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        height: 100%;
+    }
+
+    header {
+        height: 100px;
+        background-color: #5eb1bfff;
+    }
+
+    footer {
+        height: 100px;
+        background-color: #5eb1bfff;
+    }
+
+    .content {
+        /*flex: 1 1 auto;*/
+    }
+
+    .content__scrollbars {
+        overflow-y: auto;
+    }
+
+</style>
+<body>
+    <div class="flex-wrapper">
+        <header>
+            <h1>Encabezado</h1>
+        </header>
+        <div class="content">
+            <div class="content__scrollbars">
+                <h2>Contenido</h2>
+            </div>
+            
+          
+        </div>
+        <footer>
+            <h1>Pie de Página</h1>
+        </footer>
+    </div>
+</body>
+</html>
