@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio transversal y extensión transversal</title>
+    <link rel="shortcut icon" href="../../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css" />
+    <link rel="stylesheet" href="../../../icons.css" />
+    <style>
+
+        .flex-container {
+            display: flex;
+            background-color: rgba(7, 165, 46, 0.5);
+            border: 5px solid rgba(134, 134, 134, 0.5);
+            height: 400px;
+            width: 500px;
+        }
+
+        .flex-container div {
+            border: 5px solid rgba(230, 174, 111,1);
+            background-color: rgba(77, 133, 218, 1);
+            color: white;
+        }
+
+        .w-100 {
+            width: 100px;
+        }
+
+        .boxes {
+            padding: 1rem;
+            width: 45%;
+        }
+    </style>
+</head>
+<body>
+
+        <p>
+            En todos lo ejemplo el <strong>contenedor flexible</strong> tiene un alto y alto
+            de 400px.
+        </p>
+        <div class="d-flex row-wrap">
+            <div class="boxes">
+                <p>Valor por defecto: <code>stretch(normal)</code>.</p>
+                <div class="flex-container" style="align-items: stretch;">
+                    <div>
+                        Flex Item
+                    </div>
+                    <div>
+                        Flex Item
+                    </div>
+                    <div>
+                        Flex Item
+                    </div>
+                </div>
+            </div>
+    
+            <div class="boxes">
+                <p>Valor por defecto: <code>stretch(normal)</code> con diferentes extensión de contenido en <strong>elementos flexibles</strong>.</p>
+                <div class="flex-container" style="align-items: stretch;">
+                    <div class="w-100">Flex Item 1 - Flex Item 1 </div>
+                    <div class="w-100">Flex Item 2 - Flex Item 2 - Flex Item 2 - Flex Item 2 - Flex Item 2 - Flex Item 2</div>
+                    <div class="w-100">Flex Item 3 - Flex Item 3 - Flex Item 3 - Flex Item 3 - Flex Item 3 - Flex Item 3 - Flex Item 3 - Flex Item 3 - Flex Item 3 - Flex Item 3</div>
+                </div>
+            </div>
+    
+            <div class="boxes">
+                <p>
+                    <code>baseline</code>. Utiliza la línea base de la caja de texto. En este ejemplo 
+                    tenemos 3 <strong>elementos flexibles</strong> con diferentes interlineados y tamaño de fuentes
+                    para que el efecto sea vistoso.
+                </p>
+                <div class="flex-container" style="align-items: baseline;">
+                    <div style="line-height: 1; font-size: 1.5rem;">
+                        Flex Item
+                    </div>
+                    <div style="line-height: 2; font-size: 3rem;">
+                        Flex Item
+                    </div>
+                    <div style="line-height: 3;">
+                        Flex Item
+                    </div>
+                </div>
+            </div>
+    
+            <div class="boxes">
+                <p>
+                    <code>baseline</code>. Similar ejemplo al anterior pero con una extensión de contenido mayor.
+                </p>
+                <div class="flex-container" style="align-items: baseline;">
+                    <div  style="line-height: 1; font-size: 1.5rem;">Flex Item 1 - Flex Item 1 </div>
+                    <div  style="line-height: 2; font-size: 3rem;">Flex Item 2 - Flex Item 2 - Flex Item 2 - Flex Item 2</div>
+                    <div  style="line-height: 3;">Flex Item 3 - Flex Item 3 - Flex Item 3 - Flex Item 3 - Flex Item 3 - Flex Item 3 - Flex Item 3 - Flex Item 3 - Flex Item 3 - Flex Item 3</div>
+                </div>
+            </div>
+    
+            <div class="boxes">
+                <p>
+                    <code>center</code>. Lo centra verticalmente en el <strong>contenedor flexible</strong>
+                </p>
+                <div class="flex-container" style="align-items: center;">
+                    <div>
+                        Flex Item 
+                    </div>
+                    <div>
+                        Flex Item 
+                    </div>
+                    <div>
+                        Flex Item 
+                    </div>
+                </div>
+            </div>
+    
+            <div class="boxes">
+                <p>
+                    <code>center</code>. Lo centra verticalmente en el <strong>contenedor flexible</strong>
+                </p>
+                <div class="flex-container" style="align-items: center;">
+                    <div class="w-100">
+                        Flex Item 
+                    </div>
+                    <div class="w-100">
+                        Flex Item - Flex Item - Flex Item - Flex Item - Flex Item 
+                    </div>
+                    <div class="w-100">
+                        Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item 
+                    </div>
+                </div>
+            </div>
+    
+            <div class="boxes">
+                <p>
+                    <code>flex-start</code>. Ubica los <strong>elementos flexibles</strong>
+                    en el <strong>inicio transversal (cross-start)</strong> del <strong>contenedor flexible</strong>.
+                </p>
+                <div class="flex-container" style="align-items: flex-start;">
+                    <div>
+                        Flex Item
+                    </div>
+                    <div>
+                        Flex Item
+                    </div>
+                    <div>
+                        Flex Item
+                    </div>
+                </div>
+            </div>
+    
+            <div class="boxes">
+                <p>
+                    <code>flex-start</code>. Similar al anterior con más contenido.
+                </p>
+                <div class="flex-container" style="align-items: flex-start;">
+                    <div class="w-100">
+                        Flex Item 
+                    </div>
+                    <div class="w-100">
+                        Flex Item - Flex Item - Flex Item - Flex Item - Flex Item 
+                    </div>
+                    <div class="w-100">
+                        Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item 
+                    </div>
+                </div>
+            </div>
+    
+            <div class="boxes">
+                <p>
+                    <code>flex-end</code>. Ubica los <strong>elementos flexibles</strong>
+                    en la <strong>extensión transversal (cross-start)</strong> del <strong>contenedor flexible</strong>.
+                </p>
+                <div class="flex-container" style="align-items: flex-end;">
+                    <div>
+                        Flex Item
+                    </div>
+                    <div>
+                        Flex Item
+                    </div>
+                    <div>
+                        Flex Item
+                    </div>
+                </div>
+            </div>
+    
+            <div class="boxes">
+                <p>
+                    <code>flex-end</code>. Similar al anterior con más contenido..
+                </p>
+                <div class="flex-container" style="align-items: flex-end;">
+                    <div class="w-100">
+                        Flex Item 
+                    </div>
+                    <div class="w-100">
+                        Flex Item - Flex Item - Flex Item - Flex Item - Flex Item 
+                    </div>
+                    <div class="w-100">
+                        Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item - Flex Item 
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

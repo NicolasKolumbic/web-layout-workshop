@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0301 | Introducción a display:flex y display:inline-flex</title>
+    <link rel="shortcut icon" href="../../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css" />
+    <link rel="stylesheet" href="../../../icons.css" />
+</head>
+<body>
+    <div class="container">
+        <h1><strong>0301 |</strong> Introducción a <strong><i>display:flex</i></strong>  y <strong><i>display:inline-flex</i></strong></h1>
+        <hr />
+        <ul class="breadcrumbs">
+            <li>
+                <a href="../../../index.html">Principal</a>    
+            </li>
+            <li>
+                ❯
+            </li>
+            <li class="active">
+                Introducción a <strong><i>display:flex</i></strong>  y <strong><i>display:inline-flex</i></strong>
+            </li>
+        </ul>
+        <div class="content">
+            <h2>Introducción</h2>
+            <p>
+                Tiempo atrás crear estructuras complejas con CSS y HTML era un dolor de cabeza, además teníamos que luchar con lo que se comentaba como <strong>La guerra de Navegadores</strong>, donde 
+                cada uno, <strong>Internet Explorer</strong>, <strong>Firefox</strong>, <strong>Chrome</strong> y el resto tenía una interpretación propia de los estándares. 
+                Cada diseño web conllevaba unos estilos personalizados
+                para cada motor del navegador. Por suerte esto quedó atrás, y surgieron en los últimos años técnicas que facilitaron el armado de estructuras complejas. 
+            </p>
+            <p>
+                Un problema típico que recuerdo eran aquellos diseños donde teníamos columnas con diferentes alturas, en esos tiempos se utilizaba la
+                propiedad <code>float</code> en abundancia para encolumnar <code>div</code>. La siguiente imagen, por si no queda claro, es un ejemplo de lo que estamos comentando.
+            </p>
+            <div class="d-flex">
+                <figure class="box-img">
+                    <figcaption class="caption-img">
+                        <span>Objetivo del diseño</span>
+                    </figcaption>
+                    <img src="../../../images/diferent-height_1.jpg" class="captures" />
+                </figure>
+                <figure class="box-img">
+                    <figcaption class="caption-img">
+                        <span>Resultado real y problema</span>
+                    </figcaption>
+                    <img src="../../../images/diferent-height_2.jpg" class="captures" />
+                </figure>
+            </div>
+            <p>
+                El <strong>objetivo</strong> era tener 3 columnas con la misma altura, para ello utilizábamos la propiedad <code>float</code>, está propiedad
+                rompe el comportamiento del elemento en bloque, afectando al contenedor que se ajusta al alto y ancho del contenido, con lo que las alturas de las columnas eran diferentes
+                en relación al contenido, más adelante veremos que <strong>Flexbox</strong> resuelve este problema con una pocas líneas.
+            </p>
+            <h2>Introducción a Flexbox</h2>
+            <p>
+                <strong>Flexbox Layout Module</strong> o solo <strong>Flexbox</strong> es un módulo que consta de un sistema de propiedades con el objetivo de gestionar cómo
+                 distribuir el espacio, alinear el contenido y ordenar visualmente en la pantalla, afectando la apariencia y estirando, encogiendo, reorganizando y alterando
+                  elementos 
+                dentro del flujo del contenedor. El contenido puede distribuirse a lo largo de un solo eje o envolverse en varias líneas, puede crecer para adaptarse a todo
+                 el espacio disponible o reducirse para encajar en su contenedor.
+            </p>
+            <p>
+                <strong>Flexbox funciona en un sistema de ejes</strong>. Cuando configuramos un elemento para que se presente como una caja flexible, solo afectará a sus hijos directos, los del primer nivel, y no a los descendientes posteriores.
+                Estos elementos secundarios siguen las reglas de Flexbox para el diseño en lugar de las reglas del modelo de caja estándar (nos referimos los elementos en bloque (display:block), en línea, etc...).
+            </p>
+            <p>
+                Flexbox es estable en escenarios como el caso de contenido que es generado dinámicamente,
+                es fácil reorganizar visualmente el contenido sin afectar el <strong>marcado HTML</strong> y la apariencia del
+                 contenido puede ser independiente del orden de origen.
+            </p>
+            <p>
+                Las propiedades CSS <code>column-*</code>, los selectores <code>::first-line</code> y <code>::first-letter</code> no se aplican cuando se trata del contenedor flexible y los márgenes por defecto en un diseño flexbox, no colapsan.
+            </p>
+            <p>
+                La compatibilidad con navegadores es más que aceptable; <strong>Internet Explorer 10</strong>  
+                con el prefijo <code>-ms-</code>, y a partir de las versiones de <strong>Microsoft Edge</strong> lo se hace de 
+                forma estándar. La imagen siguiente es una captura de la compatibilidad con navegadores del sitio <strong>Can I Use</strong> (<a class="link" href="https://caniuse.com/?search=flexbox">Flexbox Layout</a>)
+            </p>
+            <figure class="box-img">
+                <figcaption class="caption-img">
+                    <span>sitio web de Can I Use, Flexbox Layout Module</span>
+                </figcaption>
+                <img src="../../../images/flexbox-layout_canIuse.jpg" class="captures mw-100" />
+            </figure>
+           
+            
+            <article class="internal-navbar">
+                <section>
+                    <a href="page_01.html" class="link"><i class="wlw-attachment"></i> Estructura básica de Flexbox</a>
+                   <p>
+                        Un <strong>Contenedor Flexible</strong> es la caja generada por un elemento con la propiedad 
+                        <code>display</code> con el valor <code>flex</code> o <code>inline-flex</code>.
+                        Los elementos secundarios en el flujo de un <strong>Contenedor Flexible</strong> se denominan
+                        <strong>Elementos Flexibles</strong> y se distribuyen utilizando el modelo de distribución flexible.
+                        Entonces se puede decir que <strong>Flexbox</strong> funciona a nivel de contenedor, el comportamiento es trasladado
+                        a sus elementos contenidos. El contenedor se puede comportar como un elemento en bloque (<code>display:block</code>)
+                        o en línea (<code>display:inline</code>).
+                   </p> 
+
+                  <div class="codepen-container">
+                    <div class="codepen"
+                      data-height="500"
+                      data-theme-id="dark"
+                      data-default-tab="result"
+                      data-user="NicolasKolumbic"
+                      data-slug-hash="xxLEYQo">
+                        <p class="codepen-alert">
+                            <span class="no-signal"></span>
+                            Ha ocurrido algún problema con la señal de internet. 
+                            <a href="https://codepen.io/NicolasKolumbic/pen/xxLEYQo">
+                                <span class="wlw-global"></span>
+                                Estructura básica de Flexbox
+                            </a> 
+                            desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                            en 
+                            <a href="https://codepen.io">
+                                <span class="wlw-global"></span>
+                                CodePen
+                            </a>.
+                        </p>
+                    </div>
+                </div>  
+            </section>
+
+            <section>
+                <a href="page_02.html" class="link"><i class="wlw-attachment"></i> Diferencia entre elementos flex, inline-flex y la relación con otros valores de la propiedad display</a>
+                <p>
+                    La diferencia entre ellos radica en cómo se comporta el <strong>contenedor</strong>. En el caso de 
+                los elementos <strong>flex</strong>, el contenedor no permitirá que otros elementos se acomoden a sus
+                lados, igual que <strong>display:block</strong>, aunque tenga espacio disponible este ocupará todo el ancho
+                disponible de la pantalla. En cambio <strong>inline-flex</strong>
+                es más parecido a <strong>display:inline-block</strong>; los contendores con este tipo de <strong>display</strong> se pueden
+                acomodar uno al lado de los otros.
+                </p>
+
+                  <div class="codepen-container">
+                    <div class="codepen"
+                      data-height="500"
+                      data-theme-id="dark"
+                      data-default-tab="result"
+                      data-user="NicolasKolumbic"
+                      data-slug-hash="WNEGMmM">
+                        <p class="codepen-alert">
+                            <span class="no-signal"></span>
+                            Ha ocurrido algún problema con la señal de internet. 
+                            <a href="https://codepen.io/NicolasKolumbic/pen/WNEGMmM">
+                                <span class="wlw-global"></span>
+                                Diferencia entre elementos flex, inline-flex y la relación con otros display
+                            </a> 
+                            desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                            en 
+                            <a href="https://codepen.io">
+                                <span class="wlw-global"></span>
+                                CodePen
+                            </a>.
+                        </p>
+                    </div>
+                </div>
+                
+            </section>
+
+            <section>
+                <a href="page_03.html" class="link"><i class="wlw-attachment"></i> Primeros conceptos importantes</a>
+                <p>
+                    El Modelo de Caja de Diseño Flexible (Flexbox Layout Box Model) contiene un esquema sobre algunas reglas que dominan el comportamiento,
+                 tiene algunos conceptos importantes:
+                </p>
+                <div class="mt-1">
+                    <img src="../../../images/flexbox-layout-model_1.png" />
+                </div>
+                <p>
+                    Los primeros 4 conceptos importantes son: <strong>main axis</strong>, <strong>cross axis</strong>, <strong>main size</strong>
+                    y <strong>cross size</strong>.
+                </p>
+
+                
+                <dl>
+                    <dt>main axis</dt>
+                    <dd>El <strong>eje principal</strong> de un contenedor flexible es el eje principal a lo largo del cual se 
+                        colocan los elementos flexibles. Por defecto es horizontal.</dd>
+                 
+                    <dt>cross axis</dt>
+                    <dd>El eje perpendicular al eje principal se llama <strong>eje transversal</strong>.
+                         Por defecto es el vertical.</dd>
+
+                    <dt>main size</dt>
+                    <dd>El ancho o alto de un contenedor flexible, cualquiera que esté en la dimensión principal,
+                     es el tamaño principal de esa caja. Su propiedad de tamaño principal es, por tanto, su propiedad de ancho <strong>(width)</strong> o alto <strong>(height)</strong>,
+                     cualquiera que esté en la dimensión principal.
+                    De manera similar, sus propiedades de tamaño principal mínimo y máximo son sus propiedades <strong>(min-width)</strong> / <strong>(max-width)</strong> o 
+                    <strong>(min-height)</strong> / <strong>(max-height)</strong>, cualquiera que esté en la dimensión principal, y determinan su tamaño.</dd>
+
+                    <dt>cross size</dt>
+                    <dd>El ancho o alto de un contenedor flexible, cualquiera que esté en la dimensión transversal,
+                         es el tamaño transversal de esa caja. Su propiedad de tamaño cruzado es,
+                        por lo tanto, su propiedad de ancho o alto, cualquiera que esté en la dimensión transversal. 
+                        Del mismo modo, sus propiedades de tamaño transversal mínimo y máximo son sus propiedades <strong>(min-width)</strong> / <strong>(max-width)</strong> o 
+                        <strong>(min-height)</strong> / <strong>(max-height)</strong>, lo que se encuentra en la dimensión transversal determina su tamaño transversal.</dd>
+                </dl>
+
+                <p>
+                    <strong>main axis</strong> y <strong>cross axis</strong> son claros, incluso <strong>main size</strong> no es complejo de comprender en un ejemplo práctico
+                    como el del enlace de este apartado. <strong>cross size</strong> tiene una complejidad dada por la propiedad siguiente de este Taller. <strong>align-items</strong>.
+                </p>
+
+
+                  <div class="codepen-container">
+                    <div class="codepen"
+                      data-height="500"
+                      data-theme-id="dark"
+                      data-default-tab="result"
+                      data-user="NicolasKolumbic"
+                      data-slug-hash="jOLMzNK">
+                        <p class="codepen-alert">
+                            <span class="no-signal"></span>
+                            Ha ocurrido algún problema con la señal de internet. 
+                            <a href="https://codepen.io/NicolasKolumbic/pen/jOLMzNK">
+                                <span class="wlw-global"></span>
+                                Primeros conceptos importantes
+                            </a> 
+                            desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                            en 
+                            <a href="https://codepen.io">
+                                <span class="wlw-global"></span>
+                                CodePen
+                            </a>.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+        </article>
+        </div>
+    </div>
+    <footer class="footer footer-image">
+        <div class="d-flex justify-content-between footer-image__content">
+            <div>
+            <img src="../../../images/web-layout-workshop-logo.svg" />
+            </div>
+            <div class="text-right">
+                <h6>Desarrollado por Nicolás Kolumbic</h6>
+                <ul class="social-media-list">
+                    <li>
+                        <a href="https://www.linkedin.com/in/nicolaskolumbic/">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 34 34">
+                                <title>
+                                  LinkedIn
+                                </title>                     
+                                <g>
+                                  <path d="M34,2.5v29A2.5,2.5,0,0,1,31.5,34H2.5A2.5,2.5,0,0,1,0,31.5V2.5A2.5,2.5,0,0,1,2.5,0h29A2.5,2.5,0,0,1,34,2.5ZM10,13H5V29h5Zm.45-5.5A2.88,2.88,0,0,0,7.59,4.6H7.5a2.9,2.9,0,0,0,0,5.8h0a2.88,2.88,0,0,0,2.95-2.81ZM29,19.28c0-4.81-3.06-6.68-6.1-6.68a5.7,5.7,0,0,0-5.06,2.58H17.7V13H13V29h5V20.49a3.32,3.32,0,0,1,3-3.58h.19c1.59,0,2.77,1,2.77,3.52V29h5Z" fill="#fff"></path>
+                                </g>
+                              </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/NicolasKolumbic">
+                            <svg height="24" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                                <path fill="#fff" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+    </footer>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</body>
+</html>

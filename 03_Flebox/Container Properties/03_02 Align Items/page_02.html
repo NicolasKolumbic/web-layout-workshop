@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross Axis, Cross size and Align Items</title>
+    <link rel="shortcut icon" href="../../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css" />
+    <link rel="stylesheet" href="../../../icons.css" />
+    <style>
+
+        .flex-container {
+            display: flex;
+            background-color: rgba(7, 165, 46, 0.5);
+        }
+
+        .flex-container div {
+            border: 5px solid rgba(230, 174, 111,1);
+            background-color: rgba(77, 133, 218, 1);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p>
+            Si no definimos un alto para el <strong>contenedor flexible</strong>, este se acomodar 
+            a la altura de los <strong>elementos flexibles</strong>
+        </p>
+        <div class="flex-container" style="width: 400px;">
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+        </div>
+        <p>
+            Si lo definimos el <strong>contenedor flexible</strong> se adaptará a ese alto y los
+            <strong>elementos flexibles</strong> crecerán a lo alto tanto como el contenedor.
+        </p>
+        <div class="flex-container" style="width: 400px; height: 300px;">
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+        </div>
+    </div>
+</body>
+</html>

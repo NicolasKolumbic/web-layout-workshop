@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Wrap</title>
+    <link rel="shortcut icon" href="../../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css" />
+    <link rel="stylesheet" href="../../../icons.css" />
+    <style>
+
+        .flex-container {
+            display: flex;
+            background-color: rgba(7, 165, 46, 0.5);
+            border: 5px solid rgba(134, 134, 134, 0.5);
+            width: 600px;
+        }
+
+
+        .flex-item {
+            width: 120px;
+            border: 5px solid rgba(230, 174, 111,1);
+            background-color: rgba(77, 133, 218, 1);
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="p-1">
+        <p>
+            Los siguientes son ejemplo de la combinación de textos, imágenes, video y como un <strong>contenedor flexible</strong>
+            los trata en diferentes formas dependiendo las unidades de medidas relativas y absolutas.
+        </p>
+        <p>
+            <strong>contenedor flexible</strong> de <strong>600px</strong> y <strong>elementos flexibles</strong> 
+            de <strong>120px</strong>. Todos los ítems sumados ocupan, en píxeles, <strong>720px</strong>. Desbordarán
+            del contenedor, pero el <strong>contenedor flexible</strong> reparte uniformemente el espacio entre todos.
+        </p>
+        <div class="flex-container">
+                    <div class="flex-item">Flex Item 1</div>
+                    <div class="flex-item">Flex Item 2</div>
+                    <div class="flex-item">Flex Item 3</div>
+                    <div class="flex-item">Flex Item 4</div>
+                    <div class="flex-item">Flex Item 5</div>
+                    <div class="flex-item">Flex Item 6</div>
+        </div>
+    
+        <p>
+            <strong>contenedor flexible</strong> de <strong>150px</strong> y <strong>elementos flexibles</strong> 
+            de <strong>120px</strong>. <strong>Flexbox</strong> no tiene espacio disponible para repartir uniformemente, 
+            intenta cortar las palabras por los espacios, pero no es suficiente, entonces desborda del contenedor.
+        </p>
+        <div class="flex-container" style="width: 150px;">
+                    <div class="flex-item">Flex Item 1</div>
+                    <div class="flex-item">Flex Item 2</div>
+                    <div class="flex-item">Flex Item 3</div>
+                    <div class="flex-item">Flex Item 4</div>
+                    <div class="flex-item">Flex Item 5</div>
+                    <div class="flex-item">Flex Item 6</div>
+        </div>
+    
+        <p>
+            <strong>contenedor flexible</strong> de <strong>150px</strong> y los <strong>elementos flexibles</strong> 
+            son imágenes, no tienen configurado ninguna medida de ancho, cuentan con un ancho original de <strong>100px</strong> 
+            y alto original de <strong>133px</strong>. 
+            La suma de los anchos de las imágenes supera al contenedor, por ende, desborda.
+        </p>
+        <div class="flex-container" style="width: 150px;">
+                    <img src="../../../images/dog_100.png" />
+                    <img src="../../../images/dog_100.png" />
+                    <img src="../../../images/dog_100.png" />
+        </div>
+        
+        <p>
+            <strong>contenedor flexible</strong> de <strong>350px</strong> y los <strong>elementos flexibles</strong> 
+            son imágenes con un ancho original de <strong>100px</strong> y alto original de <strong>133px</strong>. 
+            Las imágenes se adaptan al alto original.
+        </p>
+        <div class="flex-container" style="width: 350px;">
+                    <img src="../../../images/dog_100.png" />
+                    <img src="../../../images/dog_100.png" />
+                    <img src="../../../images/dog_100.png" />
+        </div>
+        <p>
+            <strong>contenedor flexible</strong> de <strong>400px</strong> y los <strong>elementos flexibles</strong> 
+            por un lado son imágenes con un ancho original de <strong>100px</strong> y alto original de <strong>133px</strong>
+            configurados el ancho a <strong>25%</strong> y divs con un width de <strong>25%</strong>.
+            El texto y las imágenes se adaptan al 25% (150px aprox.). Si reducimos el contenedor, texto e imagen se adaptan 
+            al contenedor hasta no poder reducirse más.
+        </p>
+        <div class="flex-container" style="width: 600px;">
+            <img src="../../../images/dog_100.png" style="width: 25%" />
+            <div class="flex-item" style="width: 25%">Flex Item 1</div>
+            <img src="../../../images/dog_100.png" style="width: 25%" />
+            <div class="flex-item" style="width: 25%">Flex Item 2</div>
+        </div>
+    
+        <div class="flex-container mt-2" style="width: 60px;">
+            <img src="../../../images/dog_100.png" style="width: 25%" />
+            <div class="flex-item" style="width: 25%">Flex Item 1</div>
+            <img src="../../../images/dog_100.png" style="width: 25%" />
+            <div class="flex-item" style="width: 25%">Flex Item 2</div>
+        </div>
+        <p>
+            En el caso de un <strong>contenedor</strong> con un ancho de 0px, los elementos flexibles se encogen a su mínima expresión.
+        </p>
+        <div class="flex-container mt-2" style="width: 0px;">
+            <div class="flex-item">Flex Item 1</div>
+            <div class="flex-item">Flex Item 2</div>
+            <div class="flex-item">Flex Item 3</div>
+        </div>
+        <p>
+            <strong>Contenedor flexible</strong> de <strong>300px</strong> y los <strong>elementos flexibles</strong> 
+            contiene imágenes con un ancho original de <strong>100px</strong> y alto original de <strong>133px</strong>
+            y divs con un width de <strong>120px</strong>. Las imágenes mantienen su ancho original y el texto es el que
+            se adapta al resto del espacio disponible del contenedor. (contenedor(300) - imágenes (100*2)) / 2. Flexbox 
+            no suele respetar las medidas absolutas.
+        </p>
+        <div class="flex-container" style="width: 300px;">
+            <img src="../../../images/dog_100.png" />
+            <div class="flex-item">Flex Item 1</div>
+            <img src="../../../images/dog_100.png" />
+            <div class="flex-item">Flex Item 2</div>
+        </div>
+        <p>
+            <strong>Contenedor flexible</strong> de <strong>300px</strong> y los <strong>elementos flexibles</strong> 
+            por un lado son imágenes con un ancho original de <strong>200px</strong> y alto original de <strong>267px</strong>
+            y divs con un width de <strong>120px</strong>, Las imágenes tienen configurado el ancho a una medida menor, <strong>150px</strong>.
+            El contenido rebasa al contenido, pero aun así, respeta el ancho configurado de las imágenes y adaptando el texto al menor ancho posible desbordando
+            los últimos elementos.
+        </p>
+        <div class="flex-container" style="width: 300px;">
+            <img src="../../../images/dog_200.png" style="width: 150px;" />
+            <div class="flex-item">Flex Item 1</div>
+            <img src="../../../images/dog_200.png" style="width: 150px;" />
+            <div class="flex-item">Flex Item 2</div>
+        </div>
+        <p>
+            <strong>Contenedor flexible</strong> de <strong>400px</strong> y los <strong>elementos flexibles</strong>: 
+            un video de <strong>400px</strong> y divs con un width de <strong>120px</strong>.
+        </p>
+        <div class="flex-container" style="width: 400px;">
+            <div class="flex-item">Flex Item 1</div>
+            <video width="400px"  controls>
+                <source src="../../../images/video_lago.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="flex-item">Flex Item 2</div>
+        </div>
+    </div>
+</body>
+</html>

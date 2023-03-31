@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Propiedades Abreviadas para Flexbox</title>
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../icons.css" />
+    <style>
+        .reset-one {
+            counter-reset: item-number 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><strong>0313 |</strong>  Propiedades Abreviadas para Flexbox</h1>
+        <hr />
+        <ul class="breadcrumbs">
+            <li>
+                <a href="../../index.html">Principal</a>    
+            </li>
+            <li>
+                ❯
+            </li>
+            <li class="active">
+                Propiedades Abreviadas para Flexbox
+            </li>
+        </ul>
+
+        <div class="content">
+            <article class="internal-navbar">
+                <section>
+                    <a href="page_01.html" class="link"><i class="wlw-attachment"></i>La propiedad Shorthand flex-grow.</a>
+                    
+                    <p>
+                        Otra forma de implementar <strong>Flexbox</strong> es utilizar las comentadas como <strong>propiedades abreviadas</strong>.
+                        Para el <strong>Módulo Flex</strong> tenemos dos: <code>flex-grow</code> y <code>flex</code>. El primero permite 
+                        definir en una sola declaración las propiedades <code>flex-direction</code> y <code>flex-wrap</code>. Por defecto los valores 
+                        de estas propiedades son <code>row</code> para la primera y <code>no-wrap</code> para la segunda.
+                    </p>
+                    <figure class="box-img">
+                        <figcaption class="caption-img">
+                            <span>propiedad Shorthand flex-flow</span>
+                        </figcaption>
+                        <img src="../../images/shorthand-flex-flow.png" />
+                    </figure>
+                    
+                    <div class="codepen-container">
+                        <div class="codepen"
+                            data-height="500"
+                            data-theme-id="dark"
+                            data-default-tab="result"
+                            data-user="NicolasKolumbic"
+                            data-slug-hash="poOdGBJ">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/poOdGBJ">
+                                    <span class="wlw-global"></span>
+                                    La propiedad Shorthand flex-grow.
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>  
+                </section>
+                <section>
+                    <a href="page_02.html" class="link"><i class="wlw-attachment"></i>La propiedad Shorthand flex.</a>
+                    <p>
+                        <code>flex</code> agrupa la definición de las propiedades: <code>flex-grow</code>, <code>flex-shrink</code> y <code>flex-basis</code>.
+                        <strong>W3</strong> recomienda el uso de esta propiedad por sobre las individuales por el hecho que estas son propiedades relacionadas y
+                         la especificación dice que si no define valor para alguna de estas, el navegador restablece los valores faltantes a los valores predeterminados, que no siempre
+                        son los valores predeterminados de las propiedades individuales. 
+                    </p>
+                    <p>
+                        <code>flex-grow</code> determina el <strong>factor de crecimiento</strong>, cuanto puede o debe crecer un <strong>elemento flexible</strong>,
+                        <code>flex-shrink</code> determina el <strong>factor de compresión</strong>, cuanto puede o debe encogerse un <strong>elemento flexible</strong>,
+                        y por último <code>flex-basis</code> define la medida base para los cálculos para determinar las operaciones de <code>flex-grow</code> y <code>flex-shrink</code>.
+                        Cabe recordar los valores por defecto de estas propiedades, <code>flex: 0 1 auto</code>.
+                    </p>
+                    <img src="../../images/shorthand-flex.png" />
+                </section>
+            </article>
+        </div>
+        
+        <pre>
+            La propiedad abreviada "flex", junto con sus propiedades componentes de "flex-grow",
+"flex-shrink" y "flex-base", controlan la flexibilidad de los elementos flexibles. El
+"alinearse a sí mismo" ayuda a controlar la alineación de un elemento flexible. La
+propiedad order proporciona un control más granular de la ordenación visual de
+elementos flexibles individuales o grupos.
+        </pre>
+        <pre>
+            El aspecto definitorio del diseño flexible es la capacidad de hacer que los elementos flexibles se
+"flexionen": alterando su ancho o alto para llenar el espacio disponible en la dimensión
+principal. Un contenedor flexible distribuye el espacio libre a sus elementos
+proporcionalmente a su factor de crecimiento flexible, o los reduce para evitar el
+desbordamiento proporcional a su factor de reducción flexible.
+Definir la propiedad abreviada "flex" en un elemento flexible, o definir las propiedades
+individuales que componen la abreviatura, permite a los desarrolladores definir los factores de
+crecimiento y reducción. Si hay un exceso de espacio, puede decirle a los elementos flexibles que
+crezcan para llenar ese espacio. O no. Si no hay suficiente espacio para colocar todos los
+elementos flexibles dentro del contenedor flexible en sus tamaños predeterminados o
+definidos, puede decirles a los elementos flexibles que se encojan proporcionalmente para
+caber en el espacio. O no. Todo esto se hace con la propiedad flex, que es una propiedad
+abreviada de "flex-grow", "flex-shrink" y "flex-base". Si bien estas tres subpropiedades se pueden usar
+por separado, se recomienda encarecidamente usar siempre la abreviatura "flex".
+        </pre>
+        <pre>
+            La abreviatura "flex", una propiedad de elemento flexible, se compone de las propiedades
+"flex-grow", "flex-shrink" y "flex-basis", que definen el factor de crecimiento de flexión, el
+factor de contracción de flexión y el base flexible, respectivamente.
+        </pre>
+        <pre>
+            En el fragmento de código anterior, el elemento flexible tendrá un tamaño principal de
+exactamente 200 px, ya que la base flexible es de 200 px, y no se permite que crezca ni se
+reduzca.
+Es importante comprender los tres componentes que conforman la propiedad abreviada "flex",
+que es la propiedad que debe emplear. La razón por la que se recomienda usar "flex" en lugar de
+sus tres subpropiedades individuales es porque la especificación (y, por lo tanto, el navegador)
+restablece los valores flexibles faltantes a los valores predeterminados sensibles, que no siempre
+son los valores predeterminados de las propiedades individuales.
+        </pre>
+        <pre>
+            La propiedad "flexible" toma hasta tres valores: el factor de crecimiento, el factor de
+contracción y la base. El primer valor flotante positivo no nulo, si lo hay, es el factor de
+crecimiento. Cuando se omite el factor de crecimiento en la abreviatura, el valor
+predeterminado es 1. De lo contrario, si no se incluye "flex" ni "flex-grow", el valor
+predeterminado es 0.
+En el segundo ejemplo de la Figura 3-4, debido a que declaramos un valor solo para "flexgrow",
+la base flexible se estableció en automático, como si hubiéramos declarado:
+#example2 flex-item {
+flex: 0 1 auto;
+}
+#example2 flex-item:last-child {
+flex: 1 1 auto;
+}
+Se desaconseja encarecidamente declarar "flex-grow". Más bien, declare el factor de
+crecimiento como parte de la abreviatura "flex".
+The
+        </pre>
+        <pre>
+            investigar este ejemplo
+
+            desacertada, la base flexible se establecería en 0 % y la distribución del ancho habría
+sido muy diferente, como se muestra en la Figura 3-6:
+#example2 flex-item {
+flex: 0 1 0%;
+}
+#example2 flex-item:last-child {
+flex: 1 1 0%;
+}
+        </pre>
+        <pre>
+            Los autores de la especificación pensaron en este dilema. Cuando la declaración de la
+propiedad "flex" establece explícitamente o establece por defecto la base flexible en 0 px y
+el factor de crecimiento de un elemento flexible es 0, la longitud del eje principal de los
+elementos flexibles que no crecen se reducirá al ancho más pequeño que permita el
+contenido, o menor. En nuestro ejemplo, el ancho es el ancho de la palabra más ancha
+"flex:".
+        </pre>
+        <pre>
+            flex-basis anula el ancho de un elemento.
+            Si bien el tamaño predeterminado del elemento flexible era de 100 px, la base flexible de 0
+anula eso, dejándonos con 2 elementos flexibles de 150 px cada uno y el último elemento
+flexible con un ancho de 450 px:
+        </pre>
+        <pre>
+            Esto es diferente de declarar solo crecimiento flexible, como se muestra en la Figura 3-7. Solo
+declarar "flex-grow" significa que "flex-basis" está predeterminado en automático. Cuando se
+establece en automático, solo el espacio adicional, no todo el espacio, se distribuye
+proporcionalmente. Esta falta de simplicidad es la razón por la que se recomienda
+encarecidamente utilizar siempre la abreviatura "flex" en lugar de "flex-grow", "flex-shrink" y
+"flex-base" por separado o no usarlas en absoluto.
+Figure
+        </pre>
+    </div>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</body>
+</html>

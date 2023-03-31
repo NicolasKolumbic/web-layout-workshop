@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0308 | Flex Grow</title>
+    <link rel="shortcut icon" href="../../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css" />
+    <link rel="stylesheet" href="../../../icons.css" />
+    <style>
+        .reset-one {
+            counter-reset: item-number 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><strong>0308 |</strong> Flex Grow</h1>
+        <hr />
+        <ul class="breadcrumbs">
+            <li>
+                <a href="../../../index.html">Principal</a>    
+            </li>
+            <li>
+                ❯
+            </li>
+            <li class="active">
+                Flex Grow
+            </li>
+        </ul>
+
+
+        <div class="content">
+            <article class="internal-navbar mt-1">
+                <section>
+                    <a href="page_01.html" class="link"><i class="wlw-attachment"></i>Espacio disponible y flex-grow</a>
+                    <p>
+                        Para hablar de <code>flex-grow</code> es importante retomar el tema de cómo los 
+                    <strong>contenedores flexibles</strong> distribuyen los <strong>elementos flexibles</strong>. 
+                    Cuando los elementos en el <strong>eje principal</strong> no llegan a cubrir toda la extensión, se 
+                    dice que el <strong>espacio disponible</strong> es la suma de la extensión de cada unos de los elementos menos la 
+                    extensión del contenedor. Sí los elementos cubren toda la extensión del contenedor, entonces no tenemos espacio disponible.    
+                    </p>
+                    <div>
+                        <img src="../../../images/flex-grow-1.png" />
+                    </div>
+                    <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="oNMbWGY">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/oNMbWGY">
+                                    <span class="wlw-global"></span>
+                                    Espacio disponible y flex-grow.
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>  
+                </section>
+                <section>
+                    <a href="page_02.html" class="link"><i class="wlw-attachment"></i>¿Cómo utilizar flex-grow?</a>
+                    <p>
+                        <code>flex-grow</code> gestiona el espacio disponible entre cada uno de los <strong>elementos flexibles</strong>. 
+                        El valor por defecto de esta propiedad es cero; con lo que de momento no hace ninguna gestión, no se le permite crecer. Cuando se le da un valor 
+                        mayor a cero, a uno o más <strong>elementos flexibles</strong>, el contenedor calcula el <strong>espacio disponible</strong>
+                        dividido por la suma de los valores <code>flex-grow</code> de todos los elementos y le asigna a cada elemento su porción.
+                    </p>
+                    
+    
+                    <div>
+                        <img src="../../../images/flex-grow-2.png" />
+                    </div>
+                    <p>
+                        Este valor numérico  define el factor de crecimiento, los valores negativos no son válidos y serán ignorados, los flotantes siempre y cuando sean mayores a cero son válidos.
+                    </p>
+
+                      <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="oNMbedK">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/oNMbedK">
+                                    <span class="wlw-global"></span>
+                                    ¿Cómo utilizar flex-grow?
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>  
+                      <p>
+                        En estos ejemplos los <strong>elementos flexibles</strong> tienen un ancho (<code>width</code>) de <strong>100px</strong>. El factor de crecimiento toma una <strong>medida base</strong> 
+                        sobre el cual hacer los cálculos, sí un <strong>elemento flexible</strong> tiene configurado su ancho, esa será su medida base. Por el contrario sí no hay una medida asignada,
+                        tomará su contenido, ya que en ese caso el valor de <code>width</code> es <strong>auto</strong>.
+                      </p>
+                      <p>
+                        Para demostrar matemáticamente que sucedió en los ejemplos codificados observemos las siguientes imágenes, prestemos atención al valor de 
+                        <code>flex-grow</code>.
+                      </p>
+                      <figure class="box-img">
+                        <figcaption class="caption-img">
+                            <span>Primer ejemplo sencillo de los cálculos hechos por el navegador</span> 
+                        </figcaption>
+                        <img src="../../../images/flex_grow_calc_1.png" class="w-100" />
+                      </figure>
+                      <figure class="box-img">
+                        <figcaption class="caption-img">
+                            <span>Segundo ejemplo, algo más complejo</span> 
+                        </figcaption>
+                        <img src="../../../images/flex_grow_calc_2.png" class="w-100" />
+                      </figure>
+                </section>
+            </article>
+           
+          
+        </div>  
+    </div>
+    <footer class="footer footer-image">
+        <div class="d-flex justify-content-between footer-image__content">
+            <div>
+            <img src="../../../images/web-layout-workshop-logo.svg" />
+            </div>
+            <div class="text-right">
+                <h6>Desarrollado por Nicolás Kolumbic</h6>
+                <ul class="social-media-list">
+                    <li>
+                        <a href="https://www.linkedin.com/in/nicolaskolumbic/">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 34 34">
+                                <title>
+                                  LinkedIn
+                                </title>                     
+                                <g>
+                                  <path d="M34,2.5v29A2.5,2.5,0,0,1,31.5,34H2.5A2.5,2.5,0,0,1,0,31.5V2.5A2.5,2.5,0,0,1,2.5,0h29A2.5,2.5,0,0,1,34,2.5ZM10,13H5V29h5Zm.45-5.5A2.88,2.88,0,0,0,7.59,4.6H7.5a2.9,2.9,0,0,0,0,5.8h0a2.88,2.88,0,0,0,2.95-2.81ZM29,19.28c0-4.81-3.06-6.68-6.1-6.68a5.7,5.7,0,0,0-5.06,2.58H17.7V13H13V29h5V20.49a3.32,3.32,0,0,1,3-3.58h.19c1.59,0,2.77,1,2.77,3.52V29h5Z" fill="#fff"></path>
+                                </g>
+                              </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/NicolasKolumbic">
+                            <svg height="24" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                                <path fill="#fff" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+    </footer>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</body>
+</html>

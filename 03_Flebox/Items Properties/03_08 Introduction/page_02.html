@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodos HTML y nodos de textos como elementos flexibles</title>
+    <link rel="shortcut icon" href="../../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css" />
+    <link rel="stylesheet" href="../../../icons.css" />
+    <style>
+        .flex-container {
+            align-items: center;
+            background-color: rgba(7, 165, 46, 0.5);
+            border: 5px solid rgba(134, 134, 134, 0.5);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+            width: 400px;
+        }
+
+        .flex-container div {
+            border: 5px solid rgba(230, 174, 111,1);
+            background-color: rgba(77, 133, 218, 1);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="flex-container">
+            <div>
+                Flex Item - div
+            </div>
+            Flex Item (nodo de texto)
+        </div>
+    </div>      
+</body>
+</html>

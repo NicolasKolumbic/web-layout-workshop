@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0309 | Flex Shrink</title>
+    <link rel="shortcut icon" href="../../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css" />
+    <link rel="stylesheet" href="../../../icons.css" />
+</head>
+<body>
+    <div class="container">
+        <h1><strong>0309 |</strong> Flex Shrink</h1>
+        <hr />
+        <ul class="breadcrumbs">
+            <li>
+                <a href="../../../index.html">Principal</a>    
+            </li>
+            <li>
+                ❯
+            </li>
+            <li class="active">
+                Flex Shrink
+            </li>
+        </ul>
+
+        <div class="content">
+            <article class="internal-navbar mt-1">
+                <section>
+                    <a href="page_01.html" class="link"><i class="wlw-attachment"></i>El espacio disponible negativo.</a>
+                    <p>
+                        Cuando la suma de la extensión (ancho o alto) de los <strong>elementos flexibles</strong> superan al <strong>contenedor flexible</strong> se podría 
+                        decir que esa diferencia entre los elementos y el contenedor es el <strong>espacio disponible negativo</strong>, no es 
+                        la manera técnica de llamarlo, pero por contraposición al llamado <strong>espacio disponible</strong> en la propiedad 
+                        <code>flex-grow</code> parece acertado porque en este se habla del espacio disponible dentro del contenedor 
+                        y en este caso es el espacio sobrante, excedente al contenedor, que este gestiona de manera de hacer caber todos 
+                        los elementos.
+                    </p>
+                    <figure class="box-img">
+                        <figcaption class="caption-img">
+                            <span>el espacio negativo disponible</span> 
+                        </figcaption>
+                        <img src="../../../images/flex-shrink-1.png" class="w-100" />
+                    </figure>
+
+                      <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="MWBKRxX">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/MWBKRxX">
+                                    <span class="wlw-global"></span>
+                                    El espacio disponible negativo.
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <a href="page_02.html" class="link"><i class="wlw-attachment"></i>La propiedad flex-shrink</a>
+                    <p>
+                        La propiedad <code>flex-shrink</code> especifica el factor de contracción. Este determina cuánto se reducirá un elemento flexible en relación con el resto
+                        de los elementos hermanos cuando no hay suficiente espacio para que quepan todos en su <strong>contenedor flexible</strong>.
+                        Básicamente, el factor de contracción define cómo se distribuye el espacio negativo, o cómo los elementos flexibles deben volverse más estrechos o más cortos.
+                    </p>
+                    <p>
+                        Igual que <code>flex-grow</code> los valores negativos no son válidos y serán ignorados, los flotantes siempre y cuando sean mayores a cero son válidos. 
+                        El valor por defecto para esta propiedad si no se define es <strong>1</strong>. Con esto, cuando un <strong>contenedor flexible</strong> tenga <strong>espacio disponible negativo</strong> utilizará este valor para encoger los <strong>elementos flexibles</strong> con este valor sin que nosotros hayamos establecido nada, es su comportamiento por defecto.
+                    </p>
+                    <figure class="box-img">
+                        <figcaption class="caption-img">
+                            <span>¿Cómo funciona la propiedad?</span> 
+                        </figcaption>
+                        <img src="../../../images/flex-shrink-2.png" class="w-100" />
+                    </figure>
+
+
+                      <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="XWBXwWO">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/XWBXwWO">
+                                    <span class="wlw-global"></span>
+                                    La propiedad flex-shrink
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>
+
+                      <figure class="box-img">
+                        <figcaption class="caption-img">
+                            <span>Un ejemplo básico de los cálculos que realiza el navegador</span> 
+                        </figcaption>
+                        <img src="../../../images/flex_shrink_calc_1.png" class="w-100" />
+                    </figure>
+                </section>
+                <section>
+                    <a href="page_03.html" class="link"><i class="wlw-attachment"></i>La propiedad flex-shrink con elementos flexibles con distintos anchos</a>
+                    <p>
+                        En el ejemplo anterior planteamos un <strong>contenedor flexible</strong> con elementos con un ancho igual para todos ellos. En la siguiente imagen 
+                        vamos a hacer algo diferente.
+                    </p>
+                    <figure class="box-img">
+                        <figcaption class="caption-img">
+                            <span>Un ejemplo básico de los cálculos que realiza el navegador</span> 
+                        </figcaption>
+                        <img src="../../../images/flex_shrink_calc_2.png" class="w-100" />
+                    </figure>
+                    
+                    <p>
+                        Cuando tenemos <strong>elementos flexibles</strong> con el mismo ancho los cálculos para encogerlos son sencillos, esto se complica cuando estos elementos
+                        tienen distintos anchos, acá entra en juego otro tipo de cálculo, ya no basados en píxeles, sino en porcentajes. 
+                    </p>
+                  
+                    <figure class="box-img">
+                        <figcaption class="caption-img">
+                            <span>Un ejemplo de los cálculos que realiza el navegador en un escenario complejo</span> 
+                        </figcaption>
+                        <img src="../../../images/flex_shrink_calc_3.png" class="w-100" />
+                    </figure>
+
+                      <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="ZEjQNBw">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/ZEjQNBw">
+                                    <span class="wlw-global"></span>
+                                    La propiedad flex-shrink con elementos flexibles con distintos anchos
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </article>  
+        </div>
+    </div>
+    <footer class="footer footer-image">
+        <div class="d-flex justify-content-between footer-image__content">
+            <div>
+            <img src="../../../images/web-layout-workshop-logo.svg" />
+            </div>
+            <div class="text-right">
+                <h6>Desarrollado por Nicolás Kolumbic</h6>
+                <ul class="social-media-list">
+                    <li>
+                        <a href="https://www.linkedin.com/in/nicolaskolumbic/">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 34 34">
+                                <title>
+                                  LinkedIn
+                                </title>                     
+                                <g>
+                                  <path d="M34,2.5v29A2.5,2.5,0,0,1,31.5,34H2.5A2.5,2.5,0,0,1,0,31.5V2.5A2.5,2.5,0,0,1,2.5,0h29A2.5,2.5,0,0,1,34,2.5ZM10,13H5V29h5Zm.45-5.5A2.88,2.88,0,0,0,7.59,4.6H7.5a2.9,2.9,0,0,0,0,5.8h0a2.88,2.88,0,0,0,2.95-2.81ZM29,19.28c0-4.81-3.06-6.68-6.1-6.68a5.7,5.7,0,0,0-5.06,2.58H17.7V13H13V29h5V20.49a3.32,3.32,0,0,1,3-3.58h.19c1.59,0,2.77,1,2.77,3.52V29h5Z" fill="#fff"></path>
+                                </g>
+                              </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/NicolasKolumbic">
+                            <svg height="24" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                                <path fill="#fff" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+    </footer>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</body>
+</html>

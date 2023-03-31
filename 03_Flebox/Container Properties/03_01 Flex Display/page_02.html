@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diferencia entre elementos flex, inline-flex y la relación con otros valores de la propiedad display</title>
+    <link rel="shortcut icon" href="../../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css" />
+    <link rel="stylesheet" href="../../../icons.css" />
+    <style>
+        .inline-flex-container {
+            display: inline-flex;
+            border: 5px solid rgba(134, 134, 134, 0.5);
+            background-color: rgba(7, 165, 46, 0.5);
+        }
+
+        .flex-container {
+            display: flex;
+            border: 5px solid rgba(134, 134, 134, 0.5);
+            background-color: rgba(7, 165, 46, 0.5);
+        }
+
+        .inline-block-container {
+            display: inline-block;
+            border: 5px solid rgba(134, 134, 134, 0.5);
+            background-color: rgba(7, 165, 46, 0.5);
+        }
+
+        .flex-container div,
+        .inline-flex-container div,
+        .inline-block-container div,
+        .inline-element,
+        .block-element {
+            border: 5px solid rgba(230, 174, 111,1);
+            background-color: rgba(77, 133, 218, 1);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p>
+            Dos contenedores <strong>flex</strong>:
+        </p>
+        <div class="flex-container">
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+        </div>
+        <div class="flex-container">
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+        </div>
+        <p>
+            Dos contenedores <strong>inline-flex</strong>:
+        </p>
+        <div class="inline-flex-container">
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+        </div>
+        <div class="inline-flex-container">
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+        </div>
+        <p>
+            Un elemento <strong>inline-flex</strong>, <strong>flex</strong>, <strong>inline-flex</strong>:
+        </p>
+        <div class="inline-flex-container">
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+        </div>
+        <div class="flex-container">
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+        </div>
+        <div class="inline-flex-container">
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+        </div>
+        <p>
+            Un elemento <strong>inline-flex</strong>, <strong>inline-block</strong>:
+        </p>
+        <div class="inline-flex-container">
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+        </div>
+        <div class="inline-block-container">
+            <div>
+                Inline-Block Item
+            </div>
+        </div>
+        <p>
+            Un elemento <strong>flex</strong>, <strong>inline-block</strong>:
+        </p>
+        <div class="flex-container">
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+        </div>
+        <div class="inline-block-container">
+            <div>
+                Inline-Block Item
+            </div>
+        </div>
+        <p>
+            Un elemento <strong>flex</strong>, <strong>inline</strong>:
+        </p>
+        <div class="flex-container">
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+        </div>
+        <span class="inline-element">Inline</span>
+        <p>Un elemento <strong>inline-flex</strong>, <strong>inline</strong>:</p>
+        <div class="inline-flex-container">
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+        </div>
+        <span class="inline-element">Inline</span>
+        <p>Un elemento <strong>inline-flex</strong>, <strong>block</strong>:</p>
+        <div class="inline-flex-container">
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+            <div>
+                Flex Item
+            </div>
+        </div>
+        <div class="block-element">Block</div>
+    </div>
+</body>
+</html>

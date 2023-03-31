@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-direction column y justify content</title>
+    <link rel="shortcut icon" href="../../../images/favicon.gif">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css" />
+    <link rel="stylesheet" href="../../../icons.css" />
+    <style>
+
+        .flex-container {
+            background-color: rgba(7, 165, 46, 0.5);
+            border: 5px solid rgba(134, 134, 134, 0.5);
+            display: flex;
+            flex-direction: column;
+            height: 150px;
+            margin: 0 auto;
+            width: 200px;
+        }
+
+        .flex-item {
+            background-color: rgba(77, 133, 218, 1);
+            border: 5px solid rgba(230, 174, 111,1);
+            box-sizing: border-box;
+            color: white;
+            opacity: 0.5;
+            width: 200px;
+        }
+
+        .box-sample {
+           height: 300px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+                <p>
+                    En los siguientes ejemplos definimos la dirección del <strong>eje principal</strong> en vertical, <code>flex-direction:column</code>, 
+                    dentro de un <strong>contenedor flexible</strong> con un alto limitado menor a las alturas de todos los elementos sumados, logrando con esto 
+                    un desborde por la parte inferior.
+                </p>
+                <p>
+                    Primer ejemplo con el valor por defecto: <code>justify-content:stretch</code>.
+                </p>
+                <div class="box-sample">
+                    <div class="flex-container">
+                        <div class="flex-item">Flex Item 1</div>
+                        <div class="flex-item">Flex Item 2</div>
+                        <div class="flex-item">Flex Item 3</div>
+                        <div class="flex-item">Flex Item 4</div>
+                        <div class="flex-item">Flex Item 5</div>
+                        <div class="flex-item">Flex Item 6</div>   
+                        <div class="flex-item">Flex Item 7</div>
+                        <div class="flex-item">Flex Item 8</div>   
+                     </div>
+                </div>
+                <p>
+                    <code><code>justify-content:flex-start</code></code>.
+                </p>
+                <div class="box-sample">
+                    <div class="flex-container" style="justify-content: flex-start;">
+                        <div class="flex-item">Flex Item 1</div>
+                        <div class="flex-item">Flex Item 2</div>
+                        <div class="flex-item">Flex Item 3</div>
+                        <div class="flex-item">Flex Item 4</div>
+                        <div class="flex-item">Flex Item 5</div>
+                        <div class="flex-item">Flex Item 6</div>   
+                        <div class="flex-item">Flex Item 7</div>
+                        <div class="flex-item">Flex Item 8</div>   
+                     </div>
+                </div>
+                <p>
+                    <code><code>justify-content:flex-end</code></code>. 
+                </p>
+                <p>
+                    <small>* Para que no solapar los ítems siguientes con los anteriores aplicamos unos estilos para mover el contenedor del ejemplo</small>
+                </p>
+                <div class="box-sample" style="display: flex; justify-content: flex-end;">
+                    <div class="flex-container" style="justify-content: flex-end; margin:0">
+                        <div class="flex-item">Flex Item 1</div>
+                        <div class="flex-item">Flex Item 2</div>
+                        <div class="flex-item">Flex Item 3</div>
+                        <div class="flex-item">Flex Item 4</div>
+                        <div class="flex-item">Flex Item 5</div>
+                        <div class="flex-item">Flex Item 6</div>   
+                        <div class="flex-item">Flex Item 7</div>
+                        <div class="flex-item">Flex Item 8</div>   
+                     </div>
+                </div>
+                <p>
+                    <code><code>justify-content:center</code></code>.
+                </p>
+                <div class="box-sample">
+                    <div class="flex-container" style="justify-content: center;">
+                        <div class="flex-item">Flex Item 1</div>
+                        <div class="flex-item">Flex Item 2</div>
+                        <div class="flex-item">Flex Item 3</div>
+                        <div class="flex-item">Flex Item 4</div>
+                        <div class="flex-item">Flex Item 5</div>
+                        <div class="flex-item">Flex Item 6</div>   
+                        <div class="flex-item">Flex Item 7</div>
+                        <div class="flex-item">Flex Item 8</div>   
+                     </div>
+                </div>
+                <p>
+                    <code>justify-content:baseline</code>.
+                </p>
+                <div class="box-sample">
+                    <div class="flex-container" style="justify-content: baseline;">
+                        <div class="flex-item">Flex Item 1</div>
+                        <div class="flex-item">Flex Item 2</div>
+                        <div class="flex-item">Flex Item 3</div>
+                        <div class="flex-item">Flex Item 4</div>
+                        <div class="flex-item">Flex Item 5</div>
+                        <div class="flex-item">Flex Item 6</div>   
+                        <div class="flex-item">Flex Item 7</div>
+                        <div class="flex-item">Flex Item 8</div>   
+                     </div>
+                </div>
+                <p>
+                    <code><code>justify-content:space-around</code></code>.
+                </p>
+                <div class="box-sample">
+                    <div class="flex-container" style="justify-content: space-around;">
+                        <div class="flex-item">Flex Item 1</div>
+                        <div class="flex-item">Flex Item 2</div>
+                        <div class="flex-item">Flex Item 3</div>
+                        <div class="flex-item">Flex Item 4</div>
+                        <div class="flex-item">Flex Item 5</div>
+                        <div class="flex-item">Flex Item 6</div>   
+                        <div class="flex-item">Flex Item 7</div>
+                        <div class="flex-item">Flex Item 8</div>   
+                     </div>
+                </div>
+                <p>
+                    <code>justify-content:space-between</code>.
+                </p>
+                <div class="box-sample">
+                    <div class="flex-container" style="justify-content: space-between;">
+                        <div class="flex-item">Flex Item 1</div>
+                        <div class="flex-item">Flex Item 2</div>
+                        <div class="flex-item">Flex Item 3</div>
+                        <div class="flex-item">Flex Item 4</div>
+                        <div class="flex-item">Flex Item 5</div>
+                        <div class="flex-item">Flex Item 6</div>   
+                        <div class="flex-item">Flex Item 7</div>
+                        <div class="flex-item">Flex Item 8</div>   
+                     </div>
+                </div>
+                <p>
+                    <code>justify-content:space-evenly</code>.
+                </p>
+                <div class="box-sample">
+                    <div class="flex-container" style="justify-content: space-evenly;">
+                        <div class="flex-item">Flex Item 1</div>
+                        <div class="flex-item">Flex Item 2</div>
+                        <div class="flex-item">Flex Item 3</div>
+                        <div class="flex-item">Flex Item 4</div>
+                        <div class="flex-item">Flex Item 5</div>
+                        <div class="flex-item">Flex Item 6</div>   
+                        <div class="flex-item">Flex Item 7</div>
+                        <div class="flex-item">Flex Item 8</div>   
+                     </div>
+                </div>
+        </div>
+    </div>   
+</body>
+</html>

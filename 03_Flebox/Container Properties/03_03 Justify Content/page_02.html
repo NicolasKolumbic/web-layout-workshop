@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justify Content sin espacio disponible</title>
+    <link rel="shortcut icon" href="../../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css" />
+    <link rel="stylesheet" href="../../../icons.css" />
+    
+    <style>
+
+        .flex-container {
+            display: flex;
+            background-color: rgba(7, 165, 46, 0.5);
+            border: 5px solid rgba(134, 134, 134, 0.5);
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        .flex-item {
+            border: 5px solid rgba(230, 174, 111,1);
+            background-color: rgba(77, 133, 218, 1);
+            color: white;
+            width: 70px;
+            opacity: 0.5;
+        }
+
+        .boxes {
+            padding: 1rem;
+            width: 45%;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        En todos lo ejemplo el <strong>contenedor flexible</strong> tiene un ancho y alto
+        de 200px.
+    </p>
+    <div class="d-flex row-wrap">
+        <div class="boxes">
+            <p>Valor por defecto: <strong>flex-start(normal)</strong></p>
+            <div class="flex-container" style="justify-content: flex-start;">
+               <div class="flex-item">Flex Item 1</div>
+               <div class="flex-item">Flex Item 2</div>
+               <div class="flex-item">Flex Item 3</div>
+               <div class="flex-item">Flex Item 4</div>
+               <div class="flex-item">Flex Item 5</div>
+               <div class="flex-item">Flex Item 6</div>   
+               <div class="flex-item">Flex Item 7</div>
+               <div class="flex-item">Flex Item 8</div>   
+            </div>
+        </div>
+
+        <div class="boxes">
+            <p>
+                <strong>flex-end</strong>. Alinea los <strong>elementos flexibles</strong> contra 
+                el <strong>final principal</strong> en el <strong>eje principal</strong>, similar a <strong>
+                    text-align: right
+                </strong>.
+            </p>
+            <div class="flex-container" style="justify-content: flex-end;">
+                <div class="flex-item">Flex Item 1</div>
+                <div class="flex-item">Flex Item 2</div>
+                <div class="flex-item">Flex Item 3</div>
+                <div class="flex-item">Flex Item 4</div>
+                <div class="flex-item">Flex Item 5</div>
+                <div class="flex-item">Flex Item 6</div>   
+                <div class="flex-item">Flex Item 7</div>
+                <div class="flex-item">Flex Item 8</div>   
+            </div>
+        </div>
+
+        <div class="boxes">
+            <p>
+                <strong>center</strong>. Alinea horizontalmente los <strong>elementos flexibles</strong> en el centro
+                del contenedor.
+            </p>
+            <div class="flex-container" style="justify-content: center;">
+                <div class="flex-item">Flex Item 1</div>
+                <div class="flex-item">Flex Item 2</div>
+                <div class="flex-item">Flex Item 3</div>
+                <div class="flex-item">Flex Item 4</div>
+                <div class="flex-item">Flex Item 5</div>
+                <div class="flex-item">Flex Item 6</div>   
+                <div class="flex-item">Flex Item 7</div>
+                <div class="flex-item">Flex Item 8</div>   
+            </div>
+        </div>
+
+        <div class="boxes">
+            <p>
+                <strong>space-between</strong>. Distribuye los <strong>elementos flexibles</strong>
+                en el <strong>eje principal</strong> colocando el primer elemento HTML en <strong>inicio principal</strong> 
+                y el último en <strong>inicio extremo</strong>, el espacio sobrante se resta con el ancho del resto de elementos HTML 
+                y se distribuyen los márgenes uniformemente entre todos los elementos ubicados entre el primer elemento y el último.
+            </p>
+            <div class="flex-container" style="justify-content: space-between;">
+                <div class="flex-item">Flex Item 1</div>
+                <div class="flex-item">Flex Item 2</div>
+                <div class="flex-item">Flex Item 3</div>
+                <div class="flex-item">Flex Item 4</div>
+                <div class="flex-item">Flex Item 5</div>
+                <div class="flex-item">Flex Item 6</div>   
+                <div class="flex-item">Flex Item 7</div>
+                <div class="flex-item">Flex Item 8</div>   
+            </div>
+        </div>
+
+        <div class="boxes">
+            <p>
+                <strong>space-around</strong>. Distribuye los <strong>elementos flexibles</strong>
+                en el <strong>eje principal</strong> restando el ancho de los elementos al ancho del 
+                contenedor y repartiendo uniformemente el espacio sobrante a los lados de cada elemento.
+                Con esto el primer elemento tendra a su izquierda la mitad del espacio que hay entre el 
+                primer y segundo elemento. El último tendrá a su derecha la mitad del espacio que hay entre 
+                el penúltimo y último elemento.
+            </p>
+            <div class="flex-container" style="justify-content: space-around;">
+                <div class="flex-item">Flex Item 1</div>
+                <div class="flex-item">Flex Item 2</div>
+                <div class="flex-item">Flex Item 3</div>
+                <div class="flex-item">Flex Item 4</div>
+                <div class="flex-item">Flex Item 5</div>
+                <div class="flex-item">Flex Item 6</div>   
+                <div class="flex-item">Flex Item 7</div>
+                <div class="flex-item">Flex Item 8</div>   
+            </div>
+        </div>
+
+        <div class="boxes">
+            <p>
+                <strong>space-evenly</strong>. Distribuye los <strong>elementos flexibles</strong>
+                en el <strong>eje principal</strong> restando el ancho de los elementos al ancho del 
+                contenedor y repartiendo uniformemente el espacio sobrante a los lados de cada elemento.
+            </p>
+            <div class="flex-container" style="justify-content: space-evenly;">
+                <div class="flex-item">Flex Item 1</div>
+                <div class="flex-item">Flex Item 2</div>
+                <div class="flex-item">Flex Item 3</div>
+                <div class="flex-item">Flex Item 4</div>
+                <div class="flex-item">Flex Item 5</div>
+                <div class="flex-item">Flex Item 6</div>   
+                <div class="flex-item">Flex Item 7</div>
+                <div class="flex-item">Flex Item 8</div>   
+            </div>
+        </div>
+    </div>
+    
+   
+</body>
+</html>

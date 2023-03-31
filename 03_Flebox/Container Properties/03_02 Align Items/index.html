@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0302 | Align Items</title>
+    <link rel="shortcut icon" href="../../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css" />
+    <link rel="stylesheet" href="../../../icons.css" />
+    <style>
+        .reset-one {
+            counter-reset: item-number 1;
+        }
+
+        .reset-two {
+            counter-reset: item-number 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><strong>0302 |</strong> Align Items</h1>
+        <hr />
+        <ul class="breadcrumbs">
+            <li>
+                <a href="../../../index.html">Principal</a>    
+            </li>
+            <li>
+                ❯
+            </li>
+            <li class="active">
+                Align Items
+            </li>
+        </ul>
+        <div class="content">
+            <article class="internal-navbar">
+                <section>
+                    <a href="page_01.html" class="link"><i class="wlw-attachment"></i>Cross axis, Cross size y Align Items.</a>
+                    <p>
+                        El <strong>eje y tamaño transversal</strong> tiene un comportamiento por defecto que está estrechamente
+                        relacionado con la propiedad <code>align-items</code>. La propiedad <code>align-items</code> solo actúa sobre el <strong>eje transversal</strong>, define cómo se alinean los
+                        elementos flexibles a lo largo de él dentro de una <strong>línea flexible</strong>.
+                    </p>
+                    <p>
+                        En el documento HTML vínculado a está sección se configuraron los altos de las etiquetas <code>html</code>, <code>body</code> al 100% para poder configurar el alto del <strong>contenedor flexible</strong> al 100%,
+                         para que este ocupe toda la pantalla (alto y ancho). Entonces nuestro <code>div</code> tiene las siguientes propiedades: <code>display:flex</code>,
+                        <code>height:100%</code> y algunas otras relacionadas al color para ser rápidamente visibles. El resultado es que los 
+                        <strong>elementos flexibles</strong> contenidos se estiran por el <strong>eje transversal</strong> en todo el alto disponible del <strong>contenedor flexible</strong>.
+                        El comportamiento se debe al valor por defecto de <code>align-items</code> que es <code>stretch</code>. Este valor distribuirá los <strong>elementos flexibles</strong>
+                        en todo el alto disponible del <strong>contenedor flexible</strong>.
+                    </p>
+    
+                    <p>
+                        Si inspeccionamos un <strong>contenedor flexible</strong>, en la pestaña de <strong>Calculado</strong> con el checkbox de 
+                        <strong>Show all</strong> marcado, en el caso de Google Chrome y Firefox, se puede ver que el valor por defecto es <code>normal</code>.
+                        Este valor equivale a <code>stretch</code>.
+                    </p>
+    
+                    <div>
+                        <img src="../../../images/align-items-default.jpg" class="captures" />
+                        <img src="../../../images/align-items-default-firefox.jpg" class="captures"  />
+                    </div>
+
+                      <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="LYjRdRN">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/LYjRdRN">
+                                    <span class="wlw-global"></span>
+                                    Cross axis, Cross size y Align Items.
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>  
+                    
+    
+                </section>
+                <section>
+                    <a href="page_02.html" class="link"><i class="wlw-attachment"></i>La altura de un contenedor flexible.</a>
+                    <p>
+                        Entonces sabemos que la propiedad afecta solamente al <strong>eje transversal</strong>, que por defecto es la altura.
+                        Si no definimos un alto para el <strong>contenedor flexible</strong>, este se acomoda a la altura de los 
+                        <strong>elementos flexibles</strong>. Si lo definimos el <strong>contenedor flexible</strong> se adaptará a ese alto y los
+                        <strong>elementos flexibles</strong> crecerán a lo alto tanto como el contenedor.
+                    </p>
+    
+                      <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="PoKGRpE">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/PoKGRpE">
+                                    <span class="wlw-global"></span>
+                                    La altura de elementos flexibles.
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>  
+    
+                    
+                </section>
+                <section>
+                    <a href="page_03.html" class="link"><i class="wlw-attachment"></i>altura de elementos flexibles</a>
+                    <p>
+                        Los <strong>elementos flexibles</strong> por defecto se extienden en todo el <strong>eje transversal</strong> si no se configura 
+                        alguna medida de altura, si se hace, estos se adaptarán a aquella medida.
+                    </p>
+
+                      <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="rNzMdzB">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/rNzMdzB">
+                                    <span class="wlw-global"></span>
+                                    altura de elementos flexibles.
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>  
+                    
+                </section>
+                <section>
+                    <a href="page_04.html" class="link"><i class="wlw-attachment"></i>Inicio transversal y extensión transversal.</a>
+                    <p>
+                        Sumado a los 4 primeros conceptos que comentamos en la sección anterior, el <strong>inicio transversal (en ingles cross-start)
+                        </strong> y la <strong>extensión transversal (cross-end)</strong> son dos puntos en donde se pueden distribuir los
+                        <strong>elementos flexibles</strong> en el <strong>eje transversal (cross axis) (Imagen 1)</strong>. Además de <strong>stretch</strong>, <strong>align-items</strong>
+                        tiene una serie de valores para controlar cómo se comportan los <strong>elementos flexibles</strong> dentro del contenedor.
+                    </p>
+    
+                    <div>
+                        <div class="marked-box">
+                            <strong>Inicio transversal(cross-start) y extensión transversal(cross-end) (Imagen 1)</strong> 
+                        </div>
+                        <img src="../../../images/flexbox-layout-model_3.png" />
+                    </div>
+
+                    <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="rNzMdYN">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/rNzMdYN">
+                                    <span class="wlw-global"></span>
+                                    Inicio Transversal y Extensión Transversal.
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>  
+                   
+                </section>
+                <section>
+                    <a href="page_05.html" class="link"><i class="wlw-attachment"></i> Los márgenes y los elementos flexibles.</a>
+                    <p>
+                       Los márgenes paralelos a la <strong>dimensión cruzada (cross-size)</strong> que podemos asignar a los <strong>elementos flexibles</strong> forman parte de estos ¿Qué queremos decir con esto?
+                       En el flujo por defecto de flexbox, donde los elementos se alinean de izquierda a derecha, los márgenes paralelos a la <strong>dimensión cruzada</strong> son el superior e inferior (<code>margin-top</code> y <code>margin-bottom</code>).
+                       Observemos la siguiente imagen para graficarlo:
+                    </p>
+                    <figure class="box-img">
+                        <figcaption class="caption-img">
+                            <span>Relación márgenes y dimensión cruzada en el flujo por defecto</span>
+                        </figcaption>
+                        <img src="../../../images/align-items-margins.png"  />
+                    </figure>
+                    <p>
+                        Sin entrar en detalles sobre la propiedad <code>flex-direction</code>, que se va a detallar en una próxima sección; 
+                        cuando se altera el flujo por defecto de flexbox a una columna, un flujo vertical, los márgenes paralelos cambian a 
+                        <code>margin-left</code> y <code>margin-right</code>.
+                    </p>
+                    <figure class="box-img">
+                        <figcaption class="caption-img">
+                            <span>Relación márgenes y dimensión cruzada en un flujo vertical</span>
+                        </figcaption>
+                        <img src="../../../images/align-items-margins_column.png" />
+                    </figure>
+                    <p>
+                        Observemos en el ejemplo de código de está sección y las posteriores imágenes con los esquemas, para graficar, que está pasando con los márgenes.
+                    </p>
+                           
+                    <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="rNKPXzo">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/rNKPXzo">
+                                    <span class="wlw-global"></span>
+                                    Los márgenes y los elementos flexibles.
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>  
+                    <figure class="box-img">
+                        <figcaption class="caption-img">
+                            <span>Esquema sobre los márgenes y los elementos flexibles</span>
+                        </figcaption>
+                        <img src="../../../images/align-items-image_base.png" class="w-100"/>
+                    </figure>
+                    <p>
+                        Cuando se aplican estos márgenes los <strong>elementos flexibles</strong> se encogen como se puede observar en la imagen.
+                        En la siguiente imagen se le asigna a la propiedad <code>flex-wrap:wrap</code> para mostrar el mismo efecto sobre dos <strong>líneas flexibles</strong>.
+                    </p>
+                    <figure class="box-img">
+                        <figcaption class="caption-img">
+                            <span>Esquema sobre los márgenes y los elementos flexibles sobre líneas flexibles</span>
+                        </figcaption>
+                        <img src="../../../images/align-items-image.png" class="w-100"/>
+                    </figure>  
+                </section>
+            </article>
+        </div>
+    </div>
+    <footer class="footer footer-image">
+        <div class="d-flex justify-content-between footer-image__content">
+            <div>
+            <img src="../../../images/web-layout-workshop-logo.svg" />
+            </div>
+            <div class="text-right">
+                <h6>Desarrollado por Nicolás Kolumbic</h6>
+                <ul class="social-media-list">
+                    <li>
+                        <a href="https://www.linkedin.com/in/nicolaskolumbic/">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 34 34">
+                                <title>
+                                  LinkedIn
+                                </title>                     
+                                <g>
+                                  <path d="M34,2.5v29A2.5,2.5,0,0,1,31.5,34H2.5A2.5,2.5,0,0,1,0,31.5V2.5A2.5,2.5,0,0,1,2.5,0h29A2.5,2.5,0,0,1,34,2.5ZM10,13H5V29h5Zm.45-5.5A2.88,2.88,0,0,0,7.59,4.6H7.5a2.9,2.9,0,0,0,0,5.8h0a2.88,2.88,0,0,0,2.95-2.81ZM29,19.28c0-4.81-3.06-6.68-6.1-6.68a5.7,5.7,0,0,0-5.06,2.58H17.7V13H13V29h5V20.49a3.32,3.32,0,0,1,3-3.58h.19c1.59,0,2.77,1,2.77,3.52V29h5Z" fill="#fff"></path>
+                                </g>
+                              </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/NicolasKolumbic">
+                            <svg height="24" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                                <path fill="#fff" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+    </footer>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</body>
+</html>

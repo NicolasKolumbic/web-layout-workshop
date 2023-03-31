@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14 | Flexbox in Bootstrap</title>
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../icons.css" />
+    <style>
+        .reset-one {
+            counter-reset: item-number 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1><strong>0314 |</strong> Flexbox in Bootstrap</h1>
+        <hr />
+        <ul class="breadcrumbs">
+            <li>
+                <a href="../../index.html">Principal</a>
+            </li>
+            <li>
+                ❯
+            </li>
+            <li class="active">
+                Flexbox in Bootstrap
+            </li>
+        </ul>
+
+        <div class="container">
+            <div class="content">
+                <article class="internal-navbar">
+                    <section>
+                        <a href="page_01.html" class="link"><i class="wlw-attachment"></i>Flexbox en la librería
+                            Bootstrap.</a>
+                        <p>
+                            <strong>Bootstrap</strong> es una de las librerías más utilizada en la maquetación HTML y
+                            CSS.</code></li>
+                            A partir de la <strong>versión 4.0.0</strong> está incluido un módulo de reglas CSS para
+                            <strong>Flexbox</strong>.
+                        </p>
+                        <p>
+                            Para adaptar la UX/UI a diferentes dispositivos, lo que llamamos comúnmente  <strong>Web Responsive Design</strong>,
+                             <strong>Bootstrap</strong> incluye en los selectores de sus clases CSS las siguientes abreviaturas relacionadas a los diferentes tamaños de dispositivos:
+                        </p>
+                        <table class="format-table cell-center w-100">
+                            <thead>
+                              <tr>
+                                <th>Abreviatura</th>
+                                <th>Medida</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <strong>xs</strong>
+                                    </td>
+                                    <td>
+                                        dispositivos menores 576px
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>sm</strong>
+                                    </td>
+                                    <td>
+                                        dispositivos mayores a 576px
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>md</strong>
+                                    </td>
+                                    <td>
+                                        dispositivos mayores a 768px
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>lg</strong>
+                                    </td>
+                                    <td>
+                                        dispositivos mayores a 992px
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>xl</strong>
+                                    </td>
+                                    <td>
+                                        dispositivos mayores a 1200px
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>xxl</strong>
+                                    </td>
+                                    <td>
+                                        dispositivos mayores a 1400px
+                                        <span class="d-block">* a partir de Bootstrap 5</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                          </table>
+                          <p>
+                            La documentación es muy clara con lo que mostraremos algunos ejemplo y el enlace a esta.
+                            <a href="https://getbootstrap.com/docs/4.6/utilities/flex/" class="link">
+                                <i class="wlw-global"></i>
+                                Bootstrap 4.6
+                            </a>
+                          </p>
+                        <table class="format-table w-100">
+                            <thead>
+                                <tr>
+                                    <th class="w-50">
+                                        Descripción
+                                    </th>
+                                    <th class="w-50">
+                                        Clases CSS
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Para definir <code>display:flex</code>
+                                        o <code>display:inline-flex</code> <strong>Bootstrap</strong>
+                                        tiene las clases con el prefijo <strong>d-</strong>, seguido del valor
+                                        (<code>flex</code>, <code>inline-flex</code>, <code>block</code>) y el tamaño
+                                        del dispositivo representado por 
+                                    </td>
+                                    <td>
+                                        <div class="d-flex">
+                                            <ul>
+                                                <li>.d-flex</li>
+                                                <li>.d-inline-flex</li>
+                                                <li>.d-sm-flex</li>
+                                                <li>.d-sm-inline-flex</li>
+                                                <li>.d-md-flex</li>
+                                                <li>.d-md-inline-flex</li>
+                                            </ul>
+                                            <ul>
+                                                <li>.d-lg-flex</li>
+                                                <li>.d-lg-inline-flex</li>
+                                                <li>.d-xl-flex</li>
+                                                <li>.d-xl-inline-flex</li>
+                                                <li>.d-xxl-flex</li>
+                                                <li>.d-xxl-inline-flex</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        La propiedad <code>flex-direction</code>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex">
+                                            <ul>
+                                                <li>.flex-row</li>
+                                                <li>.flex-row-reverse</li>
+                                                <li>.flex-column</li>
+                                                <li>.flex-column-reverse</li>
+                                                <li>.flex-sm-row</li>
+                                                <li>.flex-sm-row-reverse</li>
+                                                <li>.flex-sm-column</li>
+                                                <li>.flex-sm-column-reverse</li>
+                                                <li>.flex-md-row</li>
+                                                <li>.flex-md-row-reverse</li>
+                                                <li>.flex-md-column</li>
+                                                <li>.flex-md-column-reverse</li>
+                                            </ul>
+                                            <ul>
+                                                <li>.flex-lg-row</li>
+                                                <li>.flex-lg-row-reverse</li>
+                                                <li>.flex-lg-column</li>
+                                                <li>.flex-lg-column-reverse</li>
+                                                <li>.flex-xl-row</li>
+                                                <li>.flex-xl-row-reverse</li>
+                                                <li>.flex-xl-column</li>
+                                                <li>.flex-xl-column-reverse</li>
+                                                <li>.flex-xxl-row</li>
+                                                <li>.flex-xxl-row-reverse</li>
+                                                <li>.flex-xxl-column</li>
+                                                <li>.flex-xxl-column-reverse</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>
+                                            justify-content
+                                        </code>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex">
+                                            <ul>
+                                                <li>.justify-content-start</li>
+                                                <li>.justify-content-end</li>
+                                                <li>.justify-content-center</li>
+                                                <li>.justify-content-between</li>
+                                                <li>.justify-content-around</li>
+                                                <li>.justify-content-evenly</li>
+                                                <li>.justify-content-sm-start</li>
+                                                <li>.justify-content-sm-end</li>
+                                                <li>.justify-content-sm-center</li>
+                                                <li>.justify-content-sm-between</li>
+                                                <li>.justify-content-sm-around</li>
+                                                <li>.justify-content-sm-evenly</li>
+                                                <li>.justify-content-md-start</li>
+                                                <li>.justify-content-md-end</li>
+                                                <li>.justify-content-md-center</li>
+                                                <li>.justify-content-md-between</li>
+                                                <li>.justify-content-md-around</li>
+                                                <li>.justify-content-md-evenly</li>
+                                            </ul>
+                                            <ul>
+                                                <li>.justify-content-lg-start</li>
+                                                <li>.justify-content-lg-end</li>
+                                                <li>.justify-content-lg-center</li>
+                                                <li>.justify-content-lg-between</li>
+                                                <li>.justify-content-lg-around</li>
+                                                <li>.justify-content-lg-evenly</li>
+                                                <li>.justify-content-xl-start</li>
+                                                <li>.justify-content-xl-end</li>
+                                                <li>.justify-content-xl-center</li>
+                                                <li>.justify-content-xl-between</li>
+                                                <li>.justify-content-xl-around</li>
+                                                <li>.justify-content-xl-evenly</li>
+                                                <li>.justify-content-xxl-start</li>
+                                                <li>.justify-content-xxl-end</li>
+                                                <li>.justify-content-xxl-center</li>
+                                                <li>.justify-content-xxl-between</li>
+                                                <li>.justify-content-xxl-around</li>
+                                                <li>.justify-content-xxl-evenly</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>
+                                            align-items
+                                        </code>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex">
+                                            <ul>
+                                                <li>.align-items-start</li>
+                                                <li>.align-items-end</li>
+                                                <li>.align-items-center</li>
+                                                <li>.align-items-baseline</li>
+                                                <li>.align-items-stretch</li>
+                                                <li>.align-items-sm-start</li>
+                                                <li>.align-items-sm-end</li>
+                                                <li>.align-items-sm-center</li>
+                                                <li>.align-items-sm-baseline</li>
+                                                <li>.align-items-sm-stretch</li>
+                                                <li>.align-items-md-start</li>
+                                                <li>.align-items-md-end</li>
+                                                <li>.align-items-md-center</li>
+                                                <li>.align-items-md-baseline</li>
+                                                <li>.align-items-md-stretch</li>
+                                            </ul>
+                                            <ul>
+                                                <li>.align-items-lg-start</li>
+                                                <li>.align-items-lg-end</li>
+                                                <li>.align-items-lg-center</li>
+                                                <li>.align-items-lg-baseline</li>
+                                                <li>.align-items-lg-stretch</li>
+                                                <li>.align-items-xl-start</li>
+                                                <li>.align-items-xl-end</li>
+                                                <li>.align-items-xl-center</li>
+                                                <li>.align-items-xl-baseline</li>
+                                                <li>.align-items-xl-stretch</li>
+                                                <li>.align-items-xxl-start</li>
+                                                <li>.align-items-xxl-end</li>
+                                                <li>.align-items-xxl-center</li>
+                                                <li>.align-items-xxl-baseline</li>
+                                                <li>.align-items-xxl-stretch</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>align-self</code>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex">
+                                            <ul>
+                                                <li>.align-self-start</li>
+                                                <li>.align-self-end</li>
+                                                <li>.align-self-center</li>
+                                                <li>.align-self-baseline</li>
+                                                <li>.align-self-stretch</li>
+                                                <li>.align-self-sm-start</li>
+                                                <li>.align-self-sm-end</li>
+                                                <li>.align-self-sm-center</li>
+                                                <li>.align-self-sm-baseline</li>
+                                                <li>.align-self-sm-stretch</li>
+                                                <li>.align-self-md-start</li>
+                                                <li>.align-self-md-end</li>
+                                                <li>.align-self-md-center</li>
+                                                <li>.align-self-md-baseline</li>
+                                                <li>.align-self-md-stretch</li>
+                                                </ul>
+                                                <ul>
+                                                <li>.align-self-lg-start</li>
+                                                <li>.align-self-lg-end</li>
+                                                <li>.align-self-lg-center</li>
+                                                <li>.align-self-lg-baseline</li>
+                                                <li>.align-self-lg-stretch</li>
+                                                <li>.align-self-xl-start</li>
+                                                <li>.align-self-xl-end</li>
+                                                <li>.align-self-xl-center</li>
+                                                <li>.align-self-xl-baseline</li>
+                                                <li>.align-self-xl-stretch</li>
+                                                <li>.align-self-xxl-start</li>
+                                                <li>.align-self-xxl-end</li>
+                                                <li>.align-self-xxl-center</li>
+                                                <li>.align-self-xxl-baseline</li>
+                                                <li>.align-self-xxl-stretch</li>
+                                            </ul>
+                                        </div>
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>flex-grow</code> con valor 1
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>.flex-fill</li>
+                                            <li>.flex-sm-fill</li>
+                                            <li>.flex-md-fill</li>
+                                            <li>.flex-lg-fill</li>
+                                            <li>.flex-xl-fill</li>
+                                            <li>.flex-xxl-fill</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>flex-grow</code> y <code>flex-shrink</code>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex">
+                                            <ul>
+                                                <li>.flex-{grow|shrink}-0</li>
+                                                <li>.flex-{grow|shrink}-1</li>
+                                                <li>.flex-sm-{grow|shrink}-0</li>
+                                                <li>.flex-sm-{grow|shrink}-1</li>
+                                                <li>.flex-md-{grow|shrink}-0</li>
+                                                <li>.flex-md-{grow|shrink}-1</li>
+                                                </ul>
+                                                <ul>
+                                                <li>.flex-lg-{grow|shrink}-0</li>
+                                                <li>.flex-lg-{grow|shrink}-1</li>
+                                                <li>.flex-xl-{grow|shrink}-0</li>
+                                                <li>.flex-xl-{grow|shrink}-1</li>
+                                                <li>.flex-xxl-{grow|shrink}-0</li>
+                                                <li>.flex-xxl-{grow|shrink}-1</li>
+                                            </ul>
+                                        </div>
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>flex-wrap</code>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex">
+                                            <ul>
+                                                <li>.flex-nowrap</li>
+                                                <li>.flex-wrap</li>
+                                                <li>.flex-wrap-reverse</li>
+                                                <li>.flex-sm-nowrap</li>
+                                                <li>.flex-sm-wrap</li>
+                                                <li>.flex-sm-wrap-reverse</li>
+                                                <li>.flex-md-nowrap</li>
+                                                <li>.flex-md-wrap</li>
+                                                <li>.flex-md-wrap-reverse</li>
+                                                </ul><ul>
+                                                <li>.flex-lg-nowrap</li>
+                                                <li>.flex-lg-wrap</li>
+                                                <li>.flex-lg-wrap-reverse</li>
+                                                <li>.flex-xl-nowrap</li>
+                                                <li>.flex-xl-wrap</li>
+                                                <li>.flex-xl-wrap-reverse</li>
+                                                <li>.flex-xxl-nowrap</li>
+                                                <li>.flex-xxl-wrap</li>
+                                                <li>.flex-xxl-wrap-reverse</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </article>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>

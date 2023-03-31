@@ -527,6 +527,39 @@ code {
     max-width:100%;
 }
 
+.format-table {
+    border-collapse: collapse;
+    border: 2px solid var(--onyx)
+}
+
+.format-table th {
+    background-color: var(--onyx);
+    color: white;
+}
+
+.format-table tr:nth-child(even) {
+    background-color: hsla(207, 24%, 82%, 0.588);
+}
+
+.format-table tr td {
+    border-left: 2px solid var(--onyx);
+    border-right: 2px solid var(--onyx);
+}
+
+.format-table tr td + td {
+    font-size: 0.785rem;
+}
+
+.format-table tr td ul {
+    margin:0;
+    padding: 1rem;
+    list-style-type: none;
+}
+
+.cell-center td {
+    text-align: center;
+}
+
 .link {
     color: var(--aero);
     text-decoration: none;
@@ -643,6 +676,10 @@ hr {
 
 .d-inline-block {
     display: inline-block;
+}
+
+.d-block {
+    display: block;
 }
 
 .d-block-xs {

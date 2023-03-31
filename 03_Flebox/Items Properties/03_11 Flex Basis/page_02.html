@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los valores max-content y min-content</title>
+    <link rel="shortcut icon" href="../../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css" />
+    <link rel="stylesheet" href="../../../icons.css" />
+    <style>
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: rgba(7, 165, 46, 0.5);
+            border: 5px solid rgba(134, 134, 134, 0.5);
+            width: 600px;
+            /* height: 600px; */
+        }
+
+
+        .flex-item {
+            width: 100px;
+            border: 5px solid rgb(230 174 111);
+            background-color: rgba(77, 133, 218, 1);
+            color: white;
+        }
+
+        .min-content {
+            flex-basis: min-content;
+        }
+
+        .max-content {
+            flex-basis: max-content;
+        }
+     
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="d-flex">
+                <div>
+                    <p>
+                        La clave <code>min-content</code>.
+                    </p>
+                    <div class="flex-container">
+                        <div class="flex-item min-content">
+                            <img src="../../../images/dog_200.png" class="w-100" />
+                        </div>
+                        <div class="flex-item min-content">Mi padre tenía una pequeña hacienda en Nottinghamshire. De cinco hijos, yo era el tercero. Me mandó al Colegio Emanuel, de Cambridge, teniendo yo catorce años, y allí residí tres, seriamente aplicado a mis estudios pero como mi sostenimiento, aun siendo mi pensión muy corta, representaba una carga demasiado grande para una tan reducida fortuna, entré de aprendiz con míster James Bates, eminente cirujano de Londres, con quien estuve cuatro años, y con pequeñas cantidades que mi padre me enviaba de vez en cuando fui aprendiendo navegación y otras partes de las Matemáticas, útiles a quien ha de viajar, pues siempre creí que, más tarde o más temprano, viajar sería mi suerte. Cuando dejé a míster Bates, volví al lado de mi padre allí, con su ayuda, la de mi tío Juan y la de algún otro pariente, conseguí cuarenta libras y la promesa de treinta al año para mi sostenimiento en Leida. En este último punto estudié Física dos años y siete meses, seguro de que me sería útil en largas travesías.</div>
+                    </div>
+                </div>
+                <div>
+                    <p>
+                        La clave <code>max-content</code>.
+                    </p>
+                        <div class="flex-container">
+                        <div class="flex-item max-content">
+                            <img src="../../../images/dog_200.png" class="w-100" />
+                        </div>
+                        <div class="flex-item max-content">Mi padre tenía una pequeña hacienda en Nottinghamshire. De cinco hijos, yo era el tercero. Me mandó al Colegio Emanuel, de Cambridge, teniendo yo catorce años, y allí residí tres, seriamente aplicado a mis estudios pero como mi sostenimiento, aun siendo mi pensión muy corta, representaba una carga demasiado grande para una tan reducida fortuna, entré de aprendiz con míster James Bates, eminente cirujano de Londres, con quien estuve cuatro años, y con pequeñas cantidades que mi padre me enviaba de vez en cuando fui aprendiendo navegación y otras partes de las Matemáticas, útiles a quien ha de viajar, pues siempre creí que, más tarde o más temprano, viajar sería mi suerte. Cuando dejé a míster Bates, volví al lado de mi padre allí, con su ayuda, la de mi tío Juan y la de algún otro pariente, conseguí cuarenta libras y la promesa de treinta al año para mi sostenimiento en Leida. En este último punto estudié Física dos años y siete meses, seguro de que me sería útil en largas travesías.</div>
+                    </div>
+                </div>
+            </div>
+           
+           
+        </div>
+    </div> 
+</body>
+</html>

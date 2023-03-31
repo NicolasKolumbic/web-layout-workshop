@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los márgenes y los elementos flexibles</title>
+    <link rel="shortcut icon" href="../../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css" />
+    <link rel="stylesheet" href="../../../icons.css" />
+    <style>
+        body {
+            margin: 1rem;
+        }
+        
+        .flex-container {
+            display: flex;
+            background-color: rgba(7, 165, 46, 0.5);
+            border: 5px solid rgba(134, 134, 134, 0.5);
+            height: 350px;
+            width: 380px;
+        }
+
+        .flex-container div {
+            border: 5px solid rgba(230, 174, 111, 1);
+            background-color: rgba(77, 133, 218, 1);
+            color: white;
+            padding: 1rem;
+            margin: 5px;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        .flex-direction-column {
+            flex-direction: column;
+        }
+
+        div.mt-5 {
+            margin-top: 50px;
+        }
+
+        div.mb-5 {
+            margin-bottom: 50px;
+        }
+
+        div.ml-5, img.ml-5 {
+            margin-left: 50px;
+        }
+
+        div.mr-5, img.mr-5 {
+            margin-right: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <p>
+            Los márgenes no colapsan
+        </p>
+        <div class="flex-container" style="width:100px;">
+            <div class="ml-5 mr-5">
+                <strong>Flex Item 1</strong>
+            </div>
+            <div class="ml-5 mr-5">
+                <strong>Flex Item 2</strong>
+            </div>
+            <img src="../../../images/dog_200.png" class="ml-5 mr-5 w-100">
+        </div>
+        <p>
+            En el flujo por defecto de flexbox estos márgenes mencionados afectan a los <strong>elementos flexibles</strong> reduciendo la altura, desde borde superior 
+            sí aplicamos <code>margin-top</code>, y desde el border inferior si utilizamos <code>margin-bottom</code>.
+        </p>
+        <div class="flex-container">
+            <div>
+                <strong>Flex Item 1</strong>
+            </div>
+            <div class="mt-5">
+                <strong>Flex Item 2</strong>
+                <p>margin-top:50px</p>
+            </div>
+            <div class="mb-5">
+                <strong>Flex Item 3</strong>
+                <p>margin-bottom:50px</p>
+            </div>
+        </div>
+        <p>En cambio sí utilizamos los márgenes paralelos a la <strong>dimensión principal (main-size)</strong> los <strong>elementos flexibles</strong> se trasladan tantos píxeles como lo definamos por medio de los márgenes laterales (<code>margin-left</code> y <code>margin-right</code>),
+            empujando a los elementos continuos.
+        </p>
+        <div class="flex-container">
+            <div>
+                <strong>Flex Item 1</strong>
+            </div>
+            <div class="ml-5">
+                <strong>Flex Item 2</strong>
+                <p>margin-left:50px</p>
+            </div>
+            <div>
+                <strong>Flex Item 3</strong>
+            </div>
+        </div>
+        <div>
+            <p>
+                Sí cambiamos el flujo normal de un contenedor flexible a vertical (<code>flex-direction:column</code>), como comentamos, los márgenes paralelos son el izquierdo y el derecho.
+            </p>
+        </div>
+        <div class="flex-container flex-direction-column">
+            <div>
+                <strong>Flex Item 1</strong>
+            </div>
+            <div class="ml-5">
+                <strong>Flex Item 2</strong>
+                <p>margin-left:50px</p>
+            </div>
+            <div class="mr-5">
+                <strong>Flex Item 3</strong>
+                <p>margin-right:50px</p>
+            </div>
+        </div>
+        <div>
+            <p>
+                Utilizando la propiedad <code>flex-wrap:wrap</code> para ver como los márgenes y los <strong>elementos flexibles</strong> desde dos <strong>líneas flexibles</strong>.
+            </p>
+        </div>
+        <div class="flex-container flex-wrap">
+            <div>
+                <strong>Flex Item 1</strong>
+            </div>
+            <div class="mt-5">
+                <strong>Flex Item 2</strong>
+            </div>
+            <div class="mb-5">
+                <strong>Flex Item 3</strong>
+            </div>
+            <div class="mt-5">
+                <strong>Flex Item 4</strong>
+            </div>
+            <div class="mb-5">
+                <strong>Flex Item 5</strong>
+            </div>
+            <div class="mt-5">
+                <strong>Flex Item 6</strong>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
