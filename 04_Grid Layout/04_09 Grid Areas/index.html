@@ -1,0 +1,187 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0409 | Areas de grilla</title>
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../icons.css" />
+</head>
+<body>
+    <div class="container">
+        <h1><strong>0409 |</strong> Areas de grillas</h1>
+        <hr />
+        <ul class="breadcrumbs">
+            <li>
+                <a href="../../index.html">Principal</a>    
+            </li>
+            <li>
+                ❯
+            </li>
+            <li class="active">
+                Areas de grillas
+            </li>
+        </ul>
+
+        <div class="content">
+            <article class="internal-navbar mt-2">
+                <section>
+                    <a href="page_01.html" class="link"><i class="wlw-attachment"></i>Areas</a>
+                    <p> 
+                        <strong>Grid Layout Module</strong> dispone de <code>grid-area</code> y <code>grid-template-area</code>, 
+                        
+                        2 propiedades que permiten generar estructuras cómo las que venimos realizando de manera muy sencilla.
+                         La primera debe declararse sobre los <strong>elementos de grilla</strong> y recibe un nombre alfanumérico que 
+                         será el nombre de esa <strong>área</strong> representada por un elemento HTML. 
+                         La segunda se incluye en el <strong>contenedor</strong> y define la estructura de la grilla por
+                          medio de los nombres de áreas asignados a cada <strong>elemento de grilla</strong>.
+
+                    </p>
+                   <p>
+                        Vamos a retomar el ejemplo anterior y utilizar <strong>areas</strong> para estructurarlo. De momento, <strong>aside</strong> no tendrá la estructura objetivo.
+                   </p>
+                   <figure class="box-img">
+                    <figcaption class="caption-img">
+                        <span> Ejemplo de una document HTML típico (header, navbar, etc...)</span>
+                    </figcaption>
+                    <img src="../../images/grid lines alias 3.png">
+                </figure>
+                
+                <div class="codepen-container">
+                    <div class="codepen"
+                      data-height="500"
+                      data-theme-id="dark"
+                      data-default-tab="result"
+                      data-user="NicolasKolumbic"
+                      data-slug-hash="rNqVaZq">
+                        <p class="codepen-alert">
+                            <span class="no-signal"></span>
+                            Ha ocurrido algún problema con la señal de internet. 
+                            <a href="https://codepen.io/NicolasKolumbic/pen/rNqVaZq">
+                                <span class="wlw-global"></span>
+                                Áreas.
+                            </a> 
+                            desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                            en 
+                            <a href="https://codepen.io">
+                                <span class="wlw-global"></span>
+                                CodePen
+                            </a>.
+                        </p>
+                    </div>
+                </div>
+                <figure class="box-img">
+                    <figcaption class="caption-img">
+                        <span>Resultado de la estructuración por áreas</span>
+                    </figcaption>
+                    <img src="../../images/grid lines alias 5.png">
+                </figure>
+                <p>
+                    Comentamos algunos detalles sobre las síntaxis de <code>grid-template-areas</code>, 
+                    las <strong>comillas dobles</strong> determinan las filas de una grilla. 
+                    No es válido declarar las áreas en un solo juego de comillas.
+                </p>
+                </section>
+                <section>
+                    <a href="page_02.html" class="link"><i class="wlw-attachment"></i>Celdas vacías</a>
+                    <p>
+                        Puede ser que necesitemos dentro de la estructuración que algunas celdas queden vacías,
+                        para esos casos podemos utilizar un caracter <strong>"." (punto)</strong> o más.
+                    </p>
+                    
+                    <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="YzJXPMw">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/YzJXPMw">
+                                    <span class="wlw-global"></span>
+                                    Celdas vacías.
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <a href="page_03.html" class="link"><i class="wlw-attachment"></i>Las áreas y las líneas de grilla</a>
+                    <p>
+                        Cuando utilizamos <strong>areas</strong> para la propiedad <code>grid-area</code> implicitamente y consecuentemente creamos <strong>alias</strong> para las <strong>líneas de la grilla</strong>.
+                        Chequeando la siguiente imagen observamos las <strong>líneas de grilla</strong> tiene asignado unos alias (<strong>header-start</strong>, <strong>navbar-start</strong>, <strong>footer-start</strong>, 
+                        <strong>main-start</strong>, <strong>navbar-end</strong> entre otros).
+                    </p>
+                    <figure class="box-img">
+                        <figcaption class="caption-img">
+                            <span>Configuramos mostrar los nombres de líneas en la pestaña de Diseño en las Herramientas de Desarrollo</span>
+                        </figcaption>
+                        <img src="../../images/grid-area-generate-grid-lines.jpg" class="w-100" />
+                    </figure>
+
+                    <p>
+                        Lo curioso es que si inspeccionamos algunos de estos elementos, por ejemplo el <code>header</code>, vemos que si expandimos la <strong>propiedad shorthand</strong> <code>grid-area</code>, está generó 
+                        para las propiedades relacionadas que representan un <strong>alias</strong> llamado <strong>header</strong>. <code>grid-area</code> genera <strong>líneas de grilla</strong> y concatena a los <strong>alias</strong>
+                        un subfijo para el comienzo, <strong>-start</strong>, y otro para el final, <strong>-end</strong>. 
+                        
+                    </p>
+
+                    <figure class="box-img">
+                        <figcaption class="caption-img">
+                            <span>Propiedades que representa grid-area</span>
+                        </figcaption>
+                        <img src="../../images/grid-area-generate-grid-lines_developer-tools.jpg" class="w-100" />
+                    </figure>
+                </section>
+            </article>
+        </div>
+    </div>
+    <footer class="footer footer-image">
+        <div class="d-flex justify-content-between footer-image__content">
+            <div>
+            <img src="../../images/web-layout-workshop-logo.svg" />
+            </div>
+            <div class="text-right">
+                <h6>Desarrollado por Nicolás Kolumbic</h6>
+                <ul class="social-media-list">
+                    <li>
+                        <a href="https://www.linkedin.com/in/nicolaskolumbic/">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 34 34">
+                                <title>
+                                  LinkedIn
+                                </title>                     
+                                <g>
+                                  <path d="M34,2.5v29A2.5,2.5,0,0,1,31.5,34H2.5A2.5,2.5,0,0,1,0,31.5V2.5A2.5,2.5,0,0,1,2.5,0h29A2.5,2.5,0,0,1,34,2.5ZM10,13H5V29h5Zm.45-5.5A2.88,2.88,0,0,0,7.59,4.6H7.5a2.9,2.9,0,0,0,0,5.8h0a2.88,2.88,0,0,0,2.95-2.81ZM29,19.28c0-4.81-3.06-6.68-6.1-6.68a5.7,5.7,0,0,0-5.06,2.58H17.7V13H13V29h5V20.49a3.32,3.32,0,0,1,3-3.58h.19c1.59,0,2.77,1,2.77,3.52V29h5Z" fill="#fff"></path>
+                                </g>
+                              </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/NicolasKolumbic">
+                            <svg height="24" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                                <path fill="#fff" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+    </footer>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</body>
+</html>

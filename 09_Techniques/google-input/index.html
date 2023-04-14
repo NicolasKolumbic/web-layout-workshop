@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo de texto estilo google</title>
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../icons.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <style>
+        .google-input {
+            position: relative;
+            display: inline-flex;
+        }
+
+        .google-input__label {
+            animation: expand-cell-reverse 0.3s ease-out 1;
+            animation-fill-mode: forwards;
+            display: grid;
+            grid-template-columns: 20px 0 1fr;
+            margin: 0;
+            padding: 0 0.4rem;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .google-input__label__border-top::before {
+            content: "";
+            display: block;
+            border-top: 2px solid var(--brown);
+            transition: all 0.3s;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+
+        .google-input__border-top__lbl {
+            line-height: 0;
+            padding-left: 0;
+            padding-right: 0;
+            animation: align_text-reverse 0.3s ease-out 1;
+            animation-fill-mode: forwards;
+        }
+
+        .google-input__border-top__text {
+            font-weight: 500;
+            position: relative;
+            font-size: 1rem;
+            left: -14px;
+            color: var(--brown);
+            width: max-content;
+            display: block;
+            animation: move_text-reverse 0.3s ease-out 1;
+            animation-fill-mode: forwards;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            top: 2px;
+        }
+
+        .google-input::before {
+            content: "";
+            display: block;
+            border: 2px solid var(--brown);
+            border-right: none;
+            width: 0.5rem;
+            border-radius: 0.25rem 0 0 0.25rem;
+        }
+
+        .google-input::after {
+            content: "";
+            display: block;
+            border: 2px solid var(--brown);
+            border-left: none;
+            width: 0.5rem;
+            border-radius: 0 0.25rem 0.25rem 0;
+        }
+
+        .google-input__control {
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid var(--brown);
+            height: 2.2rem;
+            width: 100%;
+            color: var(--brown);
+            font-weight: 300;
+        }
+
+        /* Show green borders when valid */
+        .google-input__control:valid+.google-input__label {
+            animation: none;
+            grid-template-columns: 20px auto 1fr;
+        }
+
+        .google-input__control:valid+.google-input__label .google-input__border-top__lbl {
+            animation: none;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+
+        .google-input__control:valid+.google-input__label .google-input__border-top__lbl .google-input__border-top__text {
+            animation: none;
+            font-size: 0.785rem;
+            left: 0px;
+            line-height: 0;
+        }
+
+        .google-input__control:focus {
+            outline: none;
+        }
+
+        .google-input__control:focus:not(:valid)+.google-input__label {
+            animation: expand-cell 0.3s ease-out 1;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+        }
+
+        .google-input__control:focus:not(:valid)+.google-input__label .google-input__border-top__lbl {
+            animation: align_text 0.3s ease-out 1;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+        }
+
+        .google-input__control:focus:not(:valid)+.google-input__label .google-input__border-top__lbl .google-input__border-top__text {
+            animation: move_text 0.3s ease-out 1;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+        }
+
+        @keyframes align_text {
+            0% {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            100% {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+        }
+
+        @keyframes move_text {
+            0% {
+                font-size: 1rem;
+                left: -14px;
+                line-height: 2;
+            }
+
+            100% {
+                font-size: 0.785rem;
+                left: 0px;
+                line-height: 0;
+            }
+        }
+
+        @keyframes expand-cell {
+            0% {
+                grid-template-columns: 20px 0 1fr;
+
+            }
+
+            100% {
+                grid-template-columns: 20px auto 1fr;
+            }
+        }
+
+        @keyframes align_text-reverse {
+            0% {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+
+            100% {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+
+        @keyframes move_text-reverse {
+            0% {
+                font-size: 0.785rem;
+                left: 0px;
+                line-height: 0;
+            }
+
+            100% {
+                font-size: 1rem;
+                left: -14px;
+                line-height: 2;
+            }
+        }
+
+        @keyframes expand-cell-reverse {
+            0% {
+                grid-template-columns: 20px auto 1fr;
+            }
+
+            100% {
+                grid-template-columns: 20px 0 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="google-input">
+                <input type="text" id="name" class="google-input__control" required pattern="\S+.*" />
+                <label class="google-input__label" for="name">
+                    <span class="google-input__label__border-top"></span>
+                    <div class="google-input__border-top__lbl">
+                        <span class="google-input__border-top__text">Nombre</span>
+                    </div>
+                    <span class="google-input__label__border-top"></span>
+                </label>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

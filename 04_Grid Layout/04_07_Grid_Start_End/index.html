@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0407 | Mover y expandir celdas</title>
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../icons.css" />
+</head>
+<body>
+    <div class="container">
+        <h1><strong>0407 |</strong> Mover y expandir celdas</h1>
+        <hr />
+        <ul class="breadcrumbs">
+            <li>
+                <a href="../../index.html">Principal</a>    
+            </li>
+            <li>
+                ❯
+            </li>
+            <li class="active">
+                Mover y expandir celdas
+            </li>
+        </ul>
+        <div class="content">
+            <article class="internal-navbar mt-2">
+                <section>
+                    <a href="page_01.html" class="link"><i class="wlw-attachment"></i> Mover celdas</a>
+                    <p>
+                        De momento en la construcción de grillas no modificamos la estructura tal como se construye por medio de las propiedades 
+                        que fuimos analizando. La generación de grillas implícitas facilitan la estructuración, pero a veces la estructura puede 
+                        necesitar alterarse a raíz de un <strong>Responsive Layout</strong> para acomodarse a una resolución u otro motivo. Para ello
+                         puede ser práctico mover una celda, <code>grid-column-start</code> - <code>grid-column-end</code> y
+                         <code>grid-row-start</code> - <code>grid-row-end</code>; estos dos juegos de propiedades permiten mover las celdas a través
+                         de las líneas de la grilla.
+                    </p>
+                    <div>
+                        <p>Por ejemplo queremos mover la <strong>celda 1</strong> entre las líneas <strong>2</strong> y <strong>3</strong> horizontalmente y verticalmente. </p>
+                        <img src="../../images/grid-column-start-end.png" />
+                    </div>
+                    <div>
+                        <p>Sí solo definimos <code>grid-column-start</code>, la celda empujará a las siguientes creando nuevas y también dejará su lugar como una celda vacía. </p>
+                        <img src="../../images/grid-column-start-end 2.png" />
+
+                    <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="eYEWZMg">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/eYEWZMg">
+                                    <span class="wlw-global"></span>
+                                    Expandir celdas.
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>
+    
+                    
+                </section>
+                <section>
+                    <a href="page_02.html" class="link"><i class="wlw-attachment"></i> Expandir celdas</a>
+                    <p>
+                        El potencial de expandir celdas permitirá crear estructuras complejas. Es importante conocer que las mencionadas
+                        líneas tienen un valor positivo y otro negativo, de hecho, los navegadores lo muestran (Imagen 1 y 2) en la pestaña de <strong>Diseño(Layout)</strong>.
+                        Para expandir celdas utilizamos las mismas propiedades pero en vez de definir el final en la siguiente línea lo hacemos tanto como queremos que 
+                        se expanda la celda horizontalmente o verticalmente en cada propiedad.
+                    </p>
+    
+                    <div>
+                        <p>
+                            <strong>Chrome (Imagen 1)</strong>
+                        </p>
+                        <img src="../../images/chrome grid layout.jpg" class="captures w-100" />
+                        <p>
+                            <strong>Firefox (Imagen 2)</strong>
+                        </p>
+                        <img src="../../images/firefox grid layout.jpg" class="captures w-100" />
+                    </div>
+
+                </section>
+                <section>
+
+                    <a href="page_03.html" class="link"><i class="wlw-attachment"></i> Propiedades abreviadas</a>
+                    <p>
+                        <code>grid-column-start</code>, <code>grid-column-end</code>, <code>grid-row-start</code> y 
+                        <code>grid-row-end</code> tienen dos propiedades abreviadas: <code>grid-column</code> y <code>grid-row</code> que simplifican la declaración de mover y extender celdas. Además 
+                        estás dos también pueden ser simplificadas en <code>grid-area</code>. Está última propiedad abreviada es más potente que lo descrito en este apartado, será tratado en breve.
+                    </p>
+
+                    <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="PoKmNgM">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/PoKmNgM">
+                                    <span class="wlw-global"></span>
+                                    Apilamiento de celdas.
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <a href="page_04.html" class="link"><i class="wlw-attachment"></i> La clave span</a>
+                    <p>
+                        Otra manera de expandir las celdas en todas las propiedades vistas (<code>grid-column-start</code>, <code>grid-column-end</code>,
+                        <code>grid-row-start</code>, <code>grid-row-end</code>,  <code>grid-column</code>, <code>grid-row</code> y <code>grid-area</code> ) es la que brinda la clave <strong>span</strong>, tiene una función similar a los
+                        atributos <code>colspan</code> y <code>rowspan</code> de la etiqueta <code>&lt;td&gt;</code> de <code>&lt;table&gt;</code>, espera como valor
+                        cuántas celdas en adelante se va expandir.
+                    </p>
+
+                    <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="KKvmWNx">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/KKvmWNx">
+                                    <span class="wlw-global"></span>
+                                    La clave span.
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>
+                    
+                </section>
+               
+                <section>
+                    <a href="page_05.html" class="link"><i class="wlw-attachment"></i> Apilamiento de celdas</a>
+                    <p>
+                        Tener en cuenta que las celdas tienen orden de apilamiento y si movemos dos celdas en el mismo lugar, 
+                     la que esté declarada en el HTML por detrás de la primera será la que se visualice por delante.
+
+                    </p>
+
+                    <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="zYdwZbv">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/zYdwZbv">
+                                    <span class="wlw-global"></span>
+                                    Apilamiento de celdas.
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                
+               
+            </article>
+        </div>
+
+       
+
+       <pre>
+            PODRIA HACER UN GRAFICO PARECIDO PARA QUE QUEDE MAS VISUAL (PARECIDO A LA PAGINA 38(30))
+            Aquí, estamos usando números de líneas de cuadrícula para decir dónde y cómo deben 
+colocarse los elementos dentro de la cuadrícula. Los números de columna cuentan de izquierda 
+a derecha y los números de fila de arriba a abajo. Tenga en cuenta que si omite las líneas de 
+cuadrícula finales, como fue el caso de ".tres", las siguientes líneas de cuadrícula en secuencia se 
+utilizan para las líneas finales.
+       </pre>
+       <pre>
+        Si proporciona un intervalo con un número, está diciendo, "extienda a través de esta cantidad de 
+celdas de cuadrícula". Así que podríamos reescribir nuestro ejemplo anterior de esta manera y 
+obtener exactamente el mismo resultado:
+#grid {display: grid;
+ grid-template-rows: repeat(5, 5em);
+ grid-template-columns: repeat(10, 5em);}
+.one {
+ grid-row-start: 2; grid-row-end: span 2;
+ grid-column-start: 2; grid-column-end: span 2;}
+.two {
+ grid-row-start: 1; grid-row-end: span 2;
+ grid-column-start: 5; grid-column-end: span 5;}
+.three {
+ grid-row-start: 4; grid-row-end: span 1;
+ grid-column-start: 6; grid-column-end: span;}
+       </pre>
+       <pre>
+        Si omite un número para el intervalo, se establece en 1. No puede usar números cero 
+o negativos para el intervalo; solo números enteros positivos.
+Una característica interesante de span es que puede usarlo tanto para líneas de 
+cuadrícula iniciales como finales. El comportamiento preciso de span es que cuenta 
+las líneas de cuadrícula en la dirección "lejos" de la línea de cuadrícula donde 
+comienza. En otras palabras, si define una línea de cuadrícula inicial y configura la 
+línea de cuadrícula final como un valor de intervalo, buscará hacia el final de la 
+cuadrícula. Por el contrario, si define una línea de cuadrícula final y convierte la línea
+de inicio en un valor de intervalo, buscará hacia el inicio de la cuadrícula
+       </pre>
+       <pre>
+        No estamos restringidos a números de líneas de cuadrícula, como sucede. Si hay líneas de 
+cuadrícula con nombre, podemos referirnos a ellas en lugar de (o junto con) números. Si tiene 
+varias instancias de un nombre de línea de cuadrícula, puede usar números para identificar de 
+qué instancia del nombre de línea de cuadrícula está hablando. Por lo tanto, para comenzar 
+desde la cuarta instancia de una cuadrícula de fila denominada "mast-slice", puede decir "mastslice" 4. Eche un vistazo a lo siguiente, ilustrado en la Figura 30, para tener una idea de cómo 
+funciona.
+#grid {display: grid;
+ grid-template-rows: repeat(5, [R] 4em);
+ grid-template-columns: 2em repeat(5, [col-A] 5em [col-B] 5em) 2em;}
+.one {
+ grid-row-start: R 2; grid-row-end: 5;
+ grid-column-start: col-B; grid-column-end: span 2;}
+ .two {
+    grid-row-start: R; grid-row-end: span R 2;
+    grid-column-start: col-A 3; grid-column-end: span 2 col-A;}
+   .three {
+    grid-row-start: 9;
+    grid-column-start: col-A -2;}
+       </pre>
+       <pre>
+        EJEMPLO DE LA PAGINA 41(33) NO SE ENTIENDE, PROBARLO CON CODIGO.
+        Adjuntar elementos a líneas de cuadrícula con nombre
+       </pre>
+       <pre>
+        MIRAR EJEMPLO DE LA PAG 42 (34) "Otra forma de adjuntar elementos a líneas de cuadrícula con nombre"
+        Hay una forma alternativa de usar nombres con líneas de cuadrícula con nombre, 
+específicamente, las líneas de cuadrícula con nombre que se crean implícitamente por 
+áreas de cuadrícula. Por ejemplo, considere los siguientes estilos, ilustrados en la Figura 
+31:
+grid-template-areas:
+ "header header header header"
+ "leftside content content rightside"
+ "leftside footer footer footer";
+#masthead {grid-row-start: header;
+grid-column-start: header; grid-row-end: header;}
+#sidebar {grid-row-start: 2; grid-row-end: 4;
+grid-column-start: leftside / span 1;}
+Attaching Elements to the Grid | 33
+#main {grid-row-start: content; grid-row-end: content;
+grid-column-start: content;}
+#navbar {grid-row-start: rightside; grd-row-end: 3;
+grid-column-start: rightside;}
+#footer {grid-row-start: 3; grid-row-end: span 1;
+grid-column-start: footer; grid-row-end: footer;}
+
+La posibilidad del valor final, auto, es bastante interesante. De acuerdo con la 
+especificación de diseño de cuadrícula, si una de las propiedades de inicio/fin de la línea 
+de cuadrícula se establece en automático, eso indica "ubicación automática, un intervalo 
+automático o un intervalo predeterminado de uno". En la práctica, lo que esto tiende a 
+significar es que la línea de la cuadrícula que se selecciona está gobernada por el "flo de la 
+cuadrícula", un concepto que aún tenemos que cubrir (¡pero lo haremos pronto!). Para 
+una línea de inicio, auto generalmente significa que se usará la siguiente línea de columna 
+o fila disponible. Para una línea final, auto generalmente significa un lapso de una celda. 
+En ambos casos, la palabra "generalmente" se usa intencionalmente: como con cualquier 
+mecanismo automático, no hay absolutos
+       </pre>
+       <pre>
+        PAGINA 44 (83)
+        #grid {display: grid;
+            grid-template-rows: repeat(10, [R] 1.5em);
+            grid-template-columns: 2em repeat(5, [col-A] 5em [col-B] 5em) 2em;}
+           .one {
+            grid-row: R 3 / 7;
+            grid-column: col-B / span 2;}
+           .two {
+            grid-row: R / span R 2;
+            grid-column: col-A 3 / span 2 col-A;}
+           .three {
+            grid-row: 9;
+            grid-column: col-A -2;}
+           Eso es mucho más fácil de leer que tener cada valor inicial y final en su propia propiedad, 
+           sinceramente. Además de ser más compacto, el comportamiento de estas propiedades es 
+           más o menos lo que cabría esperar. Si tiene dos bits separados por un solidus, la primera 
+           parte define la línea de cuadrícula inicial y la segunda parte define la línea de cuadrícula 
+           final.
+           #grid {display: grid;
+            grid-template-areas:
+           "header header"
+           "sidebar content"
+           "footer footer";
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 25% 75%;}
+           #header {grid-row: header / header; grid-column: header;}
+           #footer {grid-row: footer; grid-column: footer-start / footer-end;}    
+       </pre>
+       <pre>
+        Esta es la razón por la que es arriesgado nombrar las líneas de la cuadrícula de la misma manera que las áreas 
+de la cuadrícula. Considera lo siguiente:
+ grid-template-areas:
+"header header"
+"sidebar content"
+"footer footer"
+"legal legal";
+grid-template-rows: auto 1fr [footer] auto [footer];
+grid-template-columns: 25% 75%;
+
+ Para las líneas de columna, no hay problema. el pie de página se expande a "pie de página / 
+pie de página". El navegador busca un área de cuadrícula con ese nombre y la encuentra, 
+por lo que traduce "pie de página / pie de página" a "inicio de pie de página / final de pie de 
+página". El elemento #footer se adjunta a esas líneas de cuadrícula implícitas.
+Para grid-row, todo comienza igual. footer se convierte en "footer / footer", que se traduce 
+como "footer-start / footer-end". Pero eso significa que el #pie de página solo será tan alto 
+como la fila "pie de página". No se extenderá hasta la segunda línea de cuadrícula de pie de 
+página nombrada explícitamente debajo de la fila "legal", porque la traducción de pie de 
+página a "fin de pie de página" (debido a la coincidencia entre el nombre de la línea de 
+cuadrícula y el nombre del área de cuadrícula) tiene prioridad. .
+El resultado de todo esto: generalmente es una mala idea usar el mismo nombre para las 
+áreas de cuadrícula y las líneas de cuadrícula. Es posible que pueda salirse con la suya en 
+algunos escenarios, pero casi siempre es mejor mantener los nombres de línea y área 
+distintos, para evitar tropezar con conflictos de resolución de nombres.
+       </pre>
+
+
+    </div>
+    <footer class="footer footer-image">
+        <div class="d-flex justify-content-between footer-image__content">
+            <div>
+            <img src="../../images/web-layout-workshop-logo.svg" />
+            </div>
+            <div class="text-right">
+                <h6>Desarrollado por Nicolás Kolumbic</h6>
+                <ul class="social-media-list">
+                    <li>
+                        <a href="https://www.linkedin.com/in/nicolaskolumbic/">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 34 34">
+                                <title>
+                                  LinkedIn
+                                </title>                     
+                                <g>
+                                  <path d="M34,2.5v29A2.5,2.5,0,0,1,31.5,34H2.5A2.5,2.5,0,0,1,0,31.5V2.5A2.5,2.5,0,0,1,2.5,0h29A2.5,2.5,0,0,1,34,2.5ZM10,13H5V29h5Zm.45-5.5A2.88,2.88,0,0,0,7.59,4.6H7.5a2.9,2.9,0,0,0,0,5.8h0a2.88,2.88,0,0,0,2.95-2.81ZM29,19.28c0-4.81-3.06-6.68-6.1-6.68a5.7,5.7,0,0,0-5.06,2.58H17.7V13H13V29h5V20.49a3.32,3.32,0,0,1,3-3.58h.19c1.59,0,2.77,1,2.77,3.52V29h5Z" fill="#fff"></path>
+                                </g>
+                              </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/NicolasKolumbic">
+                            <svg height="24" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                                <path fill="#fff" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+    </footer>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</body>
+</html>

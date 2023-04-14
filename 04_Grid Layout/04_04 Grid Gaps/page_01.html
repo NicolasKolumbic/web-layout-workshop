@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Columns</title>
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../icons.css" />
+    <style>
+         .grid-container {
+            display: grid;
+            width: 600px;
+            border: 5px solid rgba(134, 134, 134, 0.5);
+            background-color: rgba(7, 165, 46, 0.5);
+
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 150px 150px;
+            column-gap: 15px;
+            row-gap: 10px;
+        }
+
+        .grid-container div {
+            border: 5px solid rgba(230, 174, 111,1);
+            background-color: rgba(77, 133, 218, 1);
+            color: white;
+        }
+
+        .grid-sample-2 {
+            grid-template-columns: 200px 200px 200px;
+        }
+
+        .grid-sample-3 {
+            column-gap: 3%;
+            row-gap: 3%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="p-1">
+        <p>Se define 3 columns proporcionales (1fr). <strong>grid-template-columns: 1fr 1fr 1fr</strong> con un alto de filas 
+        de 150px,  <strong>grid-template-rows: 150px 150px;</strong>. Agregamos las propiedades <strong>column-gap</strong> 
+        con 15px de espesor y <strong>row-gap</strong> con 10px.
+    </p>
+        <div>
+            <div class="grid-container">
+              <div>Grid Cell 1</div>
+              <div>Grid Cell 2</div>
+              <div>Grid Cell 3</div>
+              <div>Grid Cell 4</div>
+              <div>Grid Cell 5</div>
+              <div>Grid Cell 6</div>
+            </div>
+        </div>
+     
+    </div>
+    <div class="p-1">
+        <p>
+          Tener en cuenta que las medidas absolutas definidas en <strong>grid-template-columns: 200px 200px 200px;</strong> 
+          y <strong>column-gap: 15px;</strong> aumentarán el ancho del contenido por sobre el contenedor, si es que este 
+          tiene una medida, que desbordará.
+        </p>
+        <div>
+            <div class="grid-container grid-sample-2">
+              <div>Grid Cell 1</div>
+              <div>Grid Cell 2</div>
+              <div>Grid Cell 3</div>
+              <div>Grid Cell 4</div>
+              <div>Grid Cell 5</div>
+              <div>Grid Cell 6</div>
+            </div>
+        </div>
+    </div>
+    <div class="p-1">
+        <p>
+            Se define 3 columns proporcionales (1fr). <strong>grid-template-columns: 1fr 1fr 1fr</strong> con un alto de filas 
+            de 150px,  <strong>grid-template-rows: 150px 150px;</strong>. Agregamos las propiedades <strong>column-gap</strong> 
+            con 3% de espesor y <strong>row-gap</strong> con 3%.
+        </p>
+        <div>
+            <div class="grid-container grid-sample-3">
+              <div>Grid Cell 1</div>
+              <div>Grid Cell 2</div>
+              <div>Grid Cell 3</div>
+              <div>Grid Cell 4</div>
+              <div>Grid Cell 5</div>
+              <div>Grid Cell 6</div>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>

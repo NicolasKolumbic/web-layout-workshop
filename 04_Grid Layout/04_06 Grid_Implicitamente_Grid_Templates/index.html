@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0406 | Definir una grilla implicitamente</title>
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../icons.css" />
+</head>
+<body>
+    <div class="container">
+        <h1><strong>0406 |</strong> Definir una grilla implicitamente</h1>
+        <hr />
+        <ul class="breadcrumbs">
+            <li>
+                <a href="../../index.html">Principal</a>    
+            </li>
+            <li>
+                ❯
+            </li>
+            <li class="active">
+                Definir una grilla implicitamente
+            </li>
+        </ul>
+
+        <div class="content">
+            <article class="internal-navbar mt-2">
+                <section>
+                    <a href="page_01.html" class="link"><i class="wlw-attachment"></i>Estructuración de grilla ineficiente</a>
+                    <p>
+                        Hasta el momento se ha descrito la forma <strong>explícita</strong> de determinar columnas y filas con las propiedades <code>grid-template-columns</code> y
+                        <code>grid-template-rows</code>, de manera que cada valor separado por espacios expresado en la propiedad representa una columna o fila. 
+                        Sí tuviéramos 10, 20 o más, debemos declararlas una por una. Claramente esto no es eficiente, de hecho es muy tedioso.
+
+                    </p>
+
+                    <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="ExvNqNy">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/ExvNqNy">
+                                    <span class="wlw-global"></span>
+                                    Estructuración de grilla ineficiente.
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+    
+                <section>
+                    <a href="page_02.html" class="link"><i class="wlw-attachment"></i>La función repeat()</a>
+                    <p>
+                       Esta función permite repetir un patrón en una fila o columna, de manera sistemática
+                       y eficiente. La función tiene varias sobrecargas para utilizarla, existen varias opciones, la primera es conocida según la especificación 
+                       como <strong>fixed-repeat</strong>.
+                    </p>
+                    <p>
+                        <code>repeat(integer, track-fixed+)</code>. La función recibe 2 argumentos: número de elementos, medida.
+
+                    </p>
+
+                    <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="KKvaPvW">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/KKvaPvW">
+                                    <span class="wlw-global"></span>
+                                    La función repeat()
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+    
+                <section>
+                    <a href="page_03.html" class="link"><i class="wlw-attachment"></i>Los patrones de repetición</a>
+                    <p>
+                        <code>repeat()</code> también permite establecer patrones de repetición, es decir, definir dimensiones para una o más celdas de una fila o columna 
+                        y que ellos se repitan tantas veces como lo determine el primer 
+                        argumento de la función. Por último no es posible ejecutar <code>repeat</code> dentro de <code>repeat</code>.
+                    </p>
+
+                    <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="dyzNWGq">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/dyzNWGq">
+                                    <span class="wlw-global"></span>
+                                    Los patrones de repetición
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>
+            
+                </section>
+                <section>
+                    <a href="page_04.html" class="link"><i class="wlw-attachment"></i>La función minmax</a>
+                    <p>
+                        Está determina un mínimo para el <strong>track size</strong>, columna o fila, y el máximo. Le da la orden 
+                        hasta donde puede achicarse y hasta cuanto puede crecer, permite ahorrar algunas <code>@media queries</code>.
+                        Cuando utilizamos <code>minmax</code> para determinar la dimensión de una celda, por defecto estamos dándole la capacidad de fluir.
+                    </p>
+                    <p>
+                        Al momento de renderizar la grilla el navegador analizará expandir las celdas a todo el espacio disponible siempre y cuando no supere la máxima,
+si el navegador concluye que no hay suficiente espacio, va a comprimir la celda siempre y cuando no supere el mínimo. Si se ve desbordado mostrará las barras de scroll.
+                    </p>
+                    <p>
+                        Si utilizamos <strong>unidades fraccionarias (fr)</strong> en el argumento correspondiente al máximo, este estará dado por la porción que le fue asignada en relación a sus elementos hermanos.
+En el argumento correspondiente al mínimo no es válido utilizar <strong>unidades fraccionarias (fr)</strong>, por lógica: <strong>"como mínimo la celda debe ocupar todo el espacio disponible"</strong>¿Cuál sería el máximo?
+                    </p>
+                    <p>
+                        Algo que puede ser obvio, pero lo aclaramos es que el mínimo no puede ser mayor al máximo. Si por error hacemos esto el valor máximo es ignorado y el valor mínimo como ancho fijo.
+Por último,podemos utilizar como argumentos <strong>píxeles</strong>, <strong>porcentajes</strong>, <strong>ems</strong>, <strong>rems</strong>.
+
+                    </p>
+
+                    <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="yLogpYW">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/yLogpYW">
+                                    <span class="wlw-global"></span>
+                                    La función minmax.
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <a href="page_05.html" class="link"><i class="wlw-attachment"></i>Combinar las funciones minmax y repeat </a>
+                    <p>
+                        Es posible enviar como segundo parámetro a <code>repeat(integer, track-size)</code> la función <code>minmax(min,max)</code>. Este definirá 
+                        un tamaño de columna fluido que se adaptará a distintas resoluciones, ahorrando <code>@media queries</code> y 
+                        generando una estructura a partir de un patrón. <strong>Es importante recalcar que la funciones <code>repeat</code> y <code>minmax</code> 
+                        son exclusivas para <i>Grid Layout</i>, con lo cual, utilizarla en otros contextos como podría ser <i>Flexbox</i> por ejemplo, no tendrá efecto.</strong> 
+                    </p>
+                    
+                    <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="bGrgawm">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/bGrgawm">
+                                    <span class="wlw-global"></span>
+                                    Combinar las funciones minmax y repeat.
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+    
+                <section>
+                    <a href="page_06.html" class="link"><i class="wlw-attachment"></i>La clave auto-fill </a>
+                    <p>
+                        La clave <code>auto-fill</code> solo puede ser utilizada en la función <code>repeat</code> y permite determinar que el navegador
+                        calcule cuántos <strong>elementos de grilla</strong>
+                        caben en su contenedor, y cuando uno no quepa en su contenedor lo empuje a una nueva fila, generando así lo que se conoce
+                        conceptualmente como <strong>grilla implícita</strong>. Es interesante esto cuando tenemos contenido que se carga dinámicamente.
+                    </p>
+                    <figure class="box-img">
+                        <figcaption class="caption-img">
+                            <span>Esquema de celdas</span>
+                        </figcaption>
+                        <img src="../../images/grilla_autofill_base.png" />
+                    </figure>
+                    <p>
+                        Observemos la línea de puntos, esto representa un elemento de grilla que se inventa el navegador con las mismas medidas definidas.
+                        <code>auto-fill</code> le dice al navegador que divida la dimensión del contenedor (ancho o alto) por la dimensión del <strong>elemento de grilla</strong> determinada
+                        en el segundo parámetro y así obtener cuantos podían caber en la dimensión del contenedor, existan esos elementos de grilla o no.
+                    </p>
+                    <p>
+                        Observe el valor para algunos de las plantillas: <code> repeat(auto-fill, 10px) repeat(auto-fill, 100px);</code>. Esto es un error ya que si le estamos comunicando implicitamente
+                        al navegador por medio de <code>auto-fill</code> que todas sus celdas van a tener un tamaño de <strong>10px</strong>, no es válido utilizar la misma clave para redefinir las celdas.
+                    </p>
+
+                    <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="RwZKxEB">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/RwZKxEB">
+                                    <span class="wlw-global"></span>
+                                    La clave auto-fill.
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <a href="page_07.html" class="link"><i class="wlw-attachment"></i>auto-fit y la diferencia con auto-fill </a>
+                    <p>
+                        La clave <code>auto-fit</code> es similar a <code>auto-fill</code>, la diferencia radica en cómo se tratan los elementos 
+                        en relación al espacio disponible. <code>auto-fit</code> cuando la suma de los anchos de la cantidad de elementos es menor al contenedor, 
+                        ajusta todos los elementos repartiendo el espacio disponible, <code>auto-fill</code> cada vez que el espacio disponible es suficiente como para 
+                        que quepa un elemento crea una nueva columna implícita vacia. Para que la diferencia sea vistosa se debe tener pocos elementos.
+    
+                    </p>
+
+                    <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="MWvJdmJ">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/MWvJdmJ">
+                                    <span class="wlw-global"></span>
+                                    auto-fit y la diferencia con auto-fill.
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+    
+                <section>
+                    <a href="page_08.html" class="link"><i class="wlw-attachment"></i>Los patrones de repetición complejos </a>
+                    <p>
+                        Todo lo visto hasta ahora se puede aplicar para generar una estructura compleja configurando 
+                        columna por columna o grupos de columnas.
+                    </p>
+    
+                    <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="KKvaLJm">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/KKvaLJm">
+                                    <span class="wlw-global"></span>
+                                    Los patrones de repetición complejos.
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="above-ten">
+                    <a href="page_10.html" class="link"><i class="wlw-attachment"></i>Clave max-content</a>
+                    <p>
+                        En el módulo de <strong>Flexbox</strong> mencionamos estás clave y comportamientos, dentro de 
+                        <strong>Grid Layout</strong> esto es similar. <code>max-content</code> en caso de las imágenes forzará a que las imágenes se vean con su medidas intrínsecas.
+                        En el caso de los <strong>elementos reemplazados</strong> el alto y ancho de cada celdas estará determinado por aquella celda que tenga la imagen o video más grande.
+                        Si intervenimos la dimensión de los <strong>elementos reemplazados</strong> por medio de CSS, por ejemplo <code>width:100%</code>, inicialmente una imagen por ejemplo tomará su medida intrínseca pero podrá redimensionarse si el contenedor se ve expande por el efecto de una celda del <strong>grid track</strong>.
+                    </p>
+                    <p>
+                        En el caso de los <strong>elementos no reemplazados</strong>, por ejemplo textos, estos se expanderán en una sola línea. 
+                        Si utilizamos <code>max-content</code> dentro de la función <code>mixmax</code> el contenedor dividirá el espacio disponible por la cantidad de elementos en partes iguales,
+                        esta será la medida de cada celda y el límite al cual el contenido puede expandirse el texto como máximo.
+                    </p>
+                    <aside class="comment">
+                        <strong>Nota:</strong> los textos pertenecen a 
+                        <a class="link" href="https://www.alibrate.com/libro/los-viajes-de-gulliver/59872ea7cba2bce50c1e4773">
+                            <i class="wlw-global"></i>
+                            Los viajes de Gulliver, Jonathan Swift.
+                        </a>
+                    </aside>
+                    <p>Un comportamiento que podemos observar es que cada pista (<strong>Grid Track</strong>) se redimensiona al ancho del contenido más extenso, comportamiento similar al diseño con la etiqueta <code>table</code>.</p>
+                    
+                    <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="wvYBxGb">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/wvYBxGb">
+                                    <span class="wlw-global"></span>
+                                    Clave max-content.
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="above-ten">
+                    <a href="page_11.html" class="link"><i class="wlw-attachment"></i>Clave min-content</a>
+                    <p>
+                        Por defecto, sin intervención de CSS, los <strong>elementos reemplazados</strong> tienen un comportamiento identico a <code>max-content</code>, se acomodan a su dimensión intríseca, en el caso de los <strong>elementos no reemplazados</strong>, como textos, comienzan a partirse por palabra encogiendo las celdas a su palabra más larga.
+                        Si intervenimos con alguna propiedadad que afecte la dimensiòn como <code>width:100%</code> en una imagen por ejemplo, está se redimensiona a <strong>0px x 0px</strong>.
+                    </p>
+                    <aside class="comment">
+                        <strong>Nota:</strong> los textos pertenecen a 
+                        <a class="link" href="https://www.alibrate.com/libro/los-viajes-de-gulliver/59872ea7cba2bce50c1e4773">
+                            <i class="wlw-global"></i>
+                            Los viajes de Gulliver, Jonathan Swift.
+                        </a>
+                    </aside>
+                    
+                    <div class="codepen-container">
+                        <div class="codepen"
+                          data-height="500"
+                          data-theme-id="dark"
+                          data-default-tab="result"
+                          data-user="NicolasKolumbic"
+                          data-slug-hash="mdzyjqv">
+                            <p class="codepen-alert">
+                                <span class="no-signal"></span>
+                                Ha ocurrido algún problema con la señal de internet. 
+                                <a href="https://codepen.io/NicolasKolumbic/pen/mdzyjqv">
+                                    <span class="wlw-global"></span>
+                                    Clave min-content.
+                                </a> 
+                                desarrollado por Nicolas Kolumbic (<a href="https://codepen.io/NicolasKolumbic">@NicolasKolumbic</a>)
+                                en 
+                                <a href="https://codepen.io">
+                                    <span class="wlw-global"></span>
+                                    CodePen
+                                </a>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="above-ten">
+                    <a href="page_12.html" class="link"><i class="wlw-attachment"></i>Clave auto</a>
+                    <p>
+                        Las imágenes tiene un comportamiento identico a <code>max-content</code>, se acomodan a su dimensión intríseca, en el caso de los textos la celda parte las oraciones por espacios entre palabras y al igual que <code>max-content</code>
+                        se redimensiona al ancho de contenido más extenso.
+                    </p>
+                </section>
+                <section class="above-ten">
+                    <a href="page_13.html" class="link"><i class="wlw-attachment"></i>función fit-content()</a>
+                    <p>
+                        Las imágenes tiene un comportamiento identico a <code>max-content</code>, se acomodan a su dimensión intríseca, en el caso de los textos la celda parte las oraciones por espacios entre palabras y al igual que <code>max-content</code>
+                        se redimensiona al ancho de contenido más extenso.
+                    </p>
+                </section>
+                <section class="above-ten">
+                    <a href="page_14.html" class="link"><i class="wlw-attachment"></i>función calc()</a>
+                    <p>
+                        Las imágenes tiene un comportamiento identico a <code>max-content</code>, se acomodan a su dimensión intríseca, en el caso de los textos la celda parte las oraciones por espacios entre palabras y al igual que <code>max-content</code>
+                        se redimensiona al ancho de contenido más extenso.
+                    </p>
+                </section>
+                
+                <pre>
+                  
+
+Hay una palabra clave más que puede usar con el tamaño de la pista de cuadrícula, que es
+AUTO. Como mínimo, se trata como el tamaño mínimo para el elemento de
+cuadrícula, según lo definido por "min-width" o "min-height". Como máximo, se trata
+igual que max-content. Puede pensar que esto significa que solo se puede usar en
+declaraciones "minmax ()", pero este no es el caso. Puede usarlo en cualquier lugar y
+asumirá un papel mínimo o máximo. Cuál tome depende de los otros valores de pista a su
+alrededor, en formas que son francamente demasiado complicadas para entrar aquí. Al
+igual que con tantos otros aspectos de CSS, el uso automático esencialmente permite que
+el navegador haga lo que quiera. A veces eso está bien, pero en general probablemente
+querrás evitarlo.
+                </pre>
+
+
+<pre>
+    #g1 {display: grid;
+        grid-template-columns: max-content max-content max-content max-content;
+        }
+       #g2 {display: grid;
+        grid-template-columns: minmax(0,max-content) minmax(0,max-content)
+       minmax(0,max-content) minmax(0,max-content);
+        }
+        PROBAR ESTOS CON IMAGENES o TEXTOS
+</pre>
+<pre>
+    Cualquier valor de tamaño de pista se puede usar en una repetición, desde valores de 
+"contenido mínimo" y "contenido máximo" hasta valores "fr" y automático, y así 
+sucesivamente, y puede reunir más de un valor de tamaño. Supongamos que queremos 
+definir una estructura de columna de modo que haya una pista de 2em, luego una pista de 
+1fr y luego otra pista de 1fr y, además, queremos repetir ese patrón tres veces. He aquí cómo 
+hacerlo, con el resultado que se muestra en la Figura 19:
+#grid {display: grid;
+ grid-template-columns: repeat(3, 2em 1fr 1fr);}
+</pre>
+<pre>
+    Lo único que no puedes hacer es anidar una repetición dentro de otra 
+repetición.
+</pre>
+<pre>
+    mostrar en las repeticiones que se puede utilizar alias con un ejemplo similar a esto#grid {
+        display: grid;
+        grid-template-columns: repeat(4, 10px [col-start] 250px [col-end]) 10px;}
+</pre>
+<pre>
+    Una cosa que debe recordar, si va a repetir líneas con nombre, es que si coloca dos líneas 
+con nombre una al lado de la otra, se fusionarán en una única línea de cuadrícula con 
+nombre doble. En otras palabras, las siguientes dos declaraciones son equivalentes:
+grid-template-rows: repeat(3, [top] 5em [bottom]);
+grid-template-rows: [top] 5em [bottom top] 5em [top bottom] 5em [bottom];
+</pre>
+<pre>
+    Por ejemplo, supongamos que queremos que el patrón de fila anterior se repita tantas 
+veces como el contenedor de cuadrícula acepte cómodamente:
+grid-template-rows: repeat(auto-fill, [top] 5em [bottom]);
+</pre>
+<pre>
+    ES UN BUEN EJEMPLO PARA AGREGAR
+    Además, solo puede tener una repetición automática en una plantilla de pista 
+determinada. Por lo tanto, no sería admisible lo siguiente:
+grid-template-columns: repeat(auto-fill, 4em) repeat(auto-fill, 100px);
+Tiene sentido que esto no esté permitido, una vez que lo miras. Si el primero llena el 
+contenedor de la cuadrícula con pistas de columnas de 4 em, ¿dónde hay espacio para 
+pistas de columnas repetidas de 100 píxeles?
+Sin embargo, puede combinar pistas de repetición fija con pistas de relleno automático. 
+Por ejemplo, podría comenzar con tres columnas anchas y luego llenar el resto del 
+contenedor de cuadrícula con pistas estrechas (suponiendo que haya espacio para ellas). 
+Eso se vería algo como esto:
+grid-template-columns: repeat(3, 20em) repeat(auto-fill, 2em);
+También puedes darle la vuelta a eso:
+grid-template-columns: repeat(auto-fill, 2em) repeat(3, 20em);
+Eso funciona porque el algoritmo de diseño de cuadrícula asigna espacio a las pistas fijas 
+primero y luego llena el espacio que queda con pistas repetidas automáticamente
+</pre>
+
+<pre>
+    VER ESTE EJEMPLO EN CODIGO, CONSULTA LA PAGINA  45-47
+    Figure 33. Creating implicit grid lines and tracks
+
+</pre>
+<pre>
+    VER EN LA PAG 40 DE LIBRO (PDF 48) ERROR HANDLING
+</pre>
+            </article>
+        </div>
+
+
+
+    </div>
+    <footer class="footer footer-image">
+        <div class="d-flex justify-content-between footer-image__content">
+            <div>
+            <img src="../../images/web-layout-workshop-logo.svg" />
+            </div>
+            <div class="text-right">
+                <h6>Desarrollado por Nicolás Kolumbic</h6>
+                <ul class="social-media-list">
+                    <li>
+                        <a href="https://www.linkedin.com/in/nicolaskolumbic/">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 34 34">
+                                <title>
+                                  LinkedIn
+                                </title>                     
+                                <g>
+                                  <path d="M34,2.5v29A2.5,2.5,0,0,1,31.5,34H2.5A2.5,2.5,0,0,1,0,31.5V2.5A2.5,2.5,0,0,1,2.5,0h29A2.5,2.5,0,0,1,34,2.5ZM10,13H5V29h5Zm.45-5.5A2.88,2.88,0,0,0,7.59,4.6H7.5a2.9,2.9,0,0,0,0,5.8h0a2.88,2.88,0,0,0,2.95-2.81ZM29,19.28c0-4.81-3.06-6.68-6.1-6.68a5.7,5.7,0,0,0-5.06,2.58H17.7V13H13V29h5V20.49a3.32,3.32,0,0,1,3-3.58h.19c1.59,0,2.77,1,2.77,3.52V29h5Z" fill="#fff"></path>
+                                </g>
+                              </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/NicolasKolumbic">
+                            <svg height="24" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                                <path fill="#fff" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+    </footer>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</body>
+</html>

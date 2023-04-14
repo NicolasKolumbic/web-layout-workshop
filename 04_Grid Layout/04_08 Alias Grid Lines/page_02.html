@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../icons.css" />
+    <title>Alias line names</title>
+    <style>
+         .grid-container { 
+            border: 5px solid rgba(134, 134, 134, 0.5);
+            background-color: rgba(7, 165, 46, 0.5);
+            height: 400px;
+            width: 48%;
+
+            display: grid;           
+            gap: 0.5rem;
+            grid-template-columns: 
+                [navbar-start header-start footer-start] 1fr
+                [navbar-end main-start] 1fr
+                [main-middle] 1fr 
+                [main-end aside-start] 1fr
+                [aside-end header-end footer-end];
+
+            grid-template-rows: 
+                [header-start] 100px
+                [header-end navbar-start main-start aside-start] 1fr
+                [header-middle navbar-middle aside-end] 1fr
+                [main-end navbar-end footer-start] 100px
+                [footer-end];
+        }
+
+        .grid-container div {
+            color: white;
+        }
+
+        .header {
+            background-color: rgb(87, 12, 161); 
+            grid-column: header-start/header-end;        
+        }
+
+        .navbar {
+            background-color: rgb(161, 79, 12);
+            grid-row: navbar-start/navbar-end;
+            grid-column: navbar-start/navbar-end;  
+        }
+
+        .main {
+            background-color: rgb(91, 161, 12);
+            grid-row: main-start/main-end;
+            grid-column: main-start/main-end;
+        }
+
+        .aside {
+            background-color: rgb(12, 161, 149);
+            grid-row: aside-start/aside-end;
+            grid-column: aside-start/aside-end;
+        }
+
+        .footer {
+            background-color: rgb(161, 12, 104);
+            grid-column: footer-start/footer-end;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="p-1">
+        <p>
+            Se obtiene los mismos resultado pero optimizando los nombres de los alias con los elementos referenciados.
+        </p>
+        <div>
+            <div class="grid-container">
+                <div class="header">header</div>
+                <div class="navbar">navbar</div>
+                <div class="main">main</div>
+                <div class="aside">aside</div>
+                <div class="footer">footer</div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

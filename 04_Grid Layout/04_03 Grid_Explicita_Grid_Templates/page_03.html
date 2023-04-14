@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Columns</title>
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../icons.css" />
+    <style>
+         .grid-container {
+            display: grid;
+            border: 5px solid rgba(134, 134, 134, 0.5);
+            background-color: rgba(7, 165, 46, 0.5);
+        }
+
+        .grid-container div {
+            border: 5px solid rgba(230, 174, 111,1);
+            background-color: rgba(77, 133, 218, 1);
+            color: white;
+        }
+
+        .grid-template-column-fixed-1fr-2fr {
+            grid-template-columns: 200px 1fr 2fr;
+        }
+
+        .grid-template-column-50-percent-1frX2 {
+            grid-template-columns: 50% 1fr 1fr;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="p-1">
+        <p>Se define una columna fija de 200px, una proporcinal a la tercera parte del total del espacio disponible y otra del doble. <strong>grid-template-columns: 200px 1fr 2fr</strong> </p>
+        <div>
+            <div class="grid-container grid-template-column-50-percent-1frX2">
+                <div>Cell Grid 1</div>
+                <div>Cell Grid 2</div>
+                <div>Cell Grid 3</div>
+                <div>Cell Grid 4</div>
+                <div>Cell Grid 5</div>
+                <div>Cell Grid 6</div>
+            </div>
+        </div>
+        <p>Se define 2 columns proporcionales y una del 50%. <strong>grid-template-columns: 50% 1fr 1fr</strong> </p>
+        <div>
+            <div class="grid-container grid-template-column-50-percent-1frX2">
+                <div>Cell Grid 1</div>
+                <div>Cell Grid 2</div>
+                <div>Cell Grid 3</div>
+                <div>Cell Grid 4</div>
+                <div>Cell Grid 5</div>
+                <div>Cell Grid 6</div>
+            </div>
+        </div>
+        
+    </div>
+   
+</body>
+</html>

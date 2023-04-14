@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Columns</title>
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../icons.css" />
+    <style>
+        .grid-container { 
+            border: 5px solid rgba(134, 134, 134, 0.5);
+            background-color: rgba(7, 165, 46, 0.5);
+
+            display: grid;
+            grid-template-columns: 200px repeat(3, minmax(70px, 5%))  repeat(auto-fit, minmax(5rem, 1fr));
+            grid-template-rows: repeat(auto-fill, 70px);
+            height: 210px;
+        }
+
+        .grid-container div {
+            border: 5px solid rgba(230, 174, 111,1);
+            background-color: rgba(77, 133, 218, 1);
+            color: white;
+        }
+
+        div.second-config {
+            background-color: rgb(231, 183, 227);
+        }
+
+        div.third-config {
+            background-color: rgb(206, 231, 183);
+        }
+
+        .second-complex-grid {
+            grid-template-columns: minmax(100px, 20%) repeat(5, 5%)  repeat(auto-fit, minmax(100px, 1fr));
+        }
+
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="p-1">
+        <p> 
+           <strong>grid-template-columns: minmax(100px, 20%) repeat(5, 5%)  repeat(auto-fit, minmax(100px, 1fr));</strong>
+        </p>
+        
+        <div>
+            <div class="grid-container second-complex-grid">
+                <div class="first-config">Grid Cell 1</div>
+                <div class="second-config">Grid Cell 2</div>
+                <div class="second-config">Grid Cell 3</div>
+                <div class="second-config">Grid Cell 4</div>
+                <div class="second-config">Grid Cell 5</div>
+                <div class="second-config">Grid Cell 6</div>
+                <div class="third-config">Grid Cell 7</div>
+                <div class="third-config">Grid Cell 8</div>     
+            </div>
+        </div> 
+
+        <p> 
+            <strong>grid-template-columns: 200px repeat(3, minmax(70px, 5%))  repeat(auto-fit, minmax(5rem, 1fr));</strong>
+         </p>
+         
+         <div>
+             <div class="grid-container">
+                 <div class="first-config">Grid Cell 1</div>
+                 <div class="second-config">Grid Cell 2</div>
+                 <div class="second-config">Grid Cell 3</div>
+                 <div class="second-config">Grid Cell 4</div>
+                 <div class="third-config">Grid Cell 5</div>
+                 <div class="third-config">Grid Cell 6</div>
+                 <div class="third-config">Grid Cell 7</div>
+                 <div class="third-config">Grid Cell 8</div>     
+             </div>
+         </div> 
+  
+    </div>
+   
+</body>
+</html>

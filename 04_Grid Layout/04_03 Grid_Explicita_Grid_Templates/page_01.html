@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Columns</title>
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../icons.css" />
+    <style>
+         .inline-grid-container {
+            display: grid;
+            width: 50%;
+            border: 5px solid rgba(134, 134, 134, 0.5);
+            background-color: rgba(7, 165, 46, 0.5);
+        }
+
+        .inline-grid-container div {
+            border: 5px solid rgba(230, 174, 111,1);
+            background-color: rgba(77, 133, 218, 1);
+            color: white;
+            box-sizing: border-box;
+        }
+
+        .grid-template-column-200 {
+            grid-template-columns: 200px 200px 200px;
+        }
+
+        .grid-template-column-25-percent {
+            grid-template-columns: 25% 25% 25% 25%;
+        }
+
+        .grid-template-row-150 {
+            grid-template-rows: 150px 150px 150px 150px;
+        }
+
+        .grid-template-row-120 {
+            grid-template-rows: 120px 120px 120px;
+        }
+
+        .grid-template-columns-33 {
+            grid-template-columns: 33% 33% 33%;
+        }
+
+    </style>
+</head>
+<body>
+
+    
+    <div class="p-1">
+        <p>Se define 3 columns de 200px. <strong>grid-template-columns: 200px 200px 200px</strong> </p>
+        <div>
+            <div class="inline-grid-container grid-template-column-200">
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+            </div>
+        </div>
+        <p>Se define 3 columns de 200px cada una: <strong>grid-template-columns: 200px 200px 200px</strong> 
+             y 4 filas de <strong>150px.</strong> de alto <strong>grid-template-rows: 150px 150px 150px 150px</strong> </p>
+        <div>
+            <div class="inline-grid-container grid-template-column-200 grid-template-row-150">
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+            </div>
+        </div>
+        <p>Se define 4 columns de 25% del contenedor cada una <strong>grid-template-columns: 25% 25% 25% 25%</strong> 
+            y 3 filas de <strong>120px.</strong> de alto <strong>grid-template-rows: 150px 150px 150px </strong> </p>
+        <div>
+            <div class="inline-grid-container grid-template-column-25-percent grid-template-row-120">
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+            </div>
+        </div>
+        <p>Se define 3 columns de 33% del contenedor cada una <strong>grid-template-columns: 33% 33% 33%</strong> 
+            y 4 filas de <strong>25%.</strong> de alto <strong>grid-template-rows: 25% 25% 25% 25% </strong>. ¿Qué sucede? Para que este código funcione es necesario 
+            definir un alto al contenedor.
+        </p>
+            <div>
+                <div class="inline-grid-container grid-template-columns-33 grid-template-column-25-percent">
+                    <div>
+                        Cell Grid
+                    </div>
+                    <div>
+                        Cell Grid
+                    </div>
+                    <div>
+                        Cell Grid
+                    </div>
+                    <div>
+                        Cell Grid
+                    </div>
+                    <div>
+                        Cell Grid
+                    </div>
+                    <div>
+                        Cell Grid
+                    </div>
+                    <div>
+                        Cell Grid
+                    </div>
+                    <div>
+                        Cell Grid
+                    </div>
+                    <div>
+                        Cell Grid
+                    </div>
+                    <div>
+                        Cell Grid
+                    </div>
+                    <div>
+                        Cell Grid
+                    </div>
+                    <div>
+                        Cell Grid
+                    </div>
+                </div>
+            </div>
+            <p>
+                Si la cantidad elementos es menor a la que suponene las reglas de estructuración. La grilla creará
+                esas celdas vacias.
+            </p>
+            <div class="inline-grid-container grid-template-column-200">
+                <div>
+                    Cell Grid
+                </div>
+                <div>
+                    Cell Grid
+                </div>
+
+            </div>
+    </div>
+   
+</body>
+</html>

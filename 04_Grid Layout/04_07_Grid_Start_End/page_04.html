@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La clave span</title>
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../icons.css" />
+    <style>
+        .grid-container-sample {
+            border: 5px solid rgba(134, 134, 134, 0.5);
+            background-color: rgba(7, 165, 46, 0.5);
+            color: white;
+            height: 400px;
+            width: 48%;
+
+            display: grid;
+            gap: 0.5rem;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 100px  repeat(2, 1fr) 100px;
+
+        }
+
+        .header {
+            background-color: rgb(87, 12, 161);
+            grid-column: span 4;
+        }
+
+        .navbar {
+            background-color: rgb(161, 79, 12);
+            grid-row: span 2;
+            grid-column: span 1;
+        }
+
+        .main {
+            background-color: rgb(91, 161, 12);
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+
+        .aside {
+            background-color: rgb(12, 161, 149);
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        .footer {
+            background-color: rgb(161, 12, 104);
+            grid-column: 1/span 4;
+        }
+
+        .grid-container {
+            border: 5px solid rgba(134, 134, 134, 0.5);
+            background-color: rgba(7, 165, 46, 0.5);
+            width: 300px;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 100px);
+            grid-template-rows: repeat(6, 70px);
+        }
+
+        .grid-container div {
+            border: 5px solid rgba(230, 174, 111, 1);
+            background-color: rgba(77, 133, 218, 1);
+            color: white;
+        }
+
+        div.item-1 {
+            grid-column: span 3;
+            background-color: rgb(238, 138, 230);
+        }
+
+        div.item-2 {
+            grid-row: span 4;
+            grid-column: span 2;
+            background-color: rgb(138, 226, 238);
+        }
+
+        div.item-3 {
+            grid-row: span 4;
+            background-color: rgb(138, 238, 146);
+        }
+
+        div.item-4 {
+            grid-column: span 3;
+        }
+
+        .move-and-expand {
+            grid-row: 2 / span 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="p-1">
+        <div>
+            <div class="grid-container-sample">
+                <div class="header">header</div>
+                <div class="navbar">navbar</div>
+                <div class="main">main</div>
+                <div class="aside">aside</div>
+                <div class="footer">footer</div>
+            </div>
+        </div>
+        <p>
+            Esta estructuración de celdas está armada con la palabra clave <strong>span</strong>, note los texto
+            seguidos de
+            <strong>Grid Cell n -...</strong>. Es importante aclarar, que si bien no es obligatorio, implementar la
+            propiedad
+            <strong>grid-template-columns</strong> ayuda a mejorar la estructuración por la altura de las celdas.
+        </p>
+        <div>
+            <div class="grid-container">
+                <div class="item-1">Grid Cell 1 - cols span 3 </div>
+                <div class="item-2">Grid Cell 2 - cols span 2, rows span 4</div>
+                <div class="item-3">Grid Cell 3 - rows span 4</div>
+                <div class="item-4">Grid Cell 4 - cols span 3</div>
+            </div>
+        </div>
+        <p>
+            Sí aparte de expandir las celdas, queremos moverla, podemos utilizar la sintaxis anterior junto con
+            <strong>span</strong>.
+            Estos ejemplos tienen definido la propiedad <strong>grid-template-rows</strong> con la función
+            <strong>repeat</strong> y el valor
+            <strong>6</strong>, con lo cual la grilla está preparada para <strong>6</strong> filas de
+            <strong>70px</strong>.
+            Sí movemos o expedimos sobre filas que no existen, estás se generarán automáticamente si el primer parámetro
+            de <strong>repeat</strong> es distinto a <strong>auto-fit</strong>.
+        </p>
+        <div>
+            <div class="grid-container">
+                <div class="item-1 move-and-expand">Grid Cell 1 - cols span 3 </div>
+                <div class="item-2">Grid Cell 2 - cols span 2, rows span 4</div>
+                <div class="item-3">Grid Cell 3 - rows span 4</div>
+                <div class="item-4">Grid Cell 4 - cols span 3</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clave max-content</title>
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../icons.css" />
+    <style>
+        .grid-container {
+            margin: 50px 50px 0px;
+            display: inline-grid;
+            border: 5px solid rgba(134, 134, 134, 0.5);
+            background-color: rgba(7, 165, 46, 0.5);
+            grid-template-columns:repeat(4, max-content);
+            grid-template-rows: repeat(2, max-content);
+            color: white;
+        }
+
+        .grid-container-minmax {
+            grid-template-columns: repeat(4, minmax(0,max-content)) ;
+            grid-template-rows: repeat(2, minmax(0,max-content));
+        }
+
+        .grid-container > div  {
+            border: 5px solid rgba(230, 174, 111,1);
+            background-color: rgba(77, 133, 218, 1);
+        }
+
+        .resize-img img{
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <code>
+            grid-template-columns:repeat(4, max-content);
+            grid-template-rows: repeat(2, max-content);
+        </code>
+    </div>
+    <div class="grid-container">
+        <div><img src="../../images/animals_imagen_1.jpg"></div>
+        <div><img src="../../images/animals_imagen_2.jpg"></div>
+        <div><img src="../../images/animals_imagen_3.jpg"></div>
+        <div><img src="../../images/animals_imagen_4.jpg"></div>
+        <div><img src="../../images/animals_imagen_5.jpg"></div>
+        <div><img src="../../images/animals_imagen_6.jpg"></div>
+        <div><img src="../../images/animals_imagen_7.jpg"></div>
+        <div><img src="../../images/animals_imagen_8.jpg"></div>
+    </div>
+    <div class="content">
+        <code>
+            grid-template-columns:repeat(4, max-content);
+            grid-template-rows: repeat(2, max-content);
+        </code>
+    </div>
+    <div class="grid-container resize-img">
+        <div><img src="../../images/animals_imagen_1.jpg"></div>
+        <div><img src="../../images/animals_imagen_2.jpg"></div>
+        <div><img src="../../images/animals_imagen_3.jpg"></div>
+        <div><img src="../../images/animals_imagen_4.jpg"></div>
+        <div><img src="../../images/animals_imagen_5.jpg"></div>
+        <div><img src="../../images/animals_imagen_6.jpg"></div>
+        <div><img src="../../images/animals_imagen_7.jpg"></div>
+        <div><img src="../../images/animals_imagen_8.jpg"></div>
+    </div>
+    <div class="content">
+        <code>
+            grid-template-columns:repeat(4, max-content);
+            grid-template-rows: repeat(2, max-content);
+        </code>
+    </div>
+    <div class="grid-container">
+        <div>
+            Mi padre tenía una pequeña hacienda en Nottinghamshire. De cinco hijos,
+yo era el tercero. Me mandó al Colegio Emanuel, de Cambridge, teniendo yo
+catorce años, y allí residí tres, seriamente aplicado a mis estudios pero como
+mi sostenimiento, aun siendo mi pensión muy corta, representaba una carga
+demasiado grande para una tan reducida fortuna, entré de aprendiz con míster
+James Bates, eminente cirujano de Londres, con quien estuve cuatro años, y
+con pequeñas cantidades que mi padre me enviaba de vez en cuando fui
+aprendiendo navegación y otras partes de las Matemáticas, útiles a quien ha de
+viajar, pues siempre creí que, más tarde o más temprano, viajar sería mi suerte.
+Cuando dejé a míster Bates, volví al lado de mi padre allí, con su ayuda, la de
+mi tío Juan y la de algún otro pariente, conseguí cuarenta libras y la promesa
+de treinta al año para mi sostenimiento en Leida. En este último punto estudié
+Física dos años y siete meses, seguro de que me sería útil en largas travesías.
+        </div>
+        <div>
+            Poco después de mi regreso de Leida, por recomendación de mi buen
+maestro míster Bates, me coloqué de médico en el Swallow, barco mandado
+por el capitán Abraham Panell, con quien en tres años y medio hice un viaje o
+dos a Oriente y varios a otros puntos. Al volver decidí establecerme en
+Londres, propósito en que me animó míster Bates, mi maestro, por quien fui
+recomendado a algunos clientes. Alquilé parte de una casa pequeña en la Old
+Jewry y como me aconsejasen tomar estado, me casé con mistress Mary
+Burton, hija segunda de míster Edmund Burton, vendedor de medias de
+Newgate Street, y con ella recibí cuatrocientas libras como dote.
+        </div>
+        <div>
+            Pero como mi buen maestro Bates murió dos años después, y yo tenía
+pocos amigos, empezó a decaer mi negocio porque mi conciencia me impedía
+imitar la mala práctica de tantos y tantos entre mis colegas. Así, consulté con
+mi mujer y con algún amigo, y determiné volverme al mar. Fui médico
+sucesivamente en dos barcos y durante seis años hice varios viajes a las Indias
+Orientales y Occidentales, lo cual me permitió aumentar algo mi fortuna.
+Empleaba mis horas de ocio en leer a los mejores autores antiguos y
+modernos, y a este propósito siempre llevaba buen repuesto de libros conmigo
+y cuando desembarcábamos, en observar las costumbres e inclinaciones de los
+naturales, así como en aprender su lengua, para lo que me daba gran facilidad
+la firmeza de mi memoria.
+        </div>
+        <div>
+            El último de estos viajes no fue muy afortunado me aburrí del mar y quise
+quedarme en casa con mi mujer y demás familia. Me trasladé de la Old Jewry
+a Fatter Lane y de aquí a Wapping, esperando encontrar clientela entre los
+marineros pero no me salieron las cuentas. Llevaba tres años de aguardar que
+cambiaran las cosas, cuando acepté un ventajoso ofrecimiento del capitán
+William Pritchard, patrón del Antelope, que iba a emprender un viaje al mar
+del Sur. Nos hicimos a la mar en Bristol el 4 de mayo de 1699, y la travesía al
+principio fue muy próspera.
+        </div>
+        <div>
+            No sería oportuno, por varias razones, molestar al lector con los detalles de
+nuestras aventuras en aquellas aguas. Baste decirle que en la travesía a las
+Indias Orientales fuimos arrojados por una violenta tempestad al noroeste de
+la tierra de Van Diemen. Según observaciones, nos encontrábamos a treinta
+grados, dos minutos de latitud Sur. De nuestra tripulación murieron doce
+hombres, a causa del trabajo excesivo y la mala alimentación, y el resto se
+encontraba en situación deplorable. El 15 de noviembre, que es el principio del
+verano en aquellas regiones, los marineros columbraron entre la espesa niebla
+que reinaba una roca a obra de medio cable de distancia del barco pero el
+viento era tan fuerte, que no pudimos evitar que nos arrastrase y estrellase
+contra ella al momento. Seis tripulantes, yo entre ellos, que habíamos lanzado
+el bote a la mar, maniobramos para apartarnos del barco y de la roca.
+Remamos, según mi cálculo, unas tres leguas, hasta que nos fue imposible
+seguir, exhaustos como estábamos ya por el esfuerzo sostenido mientras
+estuvimos en el barco. Así, que nos entregamos a merced de las olas, y al cabo
+de una media hora una violenta ráfaga del Norte volcó la barca. Lo que fuera
+de mis compañeros del bote, como de aquellos que se salvasen en la roca o de
+los que quedaran en el buque, nada puedo decir pero supongo que perecerían
+todos. En cuanto a mí, nadé a la ventura, empujado por viento y marea. A
+menudo alargaba las piernas hacia abajo, sin encontrar fondo pero cuando
+estaba casi agotado y me era imposible luchar más, hice pie. Por entonces la
+tormenta había amainado mucho.
+        </div>
+        <div>
+            El declive era tan pequeño, que anduve cerca de una milla para llegar a la
+playa, lo que conseguí, según mi cuenta, a eso de las ocho de la noche. Avancé
+después tierra adentro cerca de media milla, sin descubrir señal alguna de
+casas ni habitantes caso de haberlos, yo estaba en tan miserable condición que
+no podía advertirlo. Me encontraba cansado en extremo, y con esto, más lo
+caluroso del tiempo y la media pinta de aguardiente que me había bebido al
+abandonar el barco, sentí que me ganaba el sueño. Me tendí en la hierba, que
+era muy corta y suave, y dormí más profundamente que recordaba haber
+dormido en mi vida, y durante unas nueve horas, según pude ver, pues al
+despertarme amanecía. Intenté levantarme, pero no pude moverme me había
+echado de espaldas y me encontraba los brazos y las piernas fuertemente
+amarrados a ambos lados del terreno, y mi cabello, largo y fuerte, atado del
+mismo modo. Asimismo, sentía varias delgadas ligaduras que me cruzaban el
+cuerpo desde debajo de los brazos hasta los muslos. Solo podía mirar hacia
+arriba el sol empezaba a calentar y su luz me ofendía los ojos. Oía yo a mi
+alrededor un ruido confuso pero la postura en que yacía solamente me dejaba
+ver el cielo. Al poco tiempo sentí moverse sobre mi pierna izquierda algo
+vivo, que, avanzando lentamente, me pasó sobre el pecho y me llegó casi hasta
+la barbilla forzando la mirada hacia abajo cuanto pude, advertí que se trataba
+de una criatura humana cuya altura no llegaba a seis pulgadas, con arco y
+flecha en las manos y carcaj a la espalda. En tanto, sentí que lo menos
+cuarenta de la misma especie, según mis conjeturas, seguían al primero.
+Estaba yo en extremo asombrado, y rugí tan fuerte, que todos ellos huyeron
+hacia atrás con terror algunos, según me dijeron después, resultaron heridos de
+las caídas que sufrieron al saltar de mis costados a la arena. No obstante,
+volvieron pronto, y uno de ellos, que se arriesgó hasta el punto de mirarme de
+lleno la cara, levantando los brazos y los ojos con extremos de admiración,
+exclamó con una voz chillona, aunque bien distinta: Hekinah degul. Los
+demás repitieron las mismas palabras varias veces pero yo entonces no sabía
+lo que querían decir. El lector me creerá si le digo que este rato fue para mí de
+gran molestia. Finalmente, luchando por libertarme, tuve la fortuna de romper
+los cordeles y arrancar las estaquillas que me sujetaban a tierra el brazo
+izquierdo —pues llevándomelo sobre la cara descubrí el arbitrio de que se
+habían valido para atarme—, y al mismo tiempo, con un fuerte tirón que me
+produjo grandes dolores, aflojé algo las cuerdecillas que me sujetaban los
+cabellos por el lado izquierdo, de modo que pude volver la cabeza unas dos
+pulgadas. Pero aquellas criaturas huyeron otra vez antes de que yo pudiera
+atraparlas.
+        </div>
+        <div>
+            Sucedido esto, se produjo un enorme vocerío en tono agudísimo, y cuando
+hubo cesado, oí que uno gritaba con gran fuerza: Tolpo phonac. Al instante
+sentí más de cien flechas descargadas contra mi mano izquierda, que me
+pinchaban como otras tantas agujas y además hicieron otra descarga al aire, al
+modo en que en Europa lanzamos por elevación las bombas, de la cual muchas
+flechas me cayeron sobre el cuerpo —por lo que supongo, aunque yo no las
+noté— y algunas en la cara, que yo me apresuré a cubrirme con la mano
+izquierda. Cuando pasó este chaparrón de flechas oí lamentaciones de
+aflicción y sentimiento y hacía yo nuevos esfuerzos por desatarme, cuando me
+largaron otra andanada mayor que la primera, y algunos, armados de lanzas,
+intentaron pincharme en los costados. Por fortuna, llevaba un chaleco de ante
+que no pudieron atravesar.
+        </div>
+        <div>
+            Juzgué el partido más prudente estarme quieto acostado y era mi designio
+permanecer así hasta la noche, cuando, con la mano izquierda ya desatada,
+podría libertarme fácilmente. En cuanto a los habitantes, tenía razones para
+creer que yo sería suficiente adversario para el mayor ejército que pudieran
+arrojar sobre mí, si todos ellos eran del tamaño de los que yo había visto. Pero
+la suerte dispuso de mí en otro modo. Cuando la gente observó que me estaba
+quieto, ya no disparó más flechas pero por el ruido que oía conocí que la
+multitud había aumentado, y a unas cuatro yardas de mí, hacia mi oreja
+derecha, oí por más de una hora un golpear como de gentes que trabajasen.
+Volviendo la cabeza en esta dirección tanto cuanto me lo permitían las
+estaquillas y los cordeles, vi un tablado que levantaba de la tierra cosa de pie y
+medio, capaz para sostener a cuatro de los naturales, con dos o tres escaleras
+de mano para subir desde allí, uno de ellos, que parecía persona de calidad,
+pronunció un largo discurso, del que yo no comprendí una sílaba.
+        </div>
+    </div>
+    <div class="content">
+        <code>
+            grid-template-columns: repeat(4, minmax(0,max-content)) ;
+            grid-template-rows: repeat(2, minmax(0,max-content));
+        </code>
+    </div>
+    <div class="grid-container grid-container-minmax">
+        <div>
+            Mi padre tenía una pequeña hacienda en Nottinghamshire. De cinco hijos,
+yo era el tercero. Me mandó al Colegio Emanuel, de Cambridge, teniendo yo
+catorce años, y allí residí tres, seriamente aplicado a mis estudios pero como
+mi sostenimiento, aun siendo mi pensión muy corta, representaba una carga
+demasiado grande para una tan reducida fortuna, entré de aprendiz con míster
+James Bates, eminente cirujano de Londres, con quien estuve cuatro años, y
+con pequeñas cantidades que mi padre me enviaba de vez en cuando fui
+aprendiendo navegación y otras partes de las Matemáticas, útiles a quien ha de
+viajar, pues siempre creí que, más tarde o más temprano, viajar sería mi suerte.
+Cuando dejé a míster Bates, volví al lado de mi padre allí, con su ayuda, la de
+mi tío Juan y la de algún otro pariente, conseguí cuarenta libras y la promesa
+de treinta al año para mi sostenimiento en Leida. En este último punto estudié
+Física dos años y siete meses, seguro de que me sería útil en largas travesías.
+        </div>
+        <div>
+            Poco después de mi regreso de Leida, por recomendación de mi buen
+maestro míster Bates, me coloqué de médico en el Swallow, barco mandado
+por el capitán Abraham Panell, con quien en tres años y medio hice un viaje o
+dos a Oriente y varios a otros puntos. Al volver decidí establecerme en
+Londres, propósito en que me animó míster Bates, mi maestro, por quien fui
+recomendado a algunos clientes. Alquilé parte de una casa pequeña en la Old
+Jewry y como me aconsejasen tomar estado, me casé con mistress Mary
+Burton, hija segunda de míster Edmund Burton, vendedor de medias de
+Newgate Street, y con ella recibí cuatrocientas libras como dote.
+        </div>
+        <div>
+            Pero como mi buen maestro Bates murió dos años después, y yo tenía
+pocos amigos, empezó a decaer mi negocio porque mi conciencia me impedía
+imitar la mala práctica de tantos y tantos entre mis colegas. Así, consulté con
+mi mujer y con algún amigo, y determiné volverme al mar. Fui médico
+sucesivamente en dos barcos y durante seis años hice varios viajes a las Indias
+Orientales y Occidentales, lo cual me permitió aumentar algo mi fortuna.
+Empleaba mis horas de ocio en leer a los mejores autores antiguos y
+modernos, y a este propósito siempre llevaba buen repuesto de libros conmigo
+y cuando desembarcábamos, en observar las costumbres e inclinaciones de los
+naturales, así como en aprender su lengua, para lo que me daba gran facilidad
+la firmeza de mi memoria.
+        </div>
+        <div>
+            El último de estos viajes no fue muy afortunado me aburrí del mar y quise
+quedarme en casa con mi mujer y demás familia. Me trasladé de la Old Jewry
+a Fatter Lane y de aquí a Wapping, esperando encontrar clientela entre los
+marineros pero no me salieron las cuentas. Llevaba tres años de aguardar que
+cambiaran las cosas, cuando acepté un ventajoso ofrecimiento del capitán
+William Pritchard, patrón del Antelope, que iba a emprender un viaje al mar
+del Sur. Nos hicimos a la mar en Bristol el 4 de mayo de 1699, y la travesía al
+principio fue muy próspera.
+        </div>
+        <div>
+            No sería oportuno, por varias razones, molestar al lector con los detalles de
+nuestras aventuras en aquellas aguas. Baste decirle que en la travesía a las
+Indias Orientales fuimos arrojados por una violenta tempestad al noroeste de
+la tierra de Van Diemen. Según observaciones, nos encontrábamos a treinta
+grados, dos minutos de latitud Sur. De nuestra tripulación murieron doce
+hombres, a causa del trabajo excesivo y la mala alimentación, y el resto se
+encontraba en situación deplorable. El 15 de noviembre, que es el principio del
+verano en aquellas regiones, los marineros columbraron entre la espesa niebla
+que reinaba una roca a obra de medio cable de distancia del barco pero el
+viento era tan fuerte, que no pudimos evitar que nos arrastrase y estrellase
+contra ella al momento. Seis tripulantes, yo entre ellos, que habíamos lanzado
+el bote a la mar, maniobramos para apartarnos del barco y de la roca.
+Remamos, según mi cálculo, unas tres leguas, hasta que nos fue imposible
+seguir, exhaustos como estábamos ya por el esfuerzo sostenido mientras
+estuvimos en el barco. Así, que nos entregamos a merced de las olas, y al cabo
+de una media hora una violenta ráfaga del Norte volcó la barca. Lo que fuera
+de mis compañeros del bote, como de aquellos que se salvasen en la roca o de
+los que quedaran en el buque, nada puedo decir pero supongo que perecerían
+todos. En cuanto a mí, nadé a la ventura, empujado por viento y marea. A
+menudo alargaba las piernas hacia abajo, sin encontrar fondo pero cuando
+estaba casi agotado y me era imposible luchar más, hice pie. Por entonces la
+tormenta había amainado mucho.
+        </div>
+        <div>
+            El declive era tan pequeño, que anduve cerca de una milla para llegar a la
+playa, lo que conseguí, según mi cuenta, a eso de las ocho de la noche. Avancé
+después tierra adentro cerca de media milla, sin descubrir señal alguna de
+casas ni habitantes caso de haberlos, yo estaba en tan miserable condición que
+no podía advertirlo. Me encontraba cansado en extremo, y con esto, más lo
+caluroso del tiempo y la media pinta de aguardiente que me había bebido al
+abandonar el barco, sentí que me ganaba el sueño. Me tendí en la hierba, que
+era muy corta y suave, y dormí más profundamente que recordaba haber
+dormido en mi vida, y durante unas nueve horas, según pude ver, pues al
+despertarme amanecía. Intenté levantarme, pero no pude moverme me había
+echado de espaldas y me encontraba los brazos y las piernas fuertemente
+amarrados a ambos lados del terreno, y mi cabello, largo y fuerte, atado del
+mismo modo. Asimismo, sentía varias delgadas ligaduras que me cruzaban el
+cuerpo desde debajo de los brazos hasta los muslos. Solo podía mirar hacia
+arriba el sol empezaba a calentar y su luz me ofendía los ojos. Oía yo a mi
+alrededor un ruido confuso pero la postura en que yacía solamente me dejaba
+ver el cielo. Al poco tiempo sentí moverse sobre mi pierna izquierda algo
+vivo, que, avanzando lentamente, me pasó sobre el pecho y me llegó casi hasta
+la barbilla forzando la mirada hacia abajo cuanto pude, advertí que se trataba
+de una criatura humana cuya altura no llegaba a seis pulgadas, con arco y
+flecha en las manos y carcaj a la espalda. En tanto, sentí que lo menos
+cuarenta de la misma especie, según mis conjeturas, seguían al primero.
+Estaba yo en extremo asombrado, y rugí tan fuerte, que todos ellos huyeron
+hacia atrás con terror algunos, según me dijeron después, resultaron heridos de
+las caídas que sufrieron al saltar de mis costados a la arena. No obstante,
+volvieron pronto, y uno de ellos, que se arriesgó hasta el punto de mirarme de
+lleno la cara, levantando los brazos y los ojos con extremos de admiración,
+exclamó con una voz chillona, aunque bien distinta: Hekinah degul. Los
+demás repitieron las mismas palabras varias veces pero yo entonces no sabía
+lo que querían decir. El lector me creerá si le digo que este rato fue para mí de
+gran molestia. Finalmente, luchando por libertarme, tuve la fortuna de romper
+los cordeles y arrancar las estaquillas que me sujetaban a tierra el brazo
+izquierdo —pues llevándomelo sobre la cara descubrí el arbitrio de que se
+habían valido para atarme—, y al mismo tiempo, con un fuerte tirón que me
+produjo grandes dolores, aflojé algo las cuerdecillas que me sujetaban los
+cabellos por el lado izquierdo, de modo que pude volver la cabeza unas dos
+pulgadas. Pero aquellas criaturas huyeron otra vez antes de que yo pudiera
+atraparlas.
+        </div>
+        <div>
+            Sucedido esto, se produjo un enorme vocerío en tono agudísimo, y cuando
+hubo cesado, oí que uno gritaba con gran fuerza: Tolpo phonac. Al instante
+sentí más de cien flechas descargadas contra mi mano izquierda, que me
+pinchaban como otras tantas agujas y además hicieron otra descarga al aire, al
+modo en que en Europa lanzamos por elevación las bombas, de la cual muchas
+flechas me cayeron sobre el cuerpo —por lo que supongo, aunque yo no las
+noté— y algunas en la cara, que yo me apresuré a cubrirme con la mano
+izquierda. Cuando pasó este chaparrón de flechas oí lamentaciones de
+aflicción y sentimiento y hacía yo nuevos esfuerzos por desatarme, cuando me
+largaron otra andanada mayor que la primera, y algunos, armados de lanzas,
+intentaron pincharme en los costados. Por fortuna, llevaba un chaleco de ante
+que no pudieron atravesar.
+        </div>
+        <div>
+            Juzgué el partido más prudente estarme quieto acostado y era mi designio
+permanecer así hasta la noche, cuando, con la mano izquierda ya desatada,
+podría libertarme fácilmente. En cuanto a los habitantes, tenía razones para
+creer que yo sería suficiente adversario para el mayor ejército que pudieran
+arrojar sobre mí, si todos ellos eran del tamaño de los que yo había visto. Pero
+la suerte dispuso de mí en otro modo. Cuando la gente observó que me estaba
+quieto, ya no disparó más flechas pero por el ruido que oía conocí que la
+multitud había aumentado, y a unas cuatro yardas de mí, hacia mi oreja
+derecha, oí por más de una hora un golpear como de gentes que trabajasen.
+Volviendo la cabeza en esta dirección tanto cuanto me lo permitían las
+estaquillas y los cordeles, vi un tablado que levantaba de la tierra cosa de pie y
+medio, capaz para sostener a cuatro de los naturales, con dos o tres escaleras
+de mano para subir desde allí, uno de ellos, que parecía persona de calidad,
+pronunció un largo discurso, del que yo no comprendí una sílaba.
+        </div>
+    </div>
+</body>
+</html>

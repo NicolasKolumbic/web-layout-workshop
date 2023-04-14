@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las grillas y otras propiedades</title>
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../icons.css" />
+    <style>
+        .float-left {
+            float: left;
+        }
+
+        .grid-container {
+            display: grid;
+            background-color: rgba(41, 171, 226, 0.3);
+            border: 5px solid rgba(247, 147, 30, 0.3); 
+        }
+
+        .inline-grid-container {
+            display: inline-grid;
+            background-color: rgba(41, 171, 226, 0.3);
+            border: 5px solid rgba(247, 147, 30, 0.3); 
+        }
+
+        .grid-item {
+            color: white;
+        }
+
+        .block-element {
+            background-color: rgba(147,39,143, 0.3);
+            border: 5px solid rgba(255,0,255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p>
+            A diferencia de los elementos en bloque (<code>display:block</code>), las grillas (<code>display:grid</code>) no quedan superpuestas por <strong>elemento floantes</strong> (<code>float</code>).
+
+        </p>
+        <div class="sample" style="overflow: hidden;">
+            <p>
+                Drácula (en inglés, Dracula; pronunciado /ˈdrækjʊlə/), es una novela de fantasía gótica escrita por Bram Stoker,
+                publicada en 1897. Publicada en castellano por Ediciones Hymsa bajo la colección <strong>La novela aventura</strong>>
+                en 1935, con portada de Juan Pablo Bocquet e ilustraciones de <strong>Femenía</strong>. Drácula, fue elogiada por 
+                Arthur Conan Doyle y es considerada como la novela de terror más hermosa jamás escrita. Hasta el día de hoy no ha 
+                dejado de publicarse, ha sido traducida a más de 50 idiomas y ha logrado vender alrededor de 12 millones de copias.
+                <img src="../../images/dracula_book_portrait.jpg" class="float-left" style="opacity: 0.3; margin: 1rem" />
+                Sin embargo, se le mantenía en el terreno marginal de la literatura sensacionalista y soló hasta 1983 fue 
+                incorporado entre los clásicos de la Universidad de Oxford. Su personaje protagonista, el conde Drácula, 
+                se volvió el arquetipo de vampiro occidental por antonomasia, considerándole el más famoso de la cultura
+                popular. La popularidad de su personaje es tal que ha sido adaptado al cine, cómics, teatro y/o televisión 
+                en innumerables ocasiones; siendo la más fiel al libro y la más destacada la adaptación al cine realizada 
+                por Francis Ford Coppola en 1992.
+            </p>
+            <h3 class="block-element">Soy un elemento en bloque (h3)</h3>
+            <div class="grid-container">
+                <div class="grid-item">Esta es una <strong>grilla</strong></div>
+            </div>
+        </div>
+        <p>
+            Al igual que para los <strong>elementos flexibles</strong>, los <strong>elementos de grilla</strong> ignoran todas la propiedades relacionada a <strong>elemento flotantes</strong>, <code>float</code> y <code>clear</code>.
+        </p>
+        <div class="sample">
+            <div class="grid-container">
+                <div class="grid-item" style="float: right">Este es un elemento de <strong>grilla</strong> intentando flotar a la derecha <strong>float:right</strong></div>
+            </div>
+        </div>
+        <p>
+            Todo lo relacionado a <code>columns</code>(<code>column-count</code>, <code>column-width: 100px;</code>) tambien es ignorado por <strong>Grid Layout</strong>.
+        </p>
+        <div class="sample">
+            <div class="grid-container" style="column-count: 3; column-width: 100px;">
+                <div class="grid-item">Este es un elemento de <strong>grilla</strong></div>
+                <div class="grid-item">Este es un elemento de <strong>grilla</strong></div>
+                <div class="grid-item">Este es un elemento de <strong>grilla</strong></div>
+            </div>
+        </div>
+        <p>
+            La propiedad <code>vertical-align</code> no tiene efecto sobre los <strong>contenedores</strong> y los <strong>elementos de grilla</strong>.
+        </p>
+        <div class="sample">
+            <div class="grid-container">
+                <div class="grid-item"><span>Este es un elemento de <strong>grilla</strong></span></div>
+                <div class="grid-item"><span>Este es un elemento de <strong>grilla</strong></span></div>
+                <div class="grid-item"><span>Este es un elemento de <strong>grilla</strong></span></div>
+            </div>
+        </div>
+        <p>
+           Sí flotamos una grilla con <code>display:inline-grid</code> su valor calculado se transforma en <code>display:grid</code>.
+        </p>
+        <div class="sample" style="height: 100px">
+            <div class="inline-grid-container float-left">
+                <div class="grid-item"><span>Este es un elemento de <strong>grilla</strong></span></div>
+            </div>
+        </div>
+        <p>
+            Por último los pseudoelementos <code>::first-line</code> y <code>::first-letter</code> tambien serán ignorados.
+        </p>
+    </div>
+</body>
+</html>

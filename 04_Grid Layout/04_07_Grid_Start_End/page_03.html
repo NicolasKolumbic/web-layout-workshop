@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Columns</title>
+    <link rel="shortcut icon" href="../../images/favicon.gif">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../icons.css" />
+    <style>
+         .inline-grid-container { 
+            border: 5px solid rgba(134, 134, 134, 0.5);
+            background-color: rgba(7, 165, 46, 0.5);
+            width: 300px;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 100px);
+        }
+
+        .inline-grid-container div {
+            border: 5px solid rgba(230, 174, 111,1);
+            background-color: rgba(77, 133, 218, 1);
+            color: white;
+        }
+
+        div.item-1 {
+            grid-column: span 3;
+            background-color: rgb(238, 138, 230);
+        }
+
+        div.item-4 {
+            grid-row: 2/6;
+            grid-column: 3/4;
+            background-color: rgb(138, 226, 238);
+        }
+
+        div.item-9 {
+            grid-column: 1/4;
+            background-color: rgb(138, 238, 146);
+        }
+
+        div.item-2 {
+            grid-area: 1/1/2/4;
+            background-color: rgb(238, 138, 230);
+        }
+
+        div.item-5 {
+            grid-area: 2/1/5/2;
+            background-color: rgb(138, 226, 238);
+        }
+
+        div.item-8 {
+            grid-area: 5/1/6/4;
+            background-color: rgb(138, 238, 146);
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="p-1">
+        <p>
+            Utilizamos para la <strong>celda 1</strong> la propiedad <strong>grid-column:1/4</strong>, donde el primer valor 
+            hace referencia a <strong>grid-column-start</strong> y el segunda después de la barra a <strong>grid-column-end</strong>. 
+            La <strong>celda 4</strong> tiene definido además de <strong>grid-column</strong>, <strong>grid-row</strong> con el valor <strong>2/6</strong>. 
+            El primero para <strong>grid-row-start</strong> y el segundo después de la barra para <strong>grid-row-end</strong>.
+        </p>
+        <div>
+            <div class="inline-grid-container">
+                <div class="item-1">Grid Cell 1</div>
+                <div>Grid Cell 2</div>
+                <div>Grid Cell 3</div>
+                <div class="item-4">Grid Cell 4</div>
+                <div>Grid Cell 5</div>
+                <div>Grid Cell 6</div>
+                <div>Grid Cell 7</div>
+                <div>Grid Cell 8</div>
+                <div class="item-9">Grid Cell 9</div>
+            </div>
+        </div>
+        <p>
+            Este ejemplo es similar al anterior, en este caso utilizamos la propiedad abreviada <strong>grid-area</strong> como breve introducción a la propiedad.
+            Esta sintaxis es algo compleja, y es : <strong>grid-area: [row-start/column-start/row-end/column-end]</strong>. Note la barra como separador entre los diferentes valores.
+        </p>
+        <div>
+            <div class="inline-grid-container">
+                <div>Grid Cell 1</div>
+                <div class="item-2">Grid Cell 2</div>
+                <div>Grid Cell 3</div>
+                <div >Grid Cell 4</div>
+                <div class="item-5">Grid Cell 5</div>
+                <div>Grid Cell 6</div>
+                <div>Grid Cell 7</div>
+                <div class="item-8">Grid Cell 8</div>
+                <div>Grid Cell 9</div>
+            </div>
+        </div>
+        
+    </div>
+   
+</body>
+</html>
